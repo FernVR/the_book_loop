@@ -15,9 +15,9 @@ As a **user**, I can ** something ** so that **achievement**.
 - acceptance criteria 3
 
 ### Tasks
-[ ] task 1
-[ ] task 2
-[ ] task 3
+- [ ] task 1
+- [ ] task 2
+- [ ] task 3
 
 ### Additional Notes:
 add any notes here
