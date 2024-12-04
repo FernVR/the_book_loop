@@ -13,14 +13,13 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import env  # noqa
+from env import *
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 from cloudinary_storage.storage import StaticHashedCloudinaryStorage
 from cloudinary_storage.storage import MediaCloudinaryStorage
-import django_heroku
-django_heroku.settings(locals())
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -153,6 +152,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Add static files directory
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+import django_heroku
+django_heroku.settings(locals())
 
 # Media Files
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
