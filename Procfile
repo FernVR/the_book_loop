@@ -1,0 +1,1 @@
+web: gunicorn the_book_loop.wsgi:application
