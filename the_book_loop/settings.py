@@ -44,7 +44,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
