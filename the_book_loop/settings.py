@@ -32,16 +32,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv("DEBUG")=="TRUE"
 
 
 ALLOWED_HOSTS = [
     '8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
     'thebookloop.herokuapp.com',
+    'https://thebookloop-38d0e34a2881.herokuapp.com/'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net', ]
+    'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net', 
+    'https://thebookloop-38d0e34a2881.herokuapp.com/',
+    ]
 
 # Application definition
 
