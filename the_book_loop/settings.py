@@ -16,8 +16,7 @@ import dj_database_url
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-from cloudinary_storage.storage import StaticHashedCloudinaryStorage
-from cloudinary_storage.storage import MediaCloudinaryStorage
+
 
 if os.path.exists("env.py"):
     import env
@@ -33,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG")=="TRUE"
 
 
 ALLOWED_HOSTS = [
@@ -154,8 +153,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Add static files directory
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-import django_heroku
-django_heroku.settings(locals())
 
 # Media Files
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
