@@ -19,8 +19,7 @@ import cloudinary.api
 from cloudinary_storage.storage import StaticHashedCloudinaryStorage
 from cloudinary_storage.storage import MediaCloudinaryStorage
 
-DEBUG = False if os.getenv("DEBUG")=="FALSE" else True
-if DEBUG:
+if os.path.exists("env.py"):
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -34,6 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = os.getenv("DEBUG")=="TRUE"
 
 
 ALLOWED_HOSTS = [
