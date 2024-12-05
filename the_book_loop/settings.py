@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-from env import *
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
@@ -32,7 +31,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = False if os.getenv("DEBUG")=="FALSE" else True
+if DEBUG:
+    import env
 
 ALLOWED_HOSTS = [
     '8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
@@ -52,9 +53,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
 
     'cloudinary_storage',
+    'django.contrib.staticfiles',
     'cloudinary',
 
     'testapp',
