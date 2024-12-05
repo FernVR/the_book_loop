@@ -32,7 +32,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")=="TRUE"
+DEBUG = False
 
 
 ALLOWED_HOSTS = [
@@ -41,8 +41,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
-]
+    'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net', ]
 
 # Application definition
 
