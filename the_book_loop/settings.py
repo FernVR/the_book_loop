@@ -19,6 +19,9 @@ import cloudinary.api
 from cloudinary_storage.storage import StaticHashedCloudinaryStorage
 from cloudinary_storage.storage import MediaCloudinaryStorage
 
+DEBUG = False if os.getenv("DEBUG")=="FALSE" else True
+if DEBUG:
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,9 +34,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if os.getenv("DEBUG")=="FALSE" else True
-if DEBUG:
-    import env
+
 
 ALLOWED_HOSTS = [
     '8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
