@@ -3,18 +3,24 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #73b7ff;
+    background-color: #aaaaaa;
 }
 
-
-
 /* -------------------------------------------------------- Nav */
+
+header {
+    background-color: white;
+}
 
 
 /* -------------------------------------------------------- Logo */
 
 
 /* -------------------------------------------------------- Footer */
+
+footer {
+    background-color: white;
+}
 
 
 /* -------------------------------------------------------- Home Page */
