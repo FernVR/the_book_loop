@@ -3,13 +3,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #aaaaaa;
+    background-color: #fff5d3;
 }
 
 /* -------------------------------------------------------- Nav */
 
 header {
-    background-color: white;
+    background-color: #ffc2b1;
 }
 
 .nav-link {
@@ -23,11 +23,13 @@ header {
 /* -------------------------------------------------------- Footer */
 
 footer {
-    background-color: white;
+    background-color: #ffc2b1;
 }
 
 
 /* -------------------------------------------------------- Home Page */
+
+/* Home Banner */
 
 .home-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/home-banner.png);
@@ -35,6 +37,8 @@ footer {
     background-position: center;
     justify-content: space-between;
 }
+
+/* About */
 
 .about-sec {
     justify-content: space-evenly;
@@ -49,9 +53,30 @@ footer {
     width: 350px;
 }
 
-.about-content {
-    
+/* Best Sellar List */
+
+.best-seller-sec {
+    background-color: #d4a40d;
+    margin-top: 30px;
 }
+
+.best-sellers {
+    justify-content: space-between;
+}
+
+.best-seller-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/about-img.png);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 20px;
+}
+
+
+
+/* Sell Your Old Books */
+
+
 
 
 /* -------------------------------------------------------- Bookstore */
@@ -83,5 +108,13 @@ footer {
 
     .about-content {
         margin-top: 100px;
+    }
+
+
+    /* Best Sellers */
+
+    .best-seller-img {
+        height: 160px;
+        width: 160px;
     }
 }
