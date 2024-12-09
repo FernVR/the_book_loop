@@ -148,7 +148,7 @@
 
     <!-- Footer -->
     <footer class="mt-auto container-fluid">
-        <div class="d-flex">
+        <div class="d-flex footer">
             <section id="logo">
                 <a class="navbar-brand logo" href="#">
                     <img src="{% url 'home' %}">
@@ -156,16 +156,28 @@
                 </a>
             </section>
 
-            <section id="newsletter">
-
-            </section>
-
             <section id="social-links">
+                <h6>Follow us on social</h6>
+                <div class="row social-icon-link">
+                    <div class="col-6">
+                        <a href="https://www.instagram.com" target="_blank" aria-label="instagram" class="reg-links">
+                            <i class="fa-brands fa-instagram h4 m-1"></i>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="https://www.facebook.com" target="_blank" aria-label="facebook" class="reg-links">
+                            <i class="fa-brands fa-facebook h4 m-1"></i>
+                        </a>
+                    </div>
+                </div>
 
             </section>
         </div>
-        <div id="copyright">
-
+        <section id="newsletter" class="newsletter-form text-center mt-3">
+           <h5> Newsletter Form </h5>
+        </section>
+        <div id="copyright" class="text-center mt-3">
+            copyright message
         </div>
     </footer>
 

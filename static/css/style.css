@@ -26,6 +26,16 @@ footer {
     background-color: #ffc2b1;
 }
 
+.footer {
+    justify-content: space-between;
+}
+
+.newsletter-form {
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 50px 20px;
+}
+
 
 /* -------------------------------------------------------- Home Page */
 
