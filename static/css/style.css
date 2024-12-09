@@ -29,11 +29,28 @@ footer {
 
 /* -------------------------------------------------------- Home Page */
 
-#home-banner {
+.home-banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/home-banner.png);
-    padding: 150px;
+    padding: 120px 20px;
     background-position: center;
     justify-content: space-between;
+}
+
+.about-sec {
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+}
+
+.about-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/about-img.png);
+    border-radius: 2rem;
+    height: auto;
+    width: 350px;
+}
+
+.about-content {
+    
 }
 
 
@@ -53,3 +70,18 @@ footer {
 
 
 /* -------------------------------------------------------- Media Queries */
+
+/* Styles for screens larger than 1000px */
+@media screen and (min-width: 1000px) {
+
+    /* About Page */
+
+    .about-img {
+        height: 500px;
+        width: 400px;
+    }
+
+    .about-content {
+        margin-top: 100px;
+    }
+}

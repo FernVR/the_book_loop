@@ -5,10 +5,10 @@
 {% block content %}
 
 
-<section id="home-banner" class="container d-flex">
+<section id="banner" class="container d-flex d-none d-sm-block home-banner">
     <div>
         <h1>Welcome to The Book Loop</h1>
-        <p> 
+        <p>
             your own eco-friendly book community
         </p>
     </div>
@@ -18,7 +18,35 @@
 
 </section>
 
-<section id="about">
+<!-- Landing Banner Img/ Mobile-specific content -->
+<section class="home-banner container-fluid d-block d-sm-none p-6">
+    <h2 class="text-pink">Welcome to The Book Loop</h2>
+    <a class="shop-btn btn" href="#">
+        SHOP NOW
+    </a>
+</section>
+
+<section id="about" class="container">
+    <div class="row d-flex about-sec">
+        <div class="col-6 about-img">
+
+        </div>
+        <div class="col-md-6 about-content text-center">
+            <h3>What we do here</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in nulla sit amet erat tincidunt
+                rhoncus. Nam mollis iaculis ex eu lobortis. Morbi vestibulum tempor massa, sed facilisis augue. Praesent
+                ut
+                viverra dolor. Aenean id porttitor nisi. Etiam aliquet, mi nec euismod bibendum, lacus eros fringilla
+                mauris, ut suscipit velit neque in velit. Sed in mattis ex, eu cursus nisl. Sed vehicula augue vitae
+                erat
+                posuere, iaculis euismod purus imperdiet. Phasellus semper nisl vel mauris posuere pretium. Suspendisse
+                ut
+                nibh magna. Vivamus ac scelerisque lorem. Morbi posuere pretium lectus.
+            </p>
+        </div>
+    </div>
+
 
 </section>
 
