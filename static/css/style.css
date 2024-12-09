@@ -42,8 +42,8 @@ footer {
 
 .about-sec {
     justify-content: space-evenly;
-    margin-top: 50px;
-
+    background-color: #ffc2b1;
+    padding: 50px 0;
 }
 
 .about-img {
@@ -57,7 +57,7 @@ footer {
 
 .best-seller-sec {
     background-color: #d4a40d;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .best-sellers {
@@ -72,10 +72,20 @@ footer {
     margin: 10px 20px;
 }
 
-
-
 /* Sell Your Old Books */
 
+.sell-books-sec {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/user-form.png);
+    background-size: cover;
+    padding: 50px 20px;
+}
+
+
+.used-books-form {
+    border: 1px solid white;
+    border-radius: 2rem;
+    padding: 50px 20px;
+}
 
 
 

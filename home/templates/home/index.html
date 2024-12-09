@@ -28,8 +28,7 @@
 
 <section id="about" class="container">
     <div class="row d-flex about-sec">
-        <div class="col-6 about-img">
-
+        <div class="col-md-6 about-img">
         </div>
         <div class="col-md-6 about-content text-center">
             <h3>What we do here</h3>
@@ -46,8 +45,6 @@
             </p>
         </div>
     </div>
-
-
 </section>
 
 <section id="best-seller-list" class="container-fluid best-seller-sec">
@@ -76,7 +73,26 @@
 
 </section>
 
-<section id="sell-books-form">
+<section id="sell-books-form" class="sell-books-sec text-center text-white">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <h3>We will buy your pre-loved books!</h3>
+            <p>Here at The Book Loop, we try our best to foster a high standard for zero waste.
+                We would love to hear about what books you have at home and give you an amazing price!
+            </p>
+        </div>
+        <div class="col">
+            <div class="used-books-form">
+                {% if user.is_authenticated %}
+                <form>
+                    user book form
+                </form>
+                {% else %}
+                <p><a href="#">Log in</a> to sell your old books today</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 
 </section>
 
