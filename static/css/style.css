@@ -29,6 +29,13 @@ footer {
 
 /* -------------------------------------------------------- Home Page */
 
+#home-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/home-banner.png);
+    padding: 150px;
+    background-position: center;
+    justify-content: space-between;
+}
+
 
 /* -------------------------------------------------------- Bookstore */
 
