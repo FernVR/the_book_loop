@@ -16,6 +16,19 @@ header {
     color: black;
 }
 
+.log-link {
+    margin-right: 20px;
+}
+
+.login-status {
+    margin-right: 20px;
+}
+
+.basket-icon, .wishlist-icon {
+    margin-right: 10px;
+    
+}
+
 
 /* -------------------------------------------------------- Logo */
 
