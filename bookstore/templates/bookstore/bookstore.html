@@ -4,17 +4,36 @@
 
 {% block content %}
 
-<h1>Welcome to the Bookstore</h1>
+<h1 class="text-center mt-4">Welcome to the Bookstore</h1>
+
+<section id="search-bar">
+
+    <form method="GET" action="{% url 'bookstore:book-search' %}">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search for books..." />
+        <button type="submit">Search</button>
+    </form>
+
+    {% if books %}
+    <ul>
+        {% for book in books %}
+        <li>{{ book.title }} - {{ book.author }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No books found for your search query.</p>
+    {% endif %}
+
+</section>
 
 <section id="book-list">
 
     <div class="container my-5">
-        <h1 class="text-center mb-4">Bookstore</h1>
+        <h3 class="text-center mb-4">Bookstore</h3>
         <div class="row">
             {% for book in page_obj %}
             <div class="col-md-3 mb-4">
-                <div class="card h-100">
-                    <img src="{{ book.cover_image.url }}" class="card-img-top" alt="{{ book.title }}">
+                <div class="card h-100 book-list-cover">
+                    <img src="{{ book.cover_image.url }}" class="card-img-top book-list-cover" alt="{{ book.title }}">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ book.title }}</h5>
                     </div>
