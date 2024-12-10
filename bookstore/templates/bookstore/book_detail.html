@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>{{ book.title }}</h1>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>Description:</strong> {{ book.description }}</p>
+    <p><strong>Rating:</strong> {{ book.rating }}</p>
+    <p><strong>Published:</strong> {{ book.date_published }}</p>
+    <p><strong>Condition:</strong> {{ book.condition }}</p>
+    <p><strong>Price:</strong> ${{ book.price }}</p>
+    
+    <img src="{{ book.cover_image.url }}" alt="{{ book.title }} cover image" class="img-fluid">
+  </div>
+{% endblock %}
