@@ -1,0 +1,78 @@
+[
+    {
+        "model": "bookstore.book",
+        "pk": 1,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "Douglas Adams",
+            "category": "Science-Fiction",
+            "date_published": "1979-10-12",
+            "description": "The Hitchhiker's Guide to the Galaxy by Douglas Adams is a comedic science fiction novel that follows the misadventures of Arthur Dent, an ordinary human thrust into an extraordinary universe. After Earth is unexpectedly destroyed, Arthur finds himself aboard a spaceship alongside his eccentric friend Ford Prefect, who turns out to be an alien researcher for a galactic guidebook. Together, they embark on a surreal journey through space, encountering bizarre planets, peculiar alien species, and the enigmatic titular guide. ",
+            "condition": "new",
+            "rating": 5,
+            "price": 9.99,
+            "cover_image": "media/products/1.png"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 2,
+        "fields": {
+            "title": "The Hate U Give",
+            "author": "Angie Thomas",
+            "category": "Fiction",
+            "date_published": "2017-02-28",
+            "description": "The Hate U Give by Angie Thomas is a powerful and thought-provoking novel that tells the story of Starr Carter, a 16-year-old girl who navigates life between her predominantly Black, working-class neighborhood and the wealthy, mostly white private school she attends. Starr’s world is upended when she witnesses the fatal police shooting of her unarmed best friend, Khalil, an event that thrusts her into the national spotlight and forces her to confront systemic racism, injustice, and her own identity.",
+            "condition": "used",
+            "rating": 4.0,
+            "price": 8.50,
+            "cover_image": "media/products/2.png"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 3,
+        "fields": {
+            "title": "The Theory of Everything Else: A Voyage into the World of the Weird",
+            "author": "Dan Schreiber",
+            "category": "Non-Fiction",
+            "date_published": "2022-10-13",
+            "description": "The Theory of Everything Else: A Voyage into the World of the Weird by Dan Schreiber is an intriguing exploration of strange ideas, unconventional theories, and the quirky edges of human curiosity. The book dives into a diverse range of topics—from conspiracy theories to bizarre scientific hypotheses—unearthing the most eccentric beliefs and oddities from history and modern times.",
+            "condition": "used",
+            "rating": 4.0,
+            "price": 8.50,
+            "cover_image": "media/products/3.png"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 4,
+        "fields": {
+            "title": "The Culture Map: Decoding How People Think, Lead, and Get Things Done Across Cultures",
+            "author": "Erin Meyer",
+            "category": "Non-Fiction",
+            "date_published": "2014-05-06",
+            "description": "A practical and insightful guide to navigating the complexities of cross-cultural communication. Drawing from extensive research and real-world examples, Meyer breaks down how cultural differences influence the way people express ideas, give feedback, make decisions, and collaborate in professional settings.",
+            "condition": "used",
+            "rating": 4.0,
+            "price": 6.50,
+            "cover_image": "media/products/4.png"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 5,
+        "fields": {
+            "title": "How To Get Over a Boy",
+            "author": "Chidera Eggerue",
+            "category": "Non-Fiction",
+            "date_published": "2020-02-06",
+            "description": "A bold and empowering guide for women navigating the emotional challenges of heartbreak and unfulfilling relationships. Drawing from personal experiences and a feminist perspective, Eggerue challenges societal norms that place excessive value on romantic relationships and encourages readers to reclaim their self-worth. The book explores themes of self-love, independence, and the importance of setting boundaries, offering practical advice for women to prioritize themselves rather than conform to harmful expectations about love and partnership.",
+            "condition": "new",
+            "rating": 5.0,
+            "price": 9.50,
+            "cover_image": "media/products/5.png"
+        }
+    }
+
+]
