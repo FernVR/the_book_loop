@@ -94,7 +94,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
+                        <a class="nav-link" aria-current="page" href="{% url 'bookstore-home' %}">
                             Bookstore
                         </a>
                     </li>
@@ -134,14 +134,14 @@
                 {% endif %}
 
                 <div id="basket-link">
-                    <a class="navbar-text h3 basket-icon">
+                    <a class="navbar-text h3 basket-icon" href="#">
                         <i class="fa-solid fa-basket-shopping"></i>
                     </a>
                 </div>
 
                 {% if user.is_authenticated %}
                 <div id="wishlist-link">
-                    <a class="navbar-text h3 wishlist-icon">
+                    <a class="navbar-text h3 wishlist-icon" href="#">
                         <i class="fa-solid fa-gift"></i>
                     </a>
                 </div>
