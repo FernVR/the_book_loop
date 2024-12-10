@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def bookstore_home(request):
-    return render(request, 'bookstore/bookstore.html')
+    return render(request, 'bookstore/bookstore_home.html')
