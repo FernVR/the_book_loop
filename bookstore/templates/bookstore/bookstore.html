@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Bookstore{% endblock %}
 
@@ -6,6 +7,8 @@
 
 <h1 class="text-center mt-4">Welcome to the Bookstore</h1>
 
+<!-- FOR NOW comment out search section : need to figure out how to fix this
+ 
 <section id="search-bar">
 
     <form method="GET" action="{% url 'bookstore:book-search' %}">
@@ -13,22 +16,30 @@
         <button type="submit">Search</button>
     </form>
 
-    {% if books %}
+    {% if books in q %}
     <ul>
         {% for book in books %}
-        <li>{{ book.title }} - {{ book.author }}</li>
+        <li>
+            <img src="{{ book.cover_image.url }}" class="book-list-cover card-img-top">
+            <p class="card-text">
+                {{ book.title }} - {{ book.author }}
+            </p>
+
+        </li>
         {% endfor %}
     </ul>
     {% else %}
-    <p>No books found for your search query.</p>
+
+    <p class="text-center">Sorry! We didn't find your search query.</p>
+    <a href="{% url 'bookstore:bookstore' %}" class="btn-primary">Go back</a>
     {% endif %}
 
 </section>
 
-<section id="book-list">
+-->
 
+<section id="book-list">
     <div class="container my-5">
-        <h3 class="text-center mb-4">Bookstore</h3>
         <div class="row">
             {% for book in page_obj %}
             <div class="col-md-3 mb-4">
@@ -43,7 +54,6 @@
             </div>
             {% endfor %}
         </div>
-
         <!-- Pagination controls -->
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
