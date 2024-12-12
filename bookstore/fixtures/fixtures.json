@@ -1,0 +1,606 @@
+[
+    {
+        "model": "bookstore.book",
+        "pk": 1,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "Douglas Adams",
+            "date_published": "1979-10-12",
+            "description": 
+            "The Hitchhiker's Guide to the Galaxy by Douglas Adams is a comedic science fiction novel that follows the misadventures of Arthur Dent, an ordinary human thrust into an extraordinary universe. After Earth is unexpectedly destroyed, Arthur finds himself aboard a spaceship alongside his eccentric friend Ford Prefect, who turns out to be an alien researcher for a galactic guidebook. Together, they embark on a surreal journey through space, encountering bizarre planets, peculiar alien species, and the enigmatic titular guide.",
+            "condition": "like-new",
+            "rating": 5.0,
+            "price": 6.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 2,
+        "fields": {
+            "title": "The Hate U Give",
+            "author": "Angie Thomas",
+            "date_published": "2017-02-28",
+            "description": 
+            "The Hate U Give by Angie Thomas is a powerful and thought-provoking novel that tells the story of Starr Carter, a 16-year-old girl who navigates life between her predominantly Black, working-class neighborhood and the wealthy, mostly white private school she attends. Starr's world is upended when she witnesses the fatal police shooting of her unarmed best friend, Khalil, an event that thrusts her into the national spotlight and forces her to confront systemic racism, injustice, and her own identity.",
+            "condition": "good",
+            "rating": 4.8,
+            "price": 5.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014268/2_o9mkxe.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 3,
+        "fields": {
+            "title": "The Theory of Everything Else",
+            "author": "Dan Schreiber",
+            "date_published": "2022-10-13",
+            "description": 
+            "The Theory of Everything Else: A Voyage into the World of the Weird by Dan Schreiber is an intriguing exploration of strange ideas, unconventional theories, and the quirky edges of human curiosity. The book dives into a diverse range of topics—from conspiracy theories to bizarre scientific hypotheses—unearthing the most eccentric beliefs and oddities from history and modern times.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 9.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/3_qxb7bz.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 4,
+        "fields": {
+            "title": "The Culture Map",
+            "author": "Erin Meyer",
+            "date_published": "2014-05-06",
+            "description": 
+            "The Culture Map: Decoding How People Think, Lead, and Get Things Done Across Cultures by Erin Meyer is a practical and insightful guide to navigating the complexities of cross-cultural communication. Drawing from extensive research and real-world examples, Meyer breaks down how cultural differences influence the way people express ideas, give feedback, make decisions, and collaborate in professional settings.",
+            "condition": "good",
+            "rating": 4.3,
+            "price": 7.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014268/4_jjfyhr.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 5,
+        "fields": {
+            "title": "How To Get Over a Boy",
+            "author": "Chidera Eggerue",
+            "date_published": "2020-02-06",
+            "description": "How to Get Over a Boy by Chidera Eggerue is a bold and empowering guide for women navigating the emotional challenges of heartbreak and unfulfilling relationships. Drawing from personal experiences and a feminist perspective, Eggerue challenges societal norms that place excessive value on romantic relationships and encourages readers to reclaim their self-worth. The book explores themes of self-love, independence, and the importance of setting boundaries, offering practical advice for women to prioritize themselves rather than conform to harmful expectations about love and partnership.",
+            "condition": "like-new",
+            "rating": 5.0,
+            "price": 8.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014268/5_csvyox.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 6,
+        "fields": {
+            "title": "Everyone On This Train Is A Suspect",
+            "author": "Benjamin Stevenson",
+            "date_published": "2024-08-29",
+            "description": "Everyone On This Train Is A Suspect by Benjamin Stevenson is a clever and entertaining whodunit set aboard a luxurious train journey through the snowy Australian Alps. The story follows amateur sleuth Ernest Cunningham, who finds himself embroiled in a murder investigation when a passenger is killed under mysterious circumstances. As the train becomes snowed in, cutting off contact with the outside world, Ernest must unravel the clues and uncover the killer among a colorful cast of characters, each hiding their own secrets.",
+            "condition": "like-new",
+            "rating": 4.5,
+            "price": 8.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/6_xynccj.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 7,
+        "fields": {
+            "title": "21 Lessons for the 21st Century",
+            "author": "Yuval Noah Harari",
+            "date_published": "2019-08-22",
+            "description": "21 Lessons for the 21st Century by Yuval Noah Harari is a thought-provoking exploration of the challenges and opportunities facing humanity in an era of rapid technological, political, and social change. Harari delves into pressing topics such as artificial intelligence, climate change, the rise of nationalism, and the future of work, offering insights into how these forces are reshaping societies and individual lives. He invites readers to consider how to navigate these uncertainties by questioning traditional beliefs, embracing adaptability, and fostering critical thinking.",
+            "condition": "good",
+            "rating": 5.0,
+            "price": 8.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/7_lfa4zr.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 8,
+        "fields": {
+            "title": "The Body Keeps the Score",
+            "author": "Bessel van der Kolk",
+            "date_published": "2015-09-24",
+            "description": "The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma by Bessel van der Kolk is a groundbreaking exploration of how trauma impacts the brain and body. Drawing on decades of research and clinical experience, van der Kolk reveals the profound effects of trauma on mental, emotional, and physical health. He explains how traumatic experiences can reshape the brain's wiring, leading to issues such as anxiety, depression, and dissociation, and how these experiences are often stored in the body, manifesting in various physical symptoms." ,
+            "condition": "good",
+            "rating": 4.8,
+            "price": 7.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014270/8_m2fnvs.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 9,
+        "fields": {
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "date_published": "1995-01-01",
+            "description": "The Alchemist by Paulo Coelho is a philosophical novel that follows the journey of Santiago, a young shepherd from Spain, as he seeks his personal legend and dreams of discovering treasure hidden in the Egyptian pyramids. Along the way, Santiago learns important life lessons about following his heart, overcoming obstacles, and understanding the interconnectedness of all things. The novel is rich with themes of self-discovery, destiny, and the pursuit of one's dreams, blending elements of adventure and spirituality.",
+            "condition": "fair",
+            "rating": 4.9,
+            "price": 8.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014271/9_m8adbb.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 10,
+        "fields": {
+            "title": "The Catcher in the Rye",
+            "author": "J.D Salinger",
+            "date_published": "1951-07-16",
+            "description": "The Catcher in the Rye by J.D. Salinger follows Holden Caulfield, a disillusioned teenager who has just been expelled from his prestigious prep school. The novel chronicles Holden's journey through New York City as he struggles with the complexities of adolescence, alienation, and the loss of innocence. Narrated in a candid, stream-of-consciousness style, Holden reflects on his relationships, his fears of growing up, and his longing for genuine human connection.",
+            "condition": "fair",
+            "rating": 4.5,
+            "price": 5.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014271/10_kxpzi3.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 11,
+        "fields": {
+            "title": "Doppelganger",
+            "author": "Naoimi Klein",
+            "date_published": "2023-09-12",
+            "description": "A Trip Into the Mirror World by Naomi Klein is a thought-provoking exploration of identity, disinformation, and the chaotic landscapes of modern politics. Klein begins with her personal experience of being mistaken for Naomi Wolf, another prominent author, whose views have sharply diverged into conspiracy theories and right-wing rhetoric. Using this case of mistaken identity as a springboard, Klein delves into the idea of 'mirror worlds'—parallel realities fueled by social media, polarization, and misinformation, where truth and fiction blur.",
+            "condition": "like-new",
+            "rating": 4.1,
+            "price": 8.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014271/11_g1vrug.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 12,
+        "fields": {
+            "title": "The Song of Achilles",
+            "author": "Madeline Miller",
+            "date_published": "2011-09-03",
+            "description": "The Song of Achilles by Madeline Miller is a captivating retelling of the Greek myth of Achilles, narrated from the perspective of his closest companion, Patroclus. The novel follows their relationship from childhood, as the exiled Patroclus forms a deep bond with the golden, godlike Achilles, to their eventual romance. Set against the backdrop of the Trojan War, the story weaves themes of love, loyalty, and destiny as the two navigate the challenges of their fated roles in a world of gods and heroes.",
+            "condition": "good",
+            "rating": 4.5,
+            "price": 6.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014274/12_zpdfae.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 13,
+        "fields": {
+            "title": "In Memoriam",
+            "author": "Alice Winn",
+            "date_published": "2023-02-28",
+            "description": "In Memoriam by Alice Winn is a poignant historical novel set during World War I, exploring the profound bond between two young men, Gaunt and Ellwood, who attend a prestigious English boarding school. The story begins with their idyllic life at school, but as war breaks out, they find themselves thrust into the brutal realities of the Western Front. Amidst the chaos and suffering, their friendship deepens into a forbidden and tender love, tested by the horrors of war and the societal expectations of their time.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014271/13_jngart.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 14,
+        "fields": {
+            "title": "Boy Parts",
+            "author": "Eliza Clark",
+            "date_published": "2020-07-23",
+            "description": "Boy Parts by Eliza Clark is a darkly humorous and unsettling psychological novel that follows Irina, an unconventional and provocative photographer in contemporary London. Irina specializes in capturing explicit and often degrading portraits of men she picks up in bars and online, using her art as a form of control and expression. Beneath her sharp wit and confidence, however, lies a deeply troubled psyche, which begins to unravel when she is offered an exhibition of her work and forced to confront her past and the boundaries of her desires.",
+            "condition": "good",
+            "rating": 5.0,
+            "price": 8.50,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014271/14_uiudqb.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 15,
+        "fields": {
+            "title": "The Gentleman from Peru",
+            "author": "Andre Aciman",
+            "date_published": "2024-03-27",
+            "description": "The Gentleman from Peru by André Aciman is a captivating novella about love, memory, and the blurred boundaries between reality and fantasy. Set in a luxurious Italian seaside resort, the story revolves around a mysterious Peruvian gentleman, Enrique, and a young woman, Nico, who becomes intrigued by his seemingly clairvoyant abilities. As their conversations deepen, Enrique reveals his power to see into people's thoughts and memories, drawing Nico into a hypnotic connection where past and present intermingle.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014274/15_sqfyqs.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 16,
+        "fields": {
+            "title": "The New Life",
+            "author": "Tom Crewe",
+            "date_published": "2023-01-03",
+            "description": "The New Life by Tom Crewe is a powerful historical novel set in late 19th-century England, exploring themes of love, identity, and societal change. The story follows two men, John Addington and Henry Ellis, who are drawn together by their shared passion for challenging the strict moral codes of Victorian society. Both men are involved in unconventional relationships—Addington with a younger male partner and Ellis in a marriage with a woman who desires her own freedom. As they collaborate on a groundbreaking book advocating for sexual and personal liberation, their private lives become intertwined with their political ideals.",
+            "condition": "like-new",
+            "rating": 4.5,
+            "price": 9.50,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014274/16_qwmdvd.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 17,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "The Song of Achilles by Madeline Miller is a captivating retelling of the Greek myth of Achilles, narrated from the perspective of his closest companion, Patroclus. The novel follows their relationship from childhood, as the exiled Patroclus forms a deep bond with the golden, godlike Achilles, to their eventual romance. Set against the backdrop of the Trojan War, the story weaves themes of love, loyalty, and destiny as the two navigate the challenges of their fated roles in a world of gods and heroes.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 18,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 19,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 20,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 21,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 22,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 23,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 24,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 25,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 26,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 27,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 28,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 29,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 30,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 31,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 32,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 33,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 34,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 35,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 36,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 37,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 38,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 39,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    },
+    {
+        "model": "bookstore.book",
+        "pk": 40,
+        "fields": {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "F. Scott Fitzgerald",
+            "date_published": "1925-04-10",
+            "description": "A novel set in the Jazz Age, chronicling the life of Jay Gatsby.",
+            "condition": "like-new",
+            "rating": 4.8,
+            "price": 10.99,
+            "cover_image": "https://res.cloudinary.com/dg5jdbsfp/image/upload/v1734014269/1_qylw5j.png",
+            "created_at": "2024-12-12T10:00:00Z"
+        }
+    }
+]
