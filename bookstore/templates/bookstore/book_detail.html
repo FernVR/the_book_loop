@@ -22,8 +22,8 @@
 				<p><strong>Price:</strong> ${{ book.price }}</p>
 
 				<div class="detail-btns">
-					<a class="btn btn-primary" href="#">
-						Add to Cart
+					<a class="btn btn-primary" href="{% url 'add_to_basket' book.id %}">
+						Add to Basket
 						<i class="fa-solid fa-basket-shopping"></i>
 					</a>
 					{% if user.is_authenticated %}

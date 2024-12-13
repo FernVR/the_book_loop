@@ -5,8 +5,8 @@
     <ul>
         {% for book_id, quantity in basket.items %}
             <li>
-                {{ quantity }} x {{ book_title }}
-                <a href="#">Remove</a>
+                {{ item.quantity }} x {{ item.book.title }}
+                <a href="{% url 'remove-from-basket' book_id %}">Remove</a>
             </li>
         {% endfor %}
     </ul>
