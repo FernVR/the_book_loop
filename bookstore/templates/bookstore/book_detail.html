@@ -50,26 +50,34 @@
 
 <section id="reviews">
 	<div class="row">
-		<div class="col-md-8 review-list p-5">
-			<h4>
-				Community Reviews
-			</h4>
-			<ul>
-				<li>
-					Review one
-				</li>
-				<li>
-					Review two
-				</li>
-				<li>
-					Review three
-				</li>
-			</ul>
+		<div class="col-md-8 review-list p-5 border-end">
+			<h4>Community Reviews</h4>
+            {% if reviews %}
+                <ul class="list-unstyled">
+                    {% for review in reviews %}
+                        <li class="mb-3">
+                            <strong>{{ review.author.username }}</strong> - {{ review.rating }}/5
+                            <p class="mb-1">{{ review.review }}</p>
+                            <small class="text-muted">{{ review.created_on|date:"F j, Y" }}</small>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No reviews yet. Be the first to review!</p>
+            {% endif %}
+
 		</div>
 		<div class="col-md-4 add-review">
-			<form>
-				
-			</form>
+			<h4>Leave a Review</h4>
+            {% if user.is_authenticated %}
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+                </form>
+            {% else %}
+                <p><a href="#" class="btn btn-link">Log in</a> to leave a review.</p>
+            {% endif %}
 		</div>
 	</div>
 </section>
