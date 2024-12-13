@@ -126,6 +126,11 @@ footer {
     width: 350px;
 }
 
+.review-list {
+    background-color: #ae7c6f;
+    color: white;
+}
+
 
 /* -------------------------------------------------------- Register/Login/Logout */
 

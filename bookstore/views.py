@@ -33,8 +33,9 @@ def book_search(request):
 
 
 def book_detail(request, id):
-    # Retrieve the book by ID or handle a 404 error if not found
+    """
+    """
+    
     book = get_object_or_404(Book, id=id)
     
-    # Pass the book object to the template
     return render(request, 'bookstore/book_detail.html', {'book': book})
