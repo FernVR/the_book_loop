@@ -27,6 +27,8 @@ urlpatterns = [
     path('', include('home.urls')),
     path('bookstore/', include('bookstore.urls', namespace='bookstore')),
     path('basket/', include('basket.urls')),
+    path('customer_service/', include('customer_service.urls')),
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = custom_404
