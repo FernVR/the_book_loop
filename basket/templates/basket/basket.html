@@ -2,16 +2,20 @@
 {% block content %}
 <h1>Your Basket</h1>
 {% if basket %}
-    <ul>
-        {% for book_id, quantity in basket.items %}
-            <li>
-                {{ item.quantity }} x {{ item.book.title }}
-                <a href="{% url 'remove-from-basket' book_id %}">Remove</a>
-            </li>
-        {% endfor %}
-    </ul>
-    <a href="#">Proceed to Checkout</a>
+{% for book_id, quantity in basket.items %}
+<ul>
+    <li>
+        {{ item.quantity }} x {{ item.book.title }}
+        <a href="{% url 'remove-from-basket' book_id %}">Remove</a>
+    </li>
+
+</ul>
+{% endfor %}
+<a href="#">Proceed to Checkout</a>
 {% else %}
-    <p>Your basket is empty.</p>
+<p>Your basket is empty.</p>
+<a href="{% url 'bookstore:bookstore' %}" class="btn btn-outline-black rounded-0">
+    <span class="text-uppercase">Keep Shopping</span>
+</a>
 {% endif %}
 {% endblock %}
