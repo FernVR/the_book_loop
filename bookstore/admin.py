@@ -15,5 +15,5 @@ class BookAdmin(admin.ModelAdmin):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('author', 'rating', 'created_on', )
+    list_display = ('author', 'book', 'rating', 'created_on', )
     ordering = ('-created_on',)
