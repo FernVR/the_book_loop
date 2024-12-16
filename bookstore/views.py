@@ -48,7 +48,7 @@ def book_detail(request, book_id):
             review.author = request.user
             review.book = book
             review.save()
-            return redirect('bookstore/book_detail', id=id)
+            return redirect('bookstore:book_detail', book_id=book_id)
     
     context = {
         'book': book,
