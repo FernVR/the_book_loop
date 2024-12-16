@@ -33,11 +33,11 @@ def book_search(request):
     })
 
 
-def book_detail(request, id):
+def book_detail(request, book_id):
     """
     """
     
-    book = get_object_or_404(Book, id=id)
+    book = get_object_or_404(Book, pk=book_id)
     reviews = Review.objects.filter(book=book)
     form = ReviewForm()
 
@@ -48,7 +48,7 @@ def book_detail(request, id):
             review.author = request.user
             review.book = book
             review.save()
-            return redirect('book_detail', id=id)
+            return redirect('bookstore/book_detail', id=id)
     
     context = {
         'book': book,

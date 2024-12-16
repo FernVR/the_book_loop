@@ -12,9 +12,9 @@
                     <strong>{{ item.book.title }}</strong><br>
                     <span>Price: ${{ item.book.price }}</span>
                 </div>
-                <div>
-                    <span>Quantity: {{ item.quantity }}</span>
-                </div>
+                <a href="{% url 'remove_from_basket' item.book.id %}" class="btn btn-danger">
+                    Remove
+                </a>
             </li>
             {% endfor %}
         </ul>
