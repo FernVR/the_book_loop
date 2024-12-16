@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from bookstore.models import Book
+from bookstore.views import book_detail
 
 # Create your views here.
 
@@ -26,7 +27,7 @@ def add_to_basket(request, book_id):
         messages.success(request, f'Added "{book.title}" to your basket.')
 
     request.session['basket'] = basket
-    return redirect('book_detail', book_id=book_id)
+    return redirect('bookstore:book_detail', book_id=book_id)
 
 
 
