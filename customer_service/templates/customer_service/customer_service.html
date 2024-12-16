@@ -4,6 +4,12 @@
 
 <div class="text-center">
     <h1>Customer Service Page</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mt-3">Submit Form</button>
+    </form>
     
 </div>
 {% endblock %}
