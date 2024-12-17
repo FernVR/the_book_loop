@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Checkout</h2>
+    <p>Review your order and proceed to payment.</p>
+    <a href="{% url 'view_basket' %}" class="btn btn-secondary">Back to Basket</a>
+    <button class="btn btn-primary">Proceed to Payment</button>
+</div>
+{% endblock %}

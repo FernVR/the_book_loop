@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'bookstore',
     'basket',
     'customer_service',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -192,6 +193,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+# Checkout
+FREE_DELIVERY_THRESHOLD = 40
+STANDARD_DELIVERY_PERCENTAGE = 10 
 
 
 # Default primary key field type

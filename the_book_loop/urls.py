@@ -29,6 +29,7 @@ urlpatterns = [
     path('bookstore/', include('bookstore.urls', namespace='bookstore')),
     path('basket/', include('basket.urls')),
     path('customer_service/', include('customer_service.urls')),
+    path('checkout/', include('checkout.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
