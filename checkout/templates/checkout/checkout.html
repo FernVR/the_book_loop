@@ -1,10 +1,22 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container mt-5">
-    <h2 class="mb-4">Checkout</h2>
-    <p>Review your order and proceed to payment.</p>
-    <a href="{% url 'view_basket' %}" class="btn btn-secondary">Back to Basket</a>
-    <button class="btn btn-primary">Proceed to Payment</button>
+    <h2>Checkout</h2>
+    <form method="POST" id="payment-form">
+        {% csrf_token %}
+        {{ order_form.as_p }}
+        <div id="card-element"></div>
+        <button id="submit" class="btn btn-primary mt-3">Pay Now</button>
+        <p id="card-errors" role="alert"></p>
+        <!-- Hidden fields for Stripe keys -->
+        <span id="id_stripe_public_key" class="d-none">{{ stripe_public_key }}</span>
+        <span id="id_client_secret" class="d-none">{{ client_secret }}</span>
+    </form>
 </div>
+
+<!-- Stripe JS and Custom Script -->
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'checkout/js/stripe.js' %}"></script>
 {% endblock %}
