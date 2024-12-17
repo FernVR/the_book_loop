@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import CustomerForm
 
 # Create your views here.
@@ -15,6 +15,7 @@ def customer_service(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message has been successfully submitted. We will get back to you soon!')
+            return redirect('bookstore:bookstore')
     else:
         form = CustomerForm()
 
