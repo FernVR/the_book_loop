@@ -23,6 +23,7 @@ from home.views import custom_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('testapp/', include('testapp.urls')),
     path('', include('home.urls')),
     path('bookstore/', include('bookstore.urls', namespace='bookstore')),
