@@ -30,6 +30,7 @@ def basket_contents(request):
     context = {
         'basket_items': basket_items,
         'total': total,
+        'order_total': total,
         'book_count': book_count,
         'delivery': delivery,
         'free_delivery_threshold': 40,

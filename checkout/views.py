@@ -81,6 +81,10 @@ def checkout(request):
         'form': form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'basket_items': current_basket['basket_items'],
+        'order_total': current_basket['total'],
+        'delivery_cost': current_basket['delivery'],
+        'grand_total': current_basket['grand_total'],
     }
 
     return render(request, template, context)
