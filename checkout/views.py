@@ -88,3 +88,12 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+    context = {
+        'order': order,
+    }
+    return render(request, 'checkout/checkout_success.html', context)
+
