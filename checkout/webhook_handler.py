@@ -4,7 +4,7 @@ from django.template.loader import render_to_string
 from django.conf import settings
 
 from .models import Order, OrderLineItem
-from bookstore.models import Book  # Updated to use 'bookstore' and 'Book'
+from bookstore.models import Book
 
 
 import json
