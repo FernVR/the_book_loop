@@ -49,7 +49,7 @@
 							<strong>Product Admin:</strong>
 						</h4>
 						<hr>
-						<a class=" btn btn-primary" href="#">Edit Item</a>
+						<a class=" btn btn-primary" href="{% url 'bookstore:edit_book' book.id %}">Edit Item</a>
 						<button class="btn btn-danger" id="deleteButton" data-book-title="{{ book.title }}"
 							data-book-id="{{ book.id }}">Delete Item</button>
 					</div>
