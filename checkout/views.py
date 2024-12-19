@@ -41,7 +41,7 @@ def checkout(request):
 
     if not stripe_public_key or not stripe_secret_key:
         messages.error(request, "Stripe payment keys are missing. Please contact support.")
-        return redirect(reverse('basket'))
+        return redirect(reverse('view_basket'))
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
