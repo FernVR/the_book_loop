@@ -13,7 +13,7 @@
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="{% url 'bookstore:bookstore' %}">
             <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search books...">
                 <div class="input-group-append">
                     <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                         <span class="icon">
@@ -28,6 +28,7 @@
 
 <section id="book-list">
     <div class="container my-5">
+        {% if page_obj %}
         <div class="row">
             {% for book in page_obj %}
             <div class="col-md-3 mb-4">
@@ -42,8 +43,16 @@
             </div>
             {% endfor %}
         </div>
+        {% else %}
+        <div class="no-results text-center mt-4">
+            <h3>Sorry, we found nothing!</h3>
+            <p>Try searching for a different title or author.</p>
+            <a href="{% url 'bookstore:bookstore' %}">Return to The Book Loop Bookstore</a>
+        </div>
+        {% endif %}
+
         <!-- Pagination controls -->
-        <nav aria-label="Page navigation">
+        <nav aria-label="Page navigation" {% if not page_obj.has_other_pages %}style="display: none;"{% endif %}>
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
