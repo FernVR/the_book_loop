@@ -8,6 +8,16 @@
 <h1 class="text-center mt-4">Welcome to the Bookstore</h1>
 
 
+<!-- Add Product for Super Users -->
+{% if request.user.is_superuser %}
+<section id="add-book-section">
+    <h3>Product Admin</h3>
+    <hr>
+    <a href="{% url 'bookstore:add_book' %}">Click here to add a book</a>
+</section>
+{% endif %}
+
+
 <!-- Search bar -->
 <section>
     <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -81,5 +91,8 @@
         </nav>
 
 </section>
+
+
+<script src="{% static 'js/image_preview.js' %}"></script>
 
 {% endblock %}
