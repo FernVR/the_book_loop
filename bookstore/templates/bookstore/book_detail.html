@@ -50,7 +50,7 @@
 						</h4>
 						<hr>
 						<a class=" btn btn-primary" href="#">Edit Item</a>
-						<a class="btn btn-danger" href="#">Delete Item</a>
+						<a class="btn btn-danger" href="{% url 'bookstore:delete_book' book.id %}">Delete Item</a>
 					</div>
 					{% endif %}
 				</div>

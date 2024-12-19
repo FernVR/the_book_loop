@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.urls import reverse
 from .models import Book, Review
 from .forms import ReviewForm
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -65,3 +66,17 @@ def book_detail(request, book_id):
     }
     
     return render(request, 'bookstore/book_detail.html', context)
+
+
+@login_required
+def delete_book(request, book_id):
+    """ Delete a product from the store """
+
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    book = get_object_or_404(Book, pk=book_id)
+    book.delete()
+    messages.success(request, 'Book deleted!')
+    return redirect(reverse('bookstore:bookstore'))
