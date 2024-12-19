@@ -85,10 +85,13 @@
             </p>
         </div>
         <div class="col">
-            <div class="used-books-form">
+            <div class="used-books-form text-center">
                 {% if user.is_authenticated %}
-                <form>
-                    user book form
+                <form method="POST">
+                    <h4>Sell Your Book</h4>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary mt-3">Submit Form</button>
                 </form>
                 {% else %}
                 <p><a href="#">Log in</a> to sell your old books today</p>
