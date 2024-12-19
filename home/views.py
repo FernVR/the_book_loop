@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib import messages
 from .forms import SellBookForm
 
 # Create your views here.
@@ -15,6 +16,8 @@ def home_view(request):
             sell_book = form.save(commit=False)
             sell_book.user = request.user
             sell_book.save()
+            messages.success(request, 'Your book has been successfully submitted!')
+            form = SellBookForm()
 
 
     return render(request, 'home/index.html', {'form': form})
