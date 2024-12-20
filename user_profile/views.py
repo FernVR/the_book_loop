@@ -1,9 +1,10 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, reverse, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from .models import UserProfile
+from .models import UserProfile, WishList
 from .forms import UserProfileForm
 from django.contrib import messages
+from bookstore.models import Book
 
 # Create your views here.
 
@@ -31,3 +32,26 @@ def user_profile(request):
     }
 
     return render(request, template, context)
+
+
+def wishlist_view(request):
+    wishlist, _ = WishList.objects.get_or_create(user=request.user)
+    template = "user_profile/user_profile.html"
+    context = {
+        "wishlist": wishlist.books.all(),
+    }
+    return render(request, template, context)
+
+
+def add_to_wishlist(request):
+    if request.method == "POST":
+        book = get_object_or_404(Book, id=request.POST.get("book_id"))
+        wishlist, _ = WishList.objects.get_or_create(user=request.user)
+        wishlist.books.add(book)
+    return redirect("wishlist_view")
+
+def remove_from_wishlist(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    wishlist = get_object_or_404(WishList, user=request.user)
+    wishlist.books.remove(book)
+    return redirect("wishlist_view")

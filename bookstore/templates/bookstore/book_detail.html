@@ -28,10 +28,12 @@
 						<i class="fa-solid fa-basket-shopping"></i>
 					</a>
 					{% if user.is_authenticated %}
-					<a class="btn" href="#">
-						Add to Wish-list
-						<i class="fa-solid fa-gift"></i>
-					</a>
+					<form action="{% url 'add_to_wishlist' %}" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="book_id" value="{{ book.id }}">
+						<button type="submit" class="btn btn-outline-secondary">
+							<i class="fa-solid fa-gift"></i> Add to Wish-List</button>
+					</form>
 					{% endif %}
 
 					{% else %}

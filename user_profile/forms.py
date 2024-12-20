@@ -1,5 +1,6 @@
 from django import forms
 from .models import UserProfile
+from bookstore.models import Book
 
 
 class UserProfileForm(forms.ModelForm):
@@ -26,4 +27,8 @@ class UserProfileForm(forms.ModelForm):
             'default_postcode': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Postcode'}),
             'default_country': forms.Select(attrs={'class': 'form-control'}),
         }
+
+
+class AddToWishListForm(forms.Form):
+    book_id = forms.IntegerField(widget=forms.HiddenInput())
     
