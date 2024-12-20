@@ -105,10 +105,10 @@
                 </ul>
 
                 {% if user.is_authenticated %}
-                <div class="navbar-text login-status">
+                <a href="{% url 'user_profile' %}" class="navbar-text login-status">
                     You are logged in as {{ user }}
                     <i class="fa-regular fa-user"></i>
-                </div>
+                </a>
                 <div>
                     <a class="nav-link log-link" aria-current="page" href="{% url 'account_logout' %}">
                         Logout
