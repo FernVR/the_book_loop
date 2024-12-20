@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -14,44 +15,25 @@
                 <li>
                     Username: {{ profile.user.username }}
                 </li>
+                <li>
+                    Email: {{ profile.user.email }}
+                </li>
             </ul>
         </div>
         <div class="col-12 col-lg-6">
             <p class="text-muted">Default Delivery Information</p>
-            <form class="mt-3" action="{% url 'user_profile' %}" method="POST" id="profile-update-form">
-                {% csrf_token %}
-
-                <div class="form-group">
-                    <label for="id_default_phone_number">Phone Number</label>
-                    {{ form.default_phone_number }}
-                </div>
-                <div class="form-group">
-                    <label for="id_default_street_address1">Street Address 1</label>
-                    {{ form.default_street_address1 }}
-                </div>
-                <div class="form-group">
-                    <label for="id_default_street_address2">Street Address 2</label>
-                    {{ form.default_street_address2 }}
-                </div>
-                <div class="form-group">
-                    <label for="id_default_town_or_city">Town or City</label>
-                    {{ form.default_town_or_city }}
-                </div>
-                <div class="form-group">
-                    <label for="id_default_county">County</label>
-                    {{ form.default_county }}
-                </div>
-                <div class="form-group">
-                    <label for="id_default_postcode">Postcode</label>
-                    {{ form.default_postcode }}
-                </div>
-                <div class="form-group">
-                    <label for="id_default_country">Country</label>
-                    {{ form.default_country }}
-                </div>
-
-                <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
-            </form>
+            <ul>
+                <li>Phone Number: {{ profile.default_phone_number }}</li>
+                <li>Street Address 1: {{ profile.default_street_address1 }}</li>
+                <li>Street Address 2: {{ profile.default_street_address2 }}</li>
+                <li>Town or City: {{ profile.default_town_or_city }}</li>
+                <li>County: {{ profile.default_county }}</li>
+                <li>Postcode: {{ profile.default_postcode }}</li>
+                <li>Country: {{ profile.default_country }}</li>
+            </ul>
+        </div>
+        <div class="mt-4">
+            <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
         </div>
     </div>
 </section>
@@ -62,13 +44,34 @@
         {% for book in wishlist %}
         <li>
             {{ book.title }} by {{ book.author }}
-            <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger">Remove</a>
+            <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger remove-from-wishlist" data-book-id="{{ book.id }}">Remove</a>
             <a href="{% url 'add_to_basket' book.id %}" class="btn btn-primary">Add to Basket</a>
         </li>
         {% empty %}
         <p>Your wish-list is empty.</p>
         {% endfor %}
     </ul>
+    <!-- Modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="removeModalLabel">Confirm Removal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to remove this book from your wishlist?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a id="confirm-remove-btn" href="#" class="btn btn-danger">Remove</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- Link to the wishlist.js file -->
+<script src="{% static 'js/wishlist.js' %}"></script>
 
 {% endblock %}
