@@ -47,9 +47,10 @@ footer {
 }
 
 .newsletter-form {
-    border: 1px solid black;
+    background-color: white;
     border-radius: 2rem;
-    padding: 50px 20px;
+    width: 450px;
+    padding: 10px;
 }
 
 
@@ -152,6 +153,15 @@ footer {
 
 
 /* -------------------------------------------------------- 404 error Page */
+
+/* -------------------------------------------------------- Mailchimp */
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 400px;
+}
 
 
 /* -------------------------------------------------------- Media Queries */
