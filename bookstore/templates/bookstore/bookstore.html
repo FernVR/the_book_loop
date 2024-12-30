@@ -37,11 +37,11 @@
 </section>
 
 <section id="book-list">
-    <div class="container my-5">
+    <div class="container-fluid">
         {% if page_obj %}
         <div class="row">
             {% for book in page_obj %}
-            <div class="col-md-3 mb-4">
+            <div class="col-md-4 mb-2">
                 <div class="card h-100 book-list-cover">
                     <img src="{{ book.cover_image.url }}" class="card-img-top book-list-cover" alt="{{ book.title }}">
                     <div class="card-body text-center">

@@ -165,7 +165,10 @@ form .form-group {
 /* -------------------------------------------------------- Bookstore */
 
 .book-list-cover {
-    width: 250px;
+    background: transparent;
+    border: none;
+    margin: 0 auto;
+    width: 220px;
 }
 
 .book-detail-img {
@@ -212,9 +215,11 @@ form .form-group {
 /* -------------------------------------------------------- Media Queries */
 
 
-/* Newsletter form - Footer - Mobile/Tablet sizes */
+/* Mobile/Tablet sizes */
 
 @media screen and (min-width: 350px) {
+
+    /* Newsletter form - Footer */
 
     #mc_embed_signup {
         width: 300px;
@@ -228,6 +233,25 @@ form .form-group {
     #newsletter h2 {
         font-size: 1rem;
     }
+
+    /* Bookstore */
+
+    .book-list-cover {
+        width: 300px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    /* Bookstore */
+
+    .book-list-cover {
+        width: 220px;
+    }
+
 }
 
 
