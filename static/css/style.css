@@ -46,13 +46,49 @@ footer {
     justify-content: space-between;
 }
 
+/* Newsletter form */
+
 .newsletter-form {
     background-color: white;
     border-radius: 2rem;
-    width: 450px;
     padding: 10px;
+    width: 450px;
+    margin: 0 auto;
 }
 
+#newsletter {
+    padding: 20px;
+    color: #212529;
+    box-sizing: border-box;
+}
+
+#newsletter h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#newsletter .mc-field-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#newsletter .mc-field-group input[type="email"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#newsletter input[type="submit"] {
+    cursor: pointer;
+}
+
+#newsletter input[type="submit"]:hover {
+    background-color: #142f4d;
+}
 
 /* -------------------------------------------------------- Home Page */
 
@@ -174,6 +210,26 @@ form .form-group {
 
 
 /* -------------------------------------------------------- Media Queries */
+
+
+/* Newsletter form - Footer - Mobile/Tablet sizes */
+
+@media screen and (min-width: 350px) {
+
+    #mc_embed_signup {
+        width: 300px;
+    }
+
+    .newsletter-form {
+        width: 350px;
+        padding: 5px;
+    }
+
+    #newsletter h2 {
+        font-size: 1rem;
+    }
+}
+
 
 /* Styles for screens larger than 1000px */
 @media screen and (min-width: 1000px) {
