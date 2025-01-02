@@ -5,90 +5,111 @@
 
 {% block content %}
 
-<h1 class="text-center mt-4">Welcome to the Bookstore</h1>
+<section class="bookstore">
+
+    <section id="banner" class="container-fluid d-flex d-none d-sm-block store-banner">
+        <div>
+            <h1>Welcome to The Book Loop</h1>
+            <p>
+                your own eco-friendly book community
+            </p>
+        </div>
+    </section>
+
+    <!-- Landing Banner Img/ Mobile-specific content -->
+    <section class="store-banner container-fluid d-block d-sm-none p-6">
+        <h2>Welcome to The Book Loop</h2>
+    </section>
 
 
-<!-- Add Product for Super Users -->
-{% if request.user.is_superuser %}
-<section id="add-book-section">
-    <h3>Product Admin</h3>
-    <hr>
-    <a href="{% url 'bookstore:add_book' %}">Click here to add a book</a>
-</section>
-{% endif %}
+    <h1 class="text-center mt-4">Welcome to the Bookstore</h1>
 
 
-<!-- Search bar -->
-<section>
-    <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="{% url 'bookstore:bookstore' %}">
-            <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search books...">
-                <div class="input-group-append">
-                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
+    <!-- Add Product for Super Users -->
+    {% if request.user.is_superuser %}
+    <section id="add-book-section">
+        <h3>Product Admin</h3>
+        <hr>
+        <a href="{% url 'bookstore:add_book' %}">Click here to add a book</a>
+    </section>
+    {% endif %}
 
-<section id="book-list">
-    <div class="container-fluid">
-        {% if page_obj %}
-        <div class="row">
-            {% for book in page_obj %}
-            <div class="col-md-4 mb-2">
-                <div class="card h-100 book-list-cover">
-                    <img src="{{ book.cover_image.url }}" class="card-img-top book-list-cover" alt="{{ book.title }}">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">{{ book.title }}</h5>
-                        <p class="card-text">{{ book.author }}</p>
-                        <a href="{% url 'bookstore:book_detail' book.id %}" class="btn btn-primary">View Details</a>
+
+    <!-- Search bar -->
+    <section>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <form method="GET" action="{% url 'bookstore:bookstore' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q"
+                        placeholder="Search books...">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
                     </div>
                 </div>
-            </div>
-            {% endfor %}
+            </form>
         </div>
-        {% else %}
-        <div class="no-results text-center mt-4">
-            <h3>Sorry, we found nothing!</h3>
-            <p>Try searching for a different title or author.</p>
-            <a href="{% url 'bookstore:bookstore' %}">Return to The Book Loop Bookstore</a>
-        </div>
-        {% endif %}
+    </section>
 
-        <!-- Pagination controls -->
-        <nav aria-label="Page navigation" {% if not page_obj.has_other_pages %}style="display: none;"{% endif %}>
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <span class="page-link">Previous</span>
-                </li>
-                {% endif %}
-                {% for num in page_obj.paginator.page_range %}
-                <li class="page-item {% if page_obj.number == num %}active{% endif %}">
-                    <a class="page-link" href="?page={{ num }}">{{ num }}</a>
-                </li>
+    <section id="book-list">
+        <div class="container-fluid">
+            {% if page_obj %}
+            <div class="row">
+                {% for book in page_obj %}
+                <div class="col-md-4 mb-2">
+                    <div class="card h-100 book-list-cover">
+                        <img src="{{ book.cover_image.url }}" class="card-img-top book-list-cover"
+                            alt="{{ book.title }}">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">{{ book.author }}</p>
+                            <a href="{% url 'bookstore:book_detail' book.id %}" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
-                {% if page_obj.has_next %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <span class="page-link">Next</span>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
+            </div>
+            {% else %}
+            <div class="no-results text-center mt-4">
+                <h3>Sorry, we found nothing!</h3>
+                <p>Try searching for a different title or author.</p>
+                <a href="{% url 'bookstore:bookstore' %}">Return to The Book Loop Bookstore</a>
+            </div>
+            {% endif %}
+
+            <!-- Pagination controls -->
+            <nav aria-label="Page navigation" {% if not page_obj.has_other_pages %}style="display: none;" {% endif %}>
+                <ul class="pagination justify-content-center">
+                    {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                    {% endif %}
+                    {% for num in page_obj.paginator.page_range %}
+                    <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                    {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">Next</span>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+    </section>
 
 </section>
 
