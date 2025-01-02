@@ -3,13 +3,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff5d3;
+    background-color: #ffc2b1;
 }
 
 /* -------------------------------------------------------- Nav */
 
 header {
-    background-color: #ffc2b1;
+    background-color: #FFFDF9;
 }
 
 .nav-link {
@@ -39,7 +39,7 @@ header {
 /* -------------------------------------------------------- Footer */
 
 footer {
-    background-color: #ffc2b1;
+    background-color: #FFFDF9;
 }
 
 .footer {
@@ -48,8 +48,17 @@ footer {
 
 /* Newsletter form */
 
+/* Mailchimp */
+
+#mc_embed_signup {
+    background: #ffc2b1;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 400px;
+}
+
 .newsletter-form {
-    background-color: white;
+    background-color: #ffc2b1;
     border-radius: 2rem;
     padding: 10px;
     width: 450px;
@@ -95,7 +104,7 @@ footer {
 /* Home Banner */
 
 .home-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/home-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/media/site-media/home-banner.png);
     padding: 120px 20px;
     background-position: center;
     justify-content: space-between;
@@ -106,7 +115,7 @@ footer {
 
 .about-sec {
     justify-content: space-evenly;
-    background-color: #ffc2b1;
+    background-color: #FFE4AE;
     padding: 50px 0;
 }
 
@@ -120,8 +129,9 @@ footer {
 /* Best Sellar List */
 
 .best-seller-sec {
-    background-color: #d4a40d;
+    background-color: #9a503c;
     padding-top: 30px;
+    color: white;
 }
 
 .best-sellers {
@@ -202,14 +212,6 @@ form .form-group {
 
 /* -------------------------------------------------------- 404 error Page */
 
-/* -------------------------------------------------------- Mailchimp */
-
-#mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 400px;
-}
 
 
 /* -------------------------------------------------------- Media Queries */
