@@ -81,7 +81,6 @@
                 <img src="{{ MEDIA_URL }}site-media/logo.png" class="logo">
             </a>
 
-            <!-- BUG This button isnt working - fix somehow -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -105,13 +104,20 @@
                             Customer Service
                         </a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'user_profile' %}">
+                            Profile
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
 
                 {% if user.is_authenticated %}
-                <a href="{% url 'user_profile' %}" class="navbar-text login-status">
+                <div class="navbar-text login-status">
                     You are logged in as {{ user }}
                     <i class="fa-regular fa-user"></i>
-                </a>
+                </div>
                 <div>
                     <a class="nav-link log-link" aria-current="page" href="{% url 'account_logout' %}">
                         Logout
@@ -135,17 +141,22 @@
                 </ul>
                 {% endif %}
 
-                <div id="basket-link">
-                    <a class="navbar-text h3 basket-icon" href="{% url 'view_basket' %}">
+                <div id="basket-link" class="d-flex flex-column justify-content-center align-items-center position-relative">
+                    <a class="navbar-text h3 basket-icon position-relative" href="{% url 'view_basket' %}">
                         <i class="fa-solid fa-basket-shopping"></i>
                         {% if total %}
-                        <div>
+                        <div class="basket-total">
                             $ {{ total }}
+                        </div>
+                        {% else %}
+                        <div class="basket-total">
+                            $ 0.00
                         </div>
                         {% endif %}
                     </a>
                 </div>
 
+                <!-- not sure about this :
                 {% if user.is_authenticated %}
                 <div id="wishlist-link">
                     <a class="navbar-text h3 wishlist-icon" href="#">
@@ -153,6 +164,7 @@
                     </a>
                 </div>
                 {% endif %}
+                -->
 
 
             </div>

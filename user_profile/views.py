@@ -87,7 +87,7 @@ def add_to_wishlist(request):
             print(f"Error adding to wishlist: {e}")
     else:
         messages.error(request, "Invalid request method.")
-    return redirect("wishlist_view")
+    return redirect("bookstore:bookstore")
 
 
 def remove_from_wishlist(request, book_id):
