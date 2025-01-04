@@ -97,4 +97,4 @@ def remove_from_wishlist(request, book_id):
     wishlist = get_object_or_404(WishList, user=request.user)
     wishlist.books.remove(book)
     messages.success(request, f'"{book.title}" has been removed from your wish-list.')
-    return redirect("wishlist_view")
+    return redirect("user_profile")
