@@ -259,6 +259,25 @@ form .form-group {
     border-radius: 0;
 }
 
+/* Custom styles for user profile page */
+#user-info h4, #wish-list h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+#user-info ul, #wish-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#user-info ul li, #wish-list ul li {
+    margin-bottom: 10px;
+}
+
+#wish-list ul li strong {
+    color: #007bff;
+}
+
 
 /* -------------------------------------------------------- 404 error Page */
 

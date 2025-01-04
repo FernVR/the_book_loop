@@ -3,13 +3,14 @@
 
 {% block content %}
 
-<h1>
+<h1 class="text-center mb-4">
     User profile page
 </h1>
 
-<section id="user-info">
-    <div>
-        <div class="col-lg-6">
+<section id="user-info" class="container mb-5">
+    <div class="row">
+        <!-- User Information and Default Delivery Information -->
+        <div class="col-12 col-lg-6 mb-4">
             <h4> User Information </h4>
             <ul>
                 <li>
@@ -19,8 +20,6 @@
                     Email: {{ profile.user.email }}
                 </li>
             </ul>
-        </div>
-        <div class="col-12 col-lg-6">
             <p class="text-muted">Default Delivery Information</p>
             <ul>
                 <li>Phone Number: {{ profile.default_phone_number }}</li>
@@ -31,45 +30,48 @@
                 <li>Postcode: {{ profile.default_postcode }}</li>
                 <li>Country: {{ profile.default_country }}</li>
             </ul>
-        </div>
-        <div class="mt-4">
             <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
         </div>
-    </div>
-</section>
-
-<section id="wish-list">
-    <h2>Your Wish-List</h2>
-    <ul>
-        {% for book in wishlist %}
-        <li>
-            {{ book.title }} by {{ book.author }}
-            <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger remove-from-wishlist" data-book-id="{{ book.id }}">Remove</a>
-            <a href="{% url 'add_to_basket' book.id %}" class="btn btn-primary">Add to Basket</a>
-        </li>
-        {% empty %}
-        <p>Your wish-list is empty.</p>
-        {% endfor %}
-    </ul>
-    <!-- Modal -->
-    <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="removeModalLabel">Confirm Removal</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to remove this book from your wishlist?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <a id="confirm-remove-btn" href="#" class="btn btn-danger">Remove</a>
+        
+        <!-- Wish list section -->
+        <div class="col-12 col-lg-6" id="wish-list">
+            <h2>Your Wish-List</h2>
+            <ul>
+                {% for book in wishlist %}
+                <li>
+                    {{ book.title }} by {{ book.author }}
+                    <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger remove-from-wishlist"
+                        data-book-id="{{ book.id }}">Remove</a>
+                    <a href="{% url 'add_to_basket' book.id %}" class="btn btn-primary">Add to Basket</a>
+                </li>
+                {% empty %}
+                <p>Your wish-list is empty.</p>
+                {% endfor %}
+            </ul>
+            <!-- Modal -->
+            <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="removeModalLabel">Confirm Removal</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to remove this book from your wishlist?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <a id="confirm-remove-btn" href="#" class="btn btn-danger">Remove</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <!-- Link to the wishlist.js file -->
 <script src="{% static 'js/wishlist.js' %}"></script>
