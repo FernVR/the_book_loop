@@ -27,7 +27,7 @@ def add_to_basket(request, book_id):
         messages.success(request, f'Added "{book.title}" to your basket.')
 
     request.session['basket'] = basket
-    return redirect('bookstore:book_detail', book_id=book_id)
+    return redirect('view_basket')
 
 
 
