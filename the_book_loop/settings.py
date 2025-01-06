@@ -38,7 +38,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
     'thebookloop.herokuapp.com',
-    'thebookloop-38d0e34a2881.herokuapp.com'
+    'thebookloop-38d0e34a2881.herokuapp.com',
+    'localhost'
 ]
 
 CSRF_TRUSTED_ORIGINS = [

@@ -5,7 +5,7 @@
 {% block content %}
 
 
-<section id="banner" class="container d-flex d-none d-sm-block home-banner">
+<section id="banner" class="container-fluid d-flex d-none d-sm-block home-banner">
     <div>
         <h1>Welcome to The Book Loop</h1>
         <p>
@@ -55,25 +55,29 @@
         <h2>Best Sellar List</h2>
         <p>Our best selling books at the moment</p>
     </div>
-    <div class="row d-flex best-sellers">
-        <div class="col">
-            <img src="media/products/1.png" class="best-seller-img">
-            <p class="text-center">Hitchhiker's Guide to the Galaxy</p>
-        </div>
-        <div class="col">
-            <img src="media/products/2.png" class="best-seller-img">
-            <p class="text-center">The Hate U Give</p>
-        </div>
-        <div class="col">
-            <img src="media/products/3.png" class="best-seller-img">
-            <p class="text-center">The Theory of Everything Else</p>
-        </div>
-        <div class="col">
-            <img src="media/products/4.png" class="best-seller-img">
-            <p class="text-center">The Culture Map</p>
-        </div>
+    <hr>
+    <div class="row d-flex justify-content-center best-sellers">
+        {% if best_seller_books %}
+            {% for book in best_seller_books %}
+            <div class="col-6 col-md-3 text-center">
+                <a href="{% url 'bookstore:book_detail' book.id %}">
+                    <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="best-seller-img rounded-circle">
+                </a>
+                <p class="mt-3">
+                    <a href="{% url 'bookstore:book_detail' book.id %}" class="text-decoration-none">
+                        {{ book.title }}
+                        <br>
+                        by {{ book.author }}
+                        <br>
+                        {{ book.rating }} <i class="fa-solid fa-star"></i>
+                    </a>
+                </p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No best sellers available at the moment. Check back later!</p>
+        {% endif %}
     </div>
-
 </section>
 
 <section id="sell-books-form" class="sell-books-sec text-center text-white">

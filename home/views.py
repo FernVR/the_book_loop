@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.contrib import messages
 from .forms import SellBookForm
+from bookstore.models import Book
+import random
 
 # Create your views here.
 
@@ -18,9 +20,16 @@ def home_view(request):
             sell_book.save()
             messages.success(request, 'Your book has been successfully submitted!')
             form = SellBookForm()
+    
+    all_books = list(Book.objects.all())
+    best_seller_books = random.sample(all_books, min(4, len(all_books)))
 
+    context = {
+        'form': form,
+        'best_seller_books': best_seller_books,
+    }
 
-    return render(request, 'home/index.html', {'form': form})
+    return render(request, 'home/index.html', context)
 
 
 def custom_404(request, exception):
