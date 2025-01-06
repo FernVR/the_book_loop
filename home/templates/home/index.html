@@ -5,7 +5,7 @@
 {% block content %}
 
 
-<section id="banner" class="container-fluid d-flex d-none d-sm-block home-banner">
+<section id="banner" class="container-fluid d-flex d-none d-sm-block home-banner align-items-center justify-content-center text-center">
     <div>
         <h1>Welcome to The Book Loop</h1>
         <p>
@@ -26,12 +26,13 @@
     </a>
 </section>
 
-<section id="about" class="container">
+<section id="about" class="container-fluid">
     <div class="row d-flex about-sec">
         <div class="col-md-6 about-img">
         </div>
         <div class="col-md-6 about-content text-center">
             <h3>What we do here</h3>
+            <hr>
             <p>
                 Welcome to The Book Loop, your online destination for second-hand books that bring stories back to life!
                 We're more than just a bookstore—we're a community dedicated to promoting sustainability and reducing
@@ -52,14 +53,14 @@
 
 <section id="best-seller-list" class="container-fluid best-seller-sec">
     <div class="row text-center pt-5">
-        <h2>Best Sellar List</h2>
+        <h2>- Best Seller List -</h2>
         <p>Our best selling books at the moment</p>
     </div>
     <hr>
     <div class="row d-flex justify-content-center best-sellers">
         {% if best_seller_books %}
             {% for book in best_seller_books %}
-            <div class="col-6 col-md-3 text-center">
+            <div class="col-12 col-md-6 col-lg-3 text-center my-3">
                 <a href="{% url 'bookstore:book_detail' book.id %}">
                     <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="best-seller-img rounded-circle">
                 </a>
@@ -80,7 +81,7 @@
     </div>
 </section>
 
-<section id="sell-books-form" class="sell-books-sec text-center text-white">
+<section id="sell-books-form" class="sell-books-sec text-center text-white container-fluid">
     <div class="row">
         <div class="col-12 col-lg-6">
             <h3>We will buy your pre-loved books!</h3>
@@ -117,7 +118,7 @@
                     <button type="submit" class="btn btn-primary mt-3">Submit Form</button>
                 </form>
                 {% else %}
-                <p><a href="#">Log in</a> to sell your old books today</p>
+                <p><a href="#" class="text-white">Log in</a> to sell your old books today</p>
                 {% endif %}
             </div>
         </div>
