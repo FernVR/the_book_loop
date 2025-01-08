@@ -2,39 +2,34 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <hr>
-            <h2 class="logo-font mb-4">Book Management</h2>
-            <h5 class="text-muted">Add a New Book</h5>
-            <hr>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'bookstore:add_book' %}" class="form mb-2" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form %}
-                    {% if field.name != 'cover_image' %}
-                    <div class="form-group">
-                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                        {{ field }}
+<div class="container-fluid" id="add-book">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="form-wrapper py-4 px-4">
+                <h2 class="logo-font text-center mb-4">Book Management</h2>
+                <h5 class="text-muted text-center mb-4">Add a New Book</h5>
+                <form method="POST" action="{% url 'bookstore:add_book' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'cover_image' %}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {{ field }}
+                        </div>
+                        {% else %}
+                        <!-- Custom block for the cover image -->
+                        <div class="form-group">
+                            <label for="{{ form.cover_image.id_for_label }}">{{ form.cover_image.label }}</label>
+                            {{ form.cover_image }}
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn btn-outline-dark rounded-0" href="{% url 'bookstore:bookstore' %}">Cancel</a>
+                        <button class="btn btn-dark rounded-0" type="submit">Add Book</button>
                     </div>
-                    {% else %}
-                    <!-- Custom block for the cover image -->
-                    <div class="form-group">
-                        <label for="{{ form.cover_image.id_for_label }}">{{ form.cover_image.label }}</label>
-                        {{ form.cover_image }}
-                    </div>
-                    {% endif %}
-                {% endfor %}
-                <div class="text-right">
-                    <a class="btn btn-outline-dark rounded-0" href="{% url 'bookstore:bookstore' %}">Cancel</a>
-                    <button class="btn btn-dark rounded-0" type="submit">Add Book</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
