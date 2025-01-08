@@ -233,8 +233,8 @@ form .form-group {
 /* -------------------------------------------------------- Bookstore */
 
 .store-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/media/site-media/store-banner.png);
-    padding: 120px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/media/site-media/store-banner.png);
+    padding: 150px 20px;
     background-position: center;
     justify-content: space-between;
     color: #fff5d3;
@@ -276,12 +276,49 @@ form .form-group {
     width: 220px;
 }
 
+.detail-btn {
+    background-color: transparent;
+    border: 1px solid black;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.detail-btn:hover {
+    background-color: #313030;
+    border: 1px solid black;
+}
+
 .pag-controls {
     padding-top: 50px;
 }
 
 .book-detail-img {
     width: 350px;
+}
+
+.add-basket,
+.add-wishlist {
+    border: none;
+    margin-right: 10px;
+}
+
+.add-basket {
+    background-color: #282828;
+}
+
+.add-basket:hover {
+    background-color: #262626;
+}
+
+.edit-item {
+    background-color: #282828;
+    border: 1px solid #282828;
+}
+
+.edit-item:hover {
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
 }
 
 .review-list {

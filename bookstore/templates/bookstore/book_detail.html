@@ -8,7 +8,7 @@
 <section id="book-detail">
 	<div class="container mt-5 mb-5">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 p-4">
 				<img src="{{ book.cover_image.url }}" alt="{{ book.title }} cover image"
 					class="img-fluid book-detail-img">
 			</div>
@@ -21,9 +21,9 @@
 				<p><strong>Condition:</strong> {{ book.condition }}</p>
 				<p><strong>Price:</strong> ${{ book.price }}</p>
 
-				<div class="detail-btns">
+				<div class="d-flex">
 					{% if book.in_stock %}
-					<a class="btn btn-primary" href="{% url 'add_to_basket' book.id %}">
+					<a class="btn btn-primary add-basket" href="{% url 'add_to_basket' book.id %}">
 						Add to Basket
 						<i class="fa-solid fa-basket-shopping"></i>
 					</a>
@@ -31,8 +31,9 @@
 					<form action="{% url 'add_to_wishlist' %}" method="POST">
 						{% csrf_token %}
 						<input type="hidden" name="book_id" value="{{ book.id }}">
-						<button type="submit" class="btn btn-outline-secondary">
-							<i class="fa-solid fa-gift"></i> Add to Wish-List</button>
+						<button type="submit" class="btn btn-outline-secondary add-wishlist">
+							Add to Wish-List <i class="fa-solid fa-gift"></i> 
+						</button>
 					</form>
 					{% endif %}
 
@@ -41,39 +42,36 @@
 						Out of Stock
 					</button>
 					{% endif %}
-
-
-					<!-- Product Admin links displayed ONLY to superusers -->
-					{% if request.user.is_superuser %}
-					<div class="mt-5">
+				</div>
+				<!-- Product Admin links displayed ONLY to superusers -->
+				{% if request.user.is_superuser %}
+				<div class="mt-5">
+					<h4>
+						<strong>Product Admin:</strong>
 						<hr>
-						<h4>
-							<strong>Product Admin:</strong>
-						</h4>
-						<hr>
-						<a class=" btn btn-primary" href="{% url 'bookstore:edit_book' book.id %}">Edit Item</a>
-						<button class="btn btn-danger" id="deleteButton" data-book-title="{{ book.title }}"
-							data-book-id="{{ book.id }}">Delete Item</button>
-					</div>
-					{% endif %}
+					</h4>
+					<a class=" btn btn-primary edit-item" href="{% url 'bookstore:edit_book' book.id %}">Edit Item</a>
+					<button class="btn btn-danger" id="deleteButton" data-book-title="{{ book.title }}"
+						data-book-id="{{ book.id }}">Delete Item</button>
+				</div>
+				{% endif %}
 
-					<!-- Modal for confirming delete -->
-					<div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
-						aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
-									<button type="button" class="btn-close" data-bs-dismiss="modal"
-										aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-									Are you sure you want to delete <span id="bookTitle"></span>?
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-									<a id="confirmDelete" class="btn btn-danger" href="#">Yes</a>
-								</div>
+				<!-- Modal for confirming delete -->
+				<div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								Are you sure you want to delete <span id="bookTitle"></span>?
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+								<a id="confirmDelete" class="btn btn-danger" href="#">Yes</a>
 							</div>
 						</div>
 					</div>
@@ -94,6 +92,14 @@
 					<strong>{{ review.author.username }}</strong> - {{ review.rating }}/5
 					<p class="mb-1">{{ review.review }}</p>
 					<small class="text-muted">{{ review.created_on|date:"F j, Y" }}</small>
+
+					{% if review.author == user %}
+					<!-- Add a delete button for reviews posted by the logged-in user -->
+					<form method="POST" action="{% url 'bookstore:delete_review' review.id %}" class="d-inline">
+						{% csrf_token %}
+						<button type="submit" class="btn btn-danger btn-sm mt-2">Delete</button>
+					</form>
+					{% endif %}
 				</li>
 				{% endfor %}
 			</ul>

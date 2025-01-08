@@ -6,6 +6,7 @@ from django.urls import reverse
 from .models import Book, Review
 from .forms import ReviewForm, BookForm
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
 
 # Create your views here.
@@ -135,3 +136,18 @@ def add_book(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """
+    View to delete a review.
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    
+    if review.author != request.user:
+        return HttpResponseForbidden("You are not allowed to delete this review.")
+    
+    review.delete()
+    messages.success(request, "Your review has been deleted successfully.")
+    return redirect('bookstore:book_detail', book_id=review.book.id)
