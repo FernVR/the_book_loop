@@ -342,8 +342,8 @@ textarea {
 }
 
 textarea:focus {
-    outline: none; /* Removes the focus outline */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a subtle focus shadow */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .submit-review {
@@ -411,8 +411,16 @@ textarea:focus {
 
 /* -------------------------------------------------------- Register/Login/Logout */
 
+#login,
+#logout,
+#signup {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/media/site-media/customer-service-bg.png) ;
+}
+
 .log-form-card {
     margin: 0 auto;
+    max-width: 500px;
+    padding: 100px 20px;
 }
 
 
