@@ -27,9 +27,12 @@
         <!-- Add Product for Super Users -->
         {% if request.user.is_superuser %}
         <section id="add-book-section">
-            <h3>Product Admin</h3>
-            <hr>
-            <a href="{% url 'bookstore:add_book' %}">Click here to add a book</a>
+            <h5 class="mt-3">Product Admin</h5>
+            <br>
+            <a href="{% url 'bookstore:add_book' %}" class="add-book-btn">
+                <i class="fa-solid fa-plus"></i>
+                 add book
+            </a>
         </section>
         {% endif %}
 
