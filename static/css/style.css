@@ -88,7 +88,7 @@ footer {
 /* Mailchimp */
 
 #mc_embed_signup {
-    background: #ffc2b1;
+    background: #FFFDF9;
     clear: left;
     font-size: 14px;
     font-family: Inika, sans-serif;
@@ -96,7 +96,7 @@ footer {
 }
 
 .newsletter-form {
-    background-color: #ffc2b1;
+    background-color: #FFFDF9;
     border-radius: 2rem;
     padding: 10px;
     width: 450px;
