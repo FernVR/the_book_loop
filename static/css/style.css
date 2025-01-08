@@ -142,11 +142,11 @@ footer {
 /* Home Banner */
 
 .home-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/media/site-media/home-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/media/site-media/home-banner.png);
     padding: 120px 20px;
     background-position: center;
     justify-content: space-between;
-    color: #fff5d3;
+    color: #fafafa;
 }
 
 /* About */
@@ -226,6 +226,7 @@ form .form-group {
     border: 1px solid white;
     border-radius: 2rem;
     padding: 50px 20px;
+    max-width: 700px;
 }
 
 
