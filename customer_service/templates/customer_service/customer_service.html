@@ -2,13 +2,29 @@
 
 {% block content %}
 
-<div class="text-center text-white customer-service-page">
-    <h3>Customer Service</h3>
+<div class="text-white customer-service-page">
+    <h3 class="text-center">Customer Service</h3>
     <hr>
+    <p class="text-center p-2 align-items-center justify-content-center">
+        Welcome to The Book Loop's Customer Service! We're here to help you with any questions, concerns, or assistance you may need. 
+        <br>
+        Please fill out the form below, and our team will get back to you as soon as possible.
+    </p>
 
     <form method="POST" class="customer-service-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="mb-3">
+            <label for="id_full_name" class="form-label">Full Name</label>
+            {{ form.full_name }}
+        </div>
+        <div class="mb-3">
+            <label for="id_email" class="form-label">Email</label>
+            {{ form.email }}
+        </div>
+        <div class="mb-3">
+            <label for="id_message" class="form-label">Message</label>
+            {{ form.message }}
+        </div>
         <button type="submit" class="btn btn-primary mt-3">Submit Form</button>
     </form>
     
