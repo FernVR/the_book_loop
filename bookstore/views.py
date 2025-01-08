@@ -58,6 +58,7 @@ def book_detail(request, book_id):
             review.author = request.user
             review.book = book
             review.save()
+            messages.success(request, "Your review has been submitted.")
             return redirect('bookstore:book_detail', book_id=book_id)
     
     context = {
@@ -83,6 +84,7 @@ def delete_book(request, book_id):
     return redirect(reverse('bookstore:bookstore'))
 
 
+@login_required
 def edit_book(request, book_id):
     """ Edit a book in the store """
 

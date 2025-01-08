@@ -89,7 +89,7 @@
 			<ul class="list-unstyled">
 				{% for review in reviews %}
 				<li class="mb-3">
-					<strong>{{ review.author.username }}</strong> - {{ review.rating }}/5
+					<strong>{{ review.author.username }}</strong> - {{ review.rating }}/5 <i class="fa-solid fa-star"></i>
 					<p class="mb-1">{{ review.review }}</p>
 					<small class="text-muted">{{ review.created_on|date:"F j, Y" }}</small>
 
@@ -101,6 +101,7 @@
 					</form>
 					{% endif %}
 				</li>
+				<hr>
 				{% endfor %}
 			</ul>
 			{% else %}
@@ -113,8 +114,20 @@
 			{% if user.is_authenticated %}
 			<form method="POST">
 				{% csrf_token %}
-				{{ form.as_p }}
-				<button type="submit" class="btn btn-primary mt-3">Submit Review</button>
+
+				<!-- Rating section -->
+				<div class="mb-3">
+					<label for="rating-slider" class="form-label">Rating: 
+						<span id="rating-value">3</span> / 5  <i class="fa-solid fa-star"></i>
+					</label>
+					{{ form.rating }}
+				</div>
+				<!-- Review Section -->
+				<div class="mb-3">
+					<label for="id_review" class="form-label">{{ form.review.label }}:</label>
+					{{ form.review }}
+				</div>
+				<button type="submit" class="btn btn-primary mt-3 submit-review">Submit Review</button>
 			</form>
 			{% else %}
 			<p><a href="#" class="btn btn-link">Log in</a> to leave a review.</p>
@@ -125,4 +138,6 @@
 
 <!-- Link to JS file -->
 <script src="{% static 'js/delete_book.js' %}"></script>
+<script src="{% static 'js/rating-slider.js' %}"></script>
+
 {% endblock %}

@@ -6,6 +6,16 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
         fields = ['review', 'rating']
+        widgets = {
+            'rating': forms.NumberInput(attrs={
+                'type': 'range',
+                'min': '1',
+                'max': '5',
+                'step': '0.5',
+                'class': 'form-range',
+                'id': 'rating-slider',
+            }),
+        }
 
 
 class BookForm(forms.ModelForm):

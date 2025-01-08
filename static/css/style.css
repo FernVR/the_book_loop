@@ -326,6 +326,37 @@ form .form-group {
     color: white;
 }
 
+#rating-slider {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+textarea {
+    border: none;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    width: 90%;
+}
+
+textarea:focus {
+    outline: none; /* Removes the focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a subtle focus shadow */
+}
+
+.submit-review {
+    background-color: #000;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+.submit-review:hover {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
 /* Add book - super user */
 
 .add-book-btn {
