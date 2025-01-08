@@ -2,10 +2,11 @@
 
 {% block content %}
 
-<div class="text-center">
-    <h1>Customer Service Page</h1>
+<div class="text-center text-white customer-service-page">
+    <h3>Customer Service</h3>
+    <hr>
 
-    <form method="POST">
+    <form method="POST" class="customer-service-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary mt-3">Submit Form</button>
