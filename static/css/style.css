@@ -293,6 +293,15 @@ form .form-group {
     width: 220px;
 }
 
+.back-btn {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
 .detail-btn {
     background-color: transparent;
     border: 1px solid black;
