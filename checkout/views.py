@@ -9,6 +9,7 @@ from bookstore.models import Book
 import stripe
 import json
 from checkout.webhooks import webhook
+from user_profile.models import UserProfile
 
 # Create your views here.
 
@@ -84,6 +85,24 @@ def checkout(request):
         if not basket:
             messages.info(request, "Your basket is empty.")
             return redirect(reverse('bookstore'))
+        
+
+        # Retrieve user profile delivery info
+        initial_data = {}
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                initial_data = {
+                    'phone_number': profile.default_phone_number,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'town_or_city': profile.default_town_or_city,
+                    'county': profile.default_county,
+                    'postcode': profile.default_postcode,
+                    'country': profile.default_country,
+                }
+            except UserProfile.DoesNotExist:
+                pass
 
         # Calculate the order total
         current_basket = basket_contents(request)
@@ -96,7 +115,7 @@ def checkout(request):
             currency='usd',
         )
 
-        form = OrderForm()
+        form = OrderForm(initial=initial_data)
 
     template = 'checkout/checkout.html'
     context = {
