@@ -470,6 +470,10 @@ textarea:focus {
     padding: 50px 0;
 }
 
+#checkout-success {
+    background-color: #FFE4AE;
+}
+
 /* -------------------------------------------------------- Register/Login/Logout */
 
 #login,
