@@ -20,7 +20,11 @@
                     Email: {{ profile.user.email }}
                 </li>
             </ul>
-            <p class="text-muted">Default Delivery Information</p>
+            <a href="{% url 'edit_user_info' %}" class="btn btn-primary">Edit User Info</a>
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">Delete Account</button>
+
+            <!-- Delivery info -->
+            <h3 class="text-muted mt-3">Default Delivery Information</h3>
             <ul>
                 <li>Phone Number: {{ profile.default_phone_number }}</li>
                 <li>Street Address 1: {{ profile.default_street_address1 }}</li>
@@ -30,7 +34,7 @@
                 <li>Postcode: {{ profile.default_postcode }}</li>
                 <li>Country: {{ profile.default_country }}</li>
             </ul>
-            <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Profile</a>
+            <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Delivery Info</a>
         </div>
         
         <!-- Wish list section -->
@@ -71,6 +75,25 @@
     </div>
 </section>
 
+
+<!-- Delete Account Modal -->
+<div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteAccountModalLabel">Confirm Account Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your account? This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <a href="{% url 'delete_account' %}" class="btn btn-danger">Delete Account</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- Link to the wishlist.js file -->

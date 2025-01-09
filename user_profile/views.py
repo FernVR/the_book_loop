@@ -54,6 +54,49 @@ def edit_profile(request):
     return render(request, template, context)
 
 
+@login_required
+def edit_user_info(request):
+    """
+    Allows the user to edit their username and email.
+    """
+    user = request.user
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+
+        # Validate inputs
+        if username and email:
+            user.username = username
+            user.email = email
+            user.save()
+            messages.success(request, 'Your user information has been updated.')
+            return redirect('user_profile')
+        else:
+            messages.error(request, 'Please fill out all fields.')
+
+    template = 'user_profile/edit_user_info.html'
+    context = {
+        'user': user,
+    }
+    return render(request, template, context)
+
+
+@login_required
+def delete_account(request):
+    """
+    Deletes the user's account and profile.
+    """
+    user = request.user
+    if request.method == 'POST':
+        user.delete()
+        messages.success(request, 'Your account has been successfully deleted.')
+        return redirect('home')  # Redirect to homepage or another page after deletion
+    else:
+        messages.error(request, 'Invalid request method.')
+    return redirect('user_profile')
+
+
+
 def wishlist_view(request):
     """ 
     """

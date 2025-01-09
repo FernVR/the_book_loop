@@ -432,8 +432,6 @@ textarea:focus {
 
 }
 
-
-
 .customer-service-form {
     max-width: 600px;
     margin: 0 auto;
@@ -465,6 +463,16 @@ textarea:focus {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 0;
+}
+
+#edit-profile-page {
+    background-color: #FFE4AE;
+}
+
+.edit-profile {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Custom styles for user profile page */
