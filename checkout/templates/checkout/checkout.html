@@ -2,63 +2,65 @@
 {% load static %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="checkout-form">
-               
-                <h2>Delivery Details</h2>
-                <form method="POST" id="payment-form">
-                    {% csrf_token %}
-                    
-                    <!-- Render the Order Form Fields -->
-                    <div class="form-group">
-                        {{ form.as_p }}
-                    </div>
+<section id="checkout" class="container-fluid text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="checkout-form">
 
-                    <!-- Stripe Card Element -->
-                    <div class="form-group">
-                        <label for="card-element">Card Details</label>
-                        <div id="card-element" class="form-control"></div>
-                    </div>
-                    <p id="card-errors" role="alert" class="text-danger"></p>
+                    <h2>Delivery Details</h2>
+                    <form method="POST" id="payment-form">
+                        {% csrf_token %}
 
-                    <!-- Hidden Fields for Stripe Keys -->
-                    <span id="id_stripe_public_key" class="d-none">{{ stripe_public_key }}</span>
-                    <span id="id_client_secret" class="d-none">{{ client_secret }}</span>
+                        <!-- Render the Order Form Fields -->
+                        <div class="form-group">
+                            {{ form.as_p }}
+                        </div>
 
-                    <!-- Submit Button -->
-                    <button id="submit" class="btn btn-primary mt-3">Pay Now</button>
-                </form>
+                        <!-- Stripe Card Element -->
+                        <div class="form-group">
+                            <label for="card-element">Card Details</label>
+                            <div id="card-element" class="form-control"></div>
+                        </div>
+                        <p id="card-errors" role="alert" class="text-danger"></p>
+
+                        <!-- Hidden Fields for Stripe Keys -->
+                        <span id="id_stripe_public_key" class="d-none">{{ stripe_public_key }}</span>
+                        <span id="id_client_secret" class="d-none">{{ client_secret }}</span>
+
+                        <!-- Submit Button -->
+                        <button id="submit" class="btn btn-primary mt-3 black-btn">Pay Now</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div class="col-md-4 ml-5">
-            <h2>
-                Order Summary
-            </h2>
-            <ul class="list-group">
-                {% for item in basket_items %}
+            <div class="col-md-4 ml-5">
+                <h2>
+                    Order Summary
+                </h2>
+                <ul class="list-group">
+                    {% for item in basket_items %}
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         {{ item.book.title }} (x{{ item.quantity }})
-                        <span>${{ item.lineitem_total|floatformat:2 }}</span>
+                        <span>${{ item.book.price }}</span>
                     </li>
-                {% endfor %}
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Subtotal
-                    <span>${{ order_total|floatformat:2 }}</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Delivery Cost
-                    <span>${{ delivery_cost|floatformat:2 }}</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center font-weight-bold">
-                    Grand Total
-                    <span>${{ grand_total|floatformat:2 }}</span>
-                </li>
-            </ul>
+                    {% endfor %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Subtotal
+                        <span>${{ order_total|floatformat:2 }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Delivery Cost
+                        <span>${{ delivery_cost|floatformat:2 }}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center font-weight-bold">
+                        Grand Total
+                        <span>${{ grand_total|floatformat:2 }}</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- Stripe JS and Custom Script -->
 <script src="https://js.stripe.com/v3/"></script>
