@@ -5,7 +5,7 @@
 
 body {
     font-family: Inika, sans-serif;
-    background-color: #ffc2b1;
+    background-color: #ffe1d8;
 }
 
 .black-btn {
@@ -293,6 +293,10 @@ form .form-group {
     width: 220px;
 }
 
+#book-detail {
+    padding: 30px 0;
+}
+
 .back-btn {
     text-decoration: none;
     font-weight: bold;
@@ -347,10 +351,23 @@ form .form-group {
     color: #000;
 }
 
-.review-list {
-    background-color: #ae7c6f;
-    color: white;
+#reviews {
+    padding: 70px 0;
 }
+
+.review-list {
+    background-color:  #f0b339;
+    border: none;
+    color: #000;
+    border-radius: 2rem;
+    max-width: 800px;
+    margin: 50px;
+}
+
+.add-review {
+    margin-top: 50px;
+}
+
 
 #rating-slider {
     width: 70%;

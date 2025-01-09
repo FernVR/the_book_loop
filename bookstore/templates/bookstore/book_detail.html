@@ -5,10 +5,11 @@
 
 {% block content %}
 
+<a href="{% url 'bookstore:bookstore' %}" class="p-3 text-black back-btn">
+	<i class="fa-solid fa-arrow-left"></i> back to bookstore
+</a>
+
 <section id="book-detail">
-	<a href="{% url 'bookstore:bookstore' %}" class="p-3 text-black back-btn">
-		<i class="fa-solid fa-arrow-left"></i> back to bookstore
-	</a>
 	<div class="container mt-5 mb-5">
 		<div class="row">
 			<div class="col-md-4 p-4">
@@ -54,7 +55,7 @@
 						<hr>
 					</h4>
 					<a class=" btn btn-primary edit-item" href="{% url 'bookstore:edit_book' book.id %}">Edit Item</a>
-					<button class="btn btn-danger" id="deleteButton" data-book-title="{{ book.title }}"
+					<button class="btn btn-danger red-btn" id="deleteButton" data-book-title="{{ book.title }}"
 						data-book-id="{{ book.id }}">Delete Item</button>
 				</div>
 				{% endif %}
@@ -71,6 +72,8 @@
 							</div>
 							<div class="modal-body">
 								Are you sure you want to delete <span id="bookTitle"></span>?
+								<br>
+								This cannot be undone.
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
@@ -87,20 +90,21 @@
 <section id="reviews">
 	<div class="row">
 		<div class="col-md-8 review-list p-5 border-end">
-			<h4>Community Reviews</h4>
+			<h4 class="text-center">Community Reviews</h4>
 			{% if reviews %}
 			<ul class="list-unstyled">
 				{% for review in reviews %}
 				<li class="mb-3">
-					<strong>{{ review.author.username }}</strong> - {{ review.rating }}/5 <i class="fa-solid fa-star"></i>
+					<strong>{{ review.author.username }}</strong> 
 					<p class="mb-1">{{ review.review }}</p>
-					<small class="text-muted">{{ review.created_on|date:"F j, Y" }}</small>
+					<p>{{ review.rating }}/5 <i class="fa-solid fa-star"></i></p>
+					<small>{{ review.created_on|date:"F j, Y" }}</small>
 
 					{% if review.author == user %}
 					<!-- Add a delete button for reviews posted by the logged-in user -->
 					<form method="POST" action="{% url 'bookstore:delete_review' review.id %}" class="d-inline">
 						{% csrf_token %}
-						<button type="submit" class="btn btn-danger btn-sm mt-2">Delete</button>
+						<button type="submit" class="btn btn-danger btn-sm mt-2 red-btn">Delete</button>
 					</form>
 					{% endif %}
 				</li>
@@ -108,7 +112,7 @@
 				{% endfor %}
 			</ul>
 			{% else %}
-			<p>No reviews yet. Be the first to review!</p>
+			<p class="text-center">No reviews yet. Be the first to review!</p>
 			{% endif %}
 
 		</div>
