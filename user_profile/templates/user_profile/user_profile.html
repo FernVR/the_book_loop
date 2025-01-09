@@ -9,7 +9,7 @@
         - Welcome to your Profile -
     </h3>
     <hr class="text-white">
-    <div class="row">
+    <div class="row mb-5">
         <!-- User Information and Default Delivery Information -->
         <div class="col-12 col-lg-6 mb-4 user-profile-info">
             <h4> User Information </h4>
@@ -46,7 +46,8 @@
             <ul class="p-3">
                 {% for book in wishlist %}
                 <li>
-                    {{ book.title }} by {{ book.author }}
+                    <em>{{ book.title }}</em> by {{ book.author }}
+                    
                     <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger red-btn remove-from-wishlist"
                         data-book-id="{{ book.id }}">
                         <i class="fa-solid fa-x"></i>

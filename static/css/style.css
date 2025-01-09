@@ -489,6 +489,7 @@ textarea:focus {
     background-color: #FFFDF9;
     padding: 20px;
     border-radius: 2rem;
+    max-width: 500px;
     
 }
 
@@ -527,8 +528,9 @@ textarea:focus {
 }
 
 #wish-list {
-    background-color: #FFE4AE;
+    background-color: #FFFDF9;
     border-radius: 2rem;
+    max-width: 500px;
 }
 
 
@@ -576,7 +578,16 @@ textarea:focus {
         width: 220px;
     }
 
+    .user-profile-info {
+        margin: 30px;
+    }
+
+    #wish-list {
+        margin: 30px; 
+    }
+
 }
+
 
 
 /* Styles for screens larger than 1000px */
@@ -599,5 +610,16 @@ textarea:focus {
     .best-seller-img {
         height: 160px;
         width: 160px;
+    }
+}
+
+
+@media screen and (min-width: 1300px) {
+    .user-profile-info {
+        margin: 30px 100px;
+    }
+
+    #wish-list {
+        margin-left: 150px; 
     }
 }
