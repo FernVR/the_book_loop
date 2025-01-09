@@ -433,6 +433,13 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
 }
 
+/* -------------------------------------------------------- Basket */
+
+#basket {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/media/site-media/basket-bg.png) ;
+    padding: 100px 0;
+}
+/* -------------------------------------------------------- Checkout */
 
 /* -------------------------------------------------------- Register/Login/Logout */
 
