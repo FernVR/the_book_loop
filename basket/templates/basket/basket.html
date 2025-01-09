@@ -12,7 +12,7 @@
                     <strong>{{ item.book.title }}</strong><br>
                     <span>Price: ${{ item.book.price }}</span>
                 </div>
-                <a href="{% url 'remove_from_basket' item.book.id %}" class="btn btn-danger">
+                <a href="{% url 'remove_from_basket' item.book.id %}" class="btn btn-danger red-btn">
                     Remove
                 </a>
             </li>
@@ -21,16 +21,16 @@
         <hr>
         <p>Total: ${{ total }}</p>
         <p>Delivery: ${{ delivery }}</p>
-        <p><strong>Grand Total: ${{ grand_total }}</strong></p>
-        <a href="{% url 'bookstore:bookstore' %}" class="btn btn-outline-black rounded-0">
+        <h4><strong>Grand Total: ${{ grand_total }}</strong></h4>
+        <a href="{% url 'bookstore:bookstore' %}" class="btn checkout-btn text-white rounded-0">
             <span class="text-uppercase">Keep Shopping</span>
         </a>
-        <a href="{% url 'checkout' %}" class="btn btn-outline-black rounded-0">
+        <a href="{% url 'checkout' %}" class="btn checkout-btn text-white rounded-0">
             <span class="text-uppercase">Checkout</span>
         </a>
         {% else %}
         <p>Your basket is empty.</p>
-        <a href="{% url 'bookstore:bookstore' %}" class="btn btn-outline-black rounded-0">
+        <a href="{% url 'bookstore:bookstore' %}" class="btn checkout-btn text-white rounded-0">
             <span class="text-uppercase">Keep Shopping</span>
         </a>
         {% endif %}
