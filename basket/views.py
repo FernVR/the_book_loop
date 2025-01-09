@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from bookstore.models import Book
 from bookstore.views import book_detail
+from user_profile.models import WishList
 
 # Create your views here.
 
@@ -25,6 +26,10 @@ def add_to_basket(request, book_id):
     else:
         basket[book_id] = 1
         messages.success(request, f'Added "{book.title}" to your basket.')
+
+        wishlist = WishList.objects.filter(user=request.user).first()
+        if wishlist and book in wishlist.books.all():
+            wishlist.books.remove(book)
 
     request.session['basket'] = basket
     return redirect('view_basket')
