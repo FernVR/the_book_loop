@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <h1>Edit User Information</h1>
-    <form method="POST" action="{% url 'edit_user_info' %}">
-        {% csrf_token %}
-        <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}">
-        </div>
-        <button type="submit" class="btn btn-primary">Save Changes</button>
-    </form>
-</div>
+<section id="edit-user-info">
+    <div class="container-fluid edit-profile">
+        <h3>Edit User Information</h3>
+        <form method="POST" action="{% url 'edit_user_info' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" value="{{ user.username }}">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+</section>
 {% endblock %}

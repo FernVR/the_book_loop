@@ -8,6 +8,22 @@ body {
     background-color: #ffc2b1;
 }
 
+.black-btn {
+    background-color: #000;
+    border: #000;
+}
+
+.black-btn:hover {
+    background-color: transparent;
+    border: none;
+    color: #000;
+}
+
+.red-btn {
+    background-color: #a72d2d;
+    border: #a72d2d;
+}
+
 /* -------------------------------------------------------- Nav */
 
 header {
@@ -465,8 +481,24 @@ textarea:focus {
     border-radius: 0;
 }
 
-#edit-profile-page {
+#user-info {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/media/site-media/profile-bg.png);
+}
+
+.user-profile-info {
+    background-color: #FFFDF9;
+    padding: 20px;
+    border-radius: 2rem;
+    
+}
+
+#edit-profile-page,
+#edit-user-info {
     background-color: #FFE4AE;
+}
+
+#edit-user-info {
+    padding: 20px;
 }
 
 .edit-profile {
@@ -492,6 +524,11 @@ textarea:focus {
 
 #wish-list ul li strong {
     color: #007bff;
+}
+
+#wish-list {
+    background-color: #FFE4AE;
+    border-radius: 2rem;
 }
 
 

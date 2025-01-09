@@ -3,14 +3,15 @@
 
 {% block content %}
 
-<h1 class="text-center mb-4">
-    User profile page
-</h1>
 
-<section id="user-info" class="container mb-5">
+<section id="user-info" class="container-fluid p-3">
+    <h3 class="text-center m-4 text-white">
+        - Welcome to your Profile -
+    </h3>
+    <hr class="text-white">
     <div class="row">
         <!-- User Information and Default Delivery Information -->
-        <div class="col-12 col-lg-6 mb-4">
+        <div class="col-12 col-lg-6 mb-4 user-profile-info">
             <h4> User Information </h4>
             <ul>
                 <li>
@@ -20,8 +21,8 @@
                     Email: {{ profile.user.email }}
                 </li>
             </ul>
-            <a href="{% url 'edit_user_info' %}" class="btn btn-primary">Edit User Info</a>
-            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">Delete Account</button>
+            <a href="{% url 'edit_user_info' %}" class="btn btn-primary black-btn"> <i class="fa-solid fa-pen-to-square"></i> Edit</a>
+            <button class="btn btn-danger red-btn" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">Delete Account</button>
 
             <!-- Delivery info -->
             <h3 class="text-muted mt-3">Default Delivery Information</h3>
@@ -34,22 +35,29 @@
                 <li>Postcode: {{ profile.default_postcode }}</li>
                 <li>Country: {{ profile.default_country }}</li>
             </ul>
-            <a href="{% url 'edit_profile' %}" class="btn btn-primary">Edit Delivery Info</a>
+            <a href="{% url 'edit_profile' %}" class="btn btn-primary black-btn"> <i class="fa-solid fa-pen-to-square"></i> Edit</a>
         </div>
         
         <!-- Wish list section -->
         <div class="col-12 col-lg-6" id="wish-list">
-            <h2>Your Wish-List</h2>
-            <ul>
+            <h4 class="text-center p-3">
+                Your Wish-List <i class="fa-solid fa-gift"></i>
+            </h4>
+            <ul class="p-3">
                 {% for book in wishlist %}
                 <li>
                     {{ book.title }} by {{ book.author }}
-                    <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger remove-from-wishlist"
-                        data-book-id="{{ book.id }}">Remove</a>
-                    <a href="{% url 'add_to_basket' book.id %}" class="btn btn-primary">Add to Basket</a>
+                    <a href="{% url 'remove_from_wishlist' book.id %}" class="btn btn-danger red-btn remove-from-wishlist"
+                        data-book-id="{{ book.id }}">
+                        <i class="fa-solid fa-x"></i>
+                    </a>
+                    <a href="{% url 'add_to_basket' book.id %}" class="btn btn-primary black-btn">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </a>
+                    <hr>
                 </li>
                 {% empty %}
-                <p>Your wish-list is empty.</p>
+                <p class="text-center">Your wish-list is empty.</p>
                 {% endfor %}
             </ul>
             <!-- Modal -->
