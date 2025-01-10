@@ -179,11 +179,12 @@ USE_TZ = True
 
 
 # Cloudinary Settings
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getenv('CLOUD_NAME'),
-    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
-}
+#CLOUDINARY_STORAGE = {
+    
+    #'CLOUD_NAME': os.getenv('CLOUD_NAME'),
+    #'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    #'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+#}
 
 cloudinary.config(
     cloud_name=os.getenv('CLOUD_NAME'),
