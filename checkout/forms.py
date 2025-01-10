@@ -27,7 +27,7 @@ class OrderForm(forms.ModelForm):
         }
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'country':  # Country will use a select dropdown.
+            if field != 'country':
                 placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'form-control'

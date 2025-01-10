@@ -6,12 +6,8 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Book(models.Model):
-    """
-    """
-
-
     CONDITION_CHOICES = [
-        ('like-new', 'Like-New'),
+        ('like-new', 'Like New'),
         ('good', 'Good'),
         ('fair', 'Fair'),
     ]
@@ -37,8 +33,6 @@ class Book(models.Model):
 
 
 class Review(models.Model):
-    """
-    """
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="reviewer"
     )

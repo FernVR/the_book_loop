@@ -32,7 +32,7 @@ def user_profile(request):
 @login_required
 def edit_profile(request):
     """
-    Allows the user to edit their profile.
+    Allows the user to edit their profile/delivery info.
     """
     profile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
@@ -96,9 +96,10 @@ def delete_account(request):
     return redirect('user_profile')
 
 
-
+@login_required
 def wishlist_view(request):
     """ 
+    Renders wish-list
     """
     wishlist, _ = WishList.objects.get_or_create(user=request.user)
     template = "user_profile/user_profile.html"
@@ -108,8 +109,10 @@ def wishlist_view(request):
     return render(request, template, context)
 
 
+@login_required
 def add_to_wishlist(request):
     """ 
+    Add items to wish-list
     """
     if request.method == "POST":
         book_id = request.POST.get("book_id")
@@ -133,8 +136,10 @@ def add_to_wishlist(request):
     return redirect('bookstore:book_detail', book_id=book_id)
 
 
+@login_required
 def remove_from_wishlist(request, book_id):
     """
+    Removes items from wish list
     """
     book = get_object_or_404(Book, id=book_id)
     wishlist = get_object_or_404(WishList, user=request.user)

@@ -14,6 +14,9 @@ from django.http import HttpResponseForbidden
 
 def bookstore(request):
     """
+    Render Bookstore page.
+    Paginates Book list.
+    Search bar functionality.
     """
 
     books = Book.objects.all().order_by('-created_at')
@@ -41,10 +44,11 @@ def bookstore(request):
     return render(request, 'bookstore/bookstore.html', context)
 
 
-
-
 def book_detail(request, book_id):
     """
+    Renders Book Detail page.
+    Renders book reviews.
+    Add review functionality.
     """
     
     book = get_object_or_404(Book, pk=book_id)
@@ -72,7 +76,9 @@ def book_detail(request, book_id):
 
 @login_required
 def delete_book(request, book_id):
-    """ Delete a product from the store """
+    """ 
+    Delete a book from the store 
+    """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -86,7 +92,9 @@ def delete_book(request, book_id):
 
 @login_required
 def edit_book(request, book_id):
-    """ Edit a book in the store """
+    """
+    Edit a book details in the store 
+    """
 
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -116,7 +124,9 @@ def edit_book(request, book_id):
 
 @login_required
 def add_book(request):
-    """ Add a book to the store """
+    """ 
+    Add a book to the store 
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

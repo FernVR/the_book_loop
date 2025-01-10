@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class SellBook(models.Model):
     CONDITION_CHOICES = [
-        ('like-new', 'Like-New'),
+        ('like-new', 'Like New'),
         ('good', 'Good'),
         ('fair', 'Fair'),
     ]

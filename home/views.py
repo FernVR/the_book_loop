@@ -9,6 +9,8 @@ import random
 def home_view(request):
     """
     Renders Home Page. 
+    Handles Sell book form
+    Handles best seller section
     """
 
     form = SellBookForm()

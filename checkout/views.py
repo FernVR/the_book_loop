@@ -16,6 +16,9 @@ from user_profile.models import UserProfile
 
 @require_POST
 def cache_checkout_data(request):
+    """
+    Cache checkout data
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -132,6 +135,10 @@ def checkout(request):
 
 
 def checkout_success(request, order_number):
+    """
+    Renders checkout success page
+    Add success message with order number for user.
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.success(request, f'Order successfully processed! \

@@ -7,7 +7,9 @@ from user_profile.models import WishList
 # Create your views here.
 
 def view_basket(request):
-    """ A view that renders the basket contents page """
+    """ 
+    A view that renders the basket contents page 
+    """
 
 
     return render(request, 'basket/basket.html')
@@ -16,6 +18,7 @@ def view_basket(request):
 def add_to_basket(request, book_id):
     """
     Add a book to the basket.
+    Remove item from wishlist when added to basket.
     """
 
     book = get_object_or_404(Book, pk=book_id)
