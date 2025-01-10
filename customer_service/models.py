@@ -6,9 +6,9 @@ class CustomerSupport(models.Model):
     """
     """
 
-    full_name = models.CharField(max_length=255, null=True, blank=True)
-    email = models.EmailField(max_length=255, null=True, blank=True)
-    message = models.TextField(null=True, blank=True)
+    full_name = models.CharField(max_length=255, null=True, blank=False)
+    email = models.EmailField(max_length=255, null=True, blank=False)
+    message = models.TextField(null=True, blank=False)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
