@@ -1,131 +1,217 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Book Loop
 
-Welcome Fern Van Rooyen,
+![Main Image - I am Responsive screenshot]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[The Book Loop - Deployed Link](https://thebookloop-38d0e34a2881.herokuapp.com/)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+Add forwarding paragraph
 
-## Gitpod Reminders
+## Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+* [The Book Loop](#the-book-loop)
 
-`python3 -m http.server`
+* [Website Goals and Objectives](#website-goals-and-objectives)
 
-A blue button should appear to click: _Make Public_,
+* [Target Audience](#target-audience)
 
-Another blue button should appear to click: _Open Browser_.
+* [Business Model]()
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+* [SEO and Web Marketing]()
 
-A blue button should appear to click: _Make Public_,
+* [Agile Methodology](#agile-methodology)
+  - [Overview](#overview)
+  - [Epics](#epics)
+  - [GitHub Projects](#github-projects)
+  - [User Stories](#user-stories)
+  - [Developer Stories](#developer-stories)
+  - [Visitor Stories](#visitor-stories)
+  - [Registered User Stories](#registered-user-stories)
+  - [Admin User Stories](#admin-user-stories)
+  - [E-Commerce Features]()
 
-Another blue button should appear to click: _Open Browser_.
+* [Wireframes](#wireframes)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* [Database Schema](#database-schema)
 
-To log into the Heroku toolbelt CLI:
+* [Design and Layout](#design-and-layout)
+  - [Typography](#typography)
+  - [Colour Scheme](#colour-scheme)
+  - [Images](#images)
+  - [Responsiveness](#responsiveness)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
+  - [Issues and Bugs](#issues-and-bugs)
+    - [Resolved Bugs](#resolved-bugs)
+    - [Unresolved Bugs](#unresolved-bugs)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+* [Testing](#testing)
 
-### Connecting your Mongo database
+* [Technologies Used](#technologies-used)
+  - [Frameworks]()
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+* [Deployment](#deployment)
+  * [Heroku]()
 
-------
+* [Credits](#credits)
+  - [Media]()
 
-## Release History
+* [Acknowledgements](#acknowledgements)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
 
-**June 18, 2024,** Add Mongo back into template
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
 
-**May 28 2024:** Fix Mongo and Links installs
+## Website Goals and Objectives
+Include a list of goals and objectives (5)
 
-**April 26 2024:** Update node version to 16
+## Target Audience
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Agile Methodology
+### Overview
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### GitHub Projects
+[GitHub Projects Board]()
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Epics
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+##### Iteration 1 
+![Screenshot of iteration 1]()
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+##### Iteration 2
+![Screenshot of iteration 2]()
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+##### Iteration 3
+![Screenshot of iteration 3]()
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+##### Iteration 4
+![Screenshot of iteration 4]()
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+##### Iteration 5 
+![Screenshot of iteration 5]()
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Iteration 1 :
+Create core functionality, superuser, and administrator tasks.
+[Link to Iteration page on github]()
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+#### Iteration 2 :
+Create register, login, logout functionality with basic structure added to HTML Templates.
+[Link to Iteration page on github]()
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+#### Iteration 3 :
+Creating basic functionality on home page, blog posts page and about page. (Comments, add posts, likes, forms).
+[Link to Iteration page on github]()
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+#### Iteration 4 :
+Style/polish all views.
+[Link to Iteration page on github]()
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+#### Iteration 5 :
+All Manual and Automated Testing tasks/issues for Good News Blog and all documentation tasks.
+[Link to Iteration page on github]()
 
-------
+### User Stories
+The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
+![Screenshot example of different issues with different labels.]()
 
-## FAQ about the uptime script
+### Developer Stories
+Some examples of developer stories used in The Book Loop:
 
-**Why have you added this script?**
+- As a **developer** I can **something** so that **something**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- As a **developer** I can **something** so that **something**
 
-**How will this affect me?**
+- As a **developer** I can **something** so that **something**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+*You can access **all** developer stories for this project by redirecting to the issues tab of this repo*
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+[The Book Loop - Issues]()
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Visitor Stories
+Some examples of visitor stories used in The Book Loop:
 
-**So….?**
+- As a **visitor** I can **something** so that **something**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- As a **visitor** I can **something** so that **something**
 
-**Can I opt out?**
+- As a **visitor** I can **something** so that **something**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+*You can access **all** visitor stories for this project by redirecting to the issues tab of this repo*
+[The Book Loop - Issues]()
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Registered User Stories
+Some examples of registered-user stories used in The Book Loop:
 
-**Anything more?**
+- As a **registered user,** I can **something** so that **something**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- As a **registered user** I can **something** so that **something**
 
----
+- As a **registered user** I can **something** so that **something**
 
-Happy coding!
+*You can access **all** registered-user stories for this project by redirecting to the issues tab of this repo*
+
+[The Book Loop- Issues]()
+
+### Admin User Stories
+Some examples of admin user stories used in The Book Loop:
+
+- As a **site admin** I can **something** so that **something**
+
+- As a **site administrator** I can **something** so that **something**
+
+- As a **site administrator** I can **something** so that **something**
+
+*You can access **all** admin-user stories for this project by redirecting to the issues tab of this repo*
+
+[GoodNewsBlog- Issues]()
+
+## Wireframes
+I used Figma to create basic wireframes for standard screensizes:
+<details><summary>Home Page</summary><img src="#"></details>
+<details><summary>Bookstore</summary><img src=""></details>
+<details><summary>Customer Service</summary><img src=""></details>
+
+
+## Database Schema
+I used Lucid Chart to create basic Entity Relationship Diagrams for database schema:
+- Note : one missing - explain
+
+![Screenshot of ERDS]()
+
+## Design and Layout
+### Typography
+
+Inika Font is a serif typeface designed with elegance and readability in mind. Its soft, well-balanced letterforms make it ideal for both print and digital platforms. I decided to use this font for:
+- Readability: The serif design enhances legibility, especially in longer articles, making it perfect for news content.
+- Professional Aesthetic: Inika has a formal yet approachable look, adding credibility to journalistic content.
+- Versatility: It works well on various screen sizes, providing a consistent reading experience on mobile and desktop.
+- Distinctive Style: Its unique design helps a news blog stand out while maintaining a polished appearance.
+### Colour Scheme
+![Screenshot of Colour schemes]()
+
+### Images
+I tried to carefully select the images to match the overall theme and aesthetic of the site. I tried to use complimenting colours where possible.
+<details><summary>Home Page Banner</summary><img src=""></details>
+<details><summary>About Page Banner</summary><img src=""></details>
+<details><summary>Profile Page</summary><img src=""></details>
+
+### Responsiveness
+Website is response across all device screen sizes :
+<details><summary>Home Page Mobile</summary><img src=""></details>
+<details><summary>Home Page Tablet</summary><img src=""></details>
+<details><summary>Home Page Desktop</summary><img src=""></details>
+
+<details><summary>Profile Page Mobile</summary><img src=""></details>
+<details><summary>Profile Page Tablet</summary><img src=""></details>
+<details><summary>Profile Page Laptop</summary><img src=""></details>
+
+- More responsive testing grids included within [TESTING.md](TESTING.md)
+
+## Features
+### Existing Features
+#### Home Page 
+
+#### Post Detail
+
