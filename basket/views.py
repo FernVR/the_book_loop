@@ -27,9 +27,10 @@ def add_to_basket(request, book_id):
         basket[book_id] = 1
         messages.success(request, f'Added "{book.title}" to your basket.')
 
-        wishlist = WishList.objects.filter(user=request.user).first()
-        if wishlist and book in wishlist.books.all():
-            wishlist.books.remove(book)
+        if request.user.is_authenticated:
+            wishlist = WishList.objects.filter(user=request.user).first()
+            if wishlist and book in wishlist.books.all():
+                wishlist.books.remove(book)
 
     request.session['basket'] = basket
     return redirect('view_basket')
