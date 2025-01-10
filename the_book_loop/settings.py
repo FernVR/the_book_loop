@@ -43,7 +43,9 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net', 
+    'https://8000-fernvr-pp5repo-5bwlpwlwf6t.ws.codeinstitute-ide.net',
+    'https://thebookloop.herokuapp.com',
+    'https://thebookloop-38d0e34a2881.herokuapp.com',
     ]
 
 # Application definition
@@ -177,14 +179,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Cloudinary Settings
-#CLOUDINARY_STORAGE = {
-    
-    #'CLOUD_NAME': os.getenv('CLOUD_NAME'),
-    #'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
-    #'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
-#}
 
 cloudinary.config(
     cloud_name=os.getenv('CLOUD_NAME'),
