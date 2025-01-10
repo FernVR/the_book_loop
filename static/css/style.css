@@ -473,7 +473,7 @@ textarea:focus {
 
 .log-form-card {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 600px;
     padding: 100px 20px;
 }
 
@@ -569,6 +569,11 @@ textarea:focus {
 
 /* -------------------------------------------------------- 404 error Page */
 
+.error-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/media/site-media/profile-bg.png);
+    padding: 100px;
+}
+
 /* -------------------------------------------------------- Media Queries */
 
 /* Mobile/Tablet sizes */
@@ -642,5 +647,15 @@ textarea:focus {
 
     #wish-list {
         margin-left: 150px; 
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .user-profile-info {
+        margin: 30px 200px;
+    }
+
+    #wish-list {
+        margin-left: 200px; 
     }
 }

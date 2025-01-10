@@ -22,9 +22,9 @@ from django.conf.urls import handler404
 from home.views import custom_404
 
 urlpatterns = [
+    path('', include('home.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', include('home.urls')),
     path('bookstore/', include('bookstore.urls', namespace='bookstore')),
     path('basket/', include('basket.urls')),
     path('customer_service/', include('customer_service.urls')),
