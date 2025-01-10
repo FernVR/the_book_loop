@@ -191,7 +191,6 @@ CLOUDINARY_STORAGE = {
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# Add static files directory
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
