@@ -14,9 +14,11 @@ Add forwarding paragraph
 
 * [Target Audience](#target-audience)
 
-* [Business Model]()
+* [Business Model](#business-model)
 
-* [SEO and Web Marketing]()
+* [Web Marketing](#web-marketing)
+
+* [Search Engine Optimisation (SEO)](#search-engiine-optimisation-seo)
 
 * [Agile Methodology](#agile-methodology)
   - [Overview](#overview)
@@ -67,6 +69,11 @@ Include a list of goals and objectives (5)
 
 ## Target Audience
 
+## Business Model
+
+## Web Marketing
+
+## Search Engiine Optimisation (SEO)
 
 ## Agile Methodology
 ### Overview
@@ -211,7 +218,64 @@ Website is response across all device screen sizes :
 
 ## Features
 ### Existing Features
-#### Home Page 
 
-#### Post Detail
+#### Header 
+
+#### Footer
+
+#### Home Page 
+##### Best Seller List
+##### Sell User Book Form
+
+#### Bookstore
+
+#### Book Detail
+##### Reviews 
+
+#### Basket 
+
+#### Checkout
+
+#### User Authentication
+
+#### User Profile
+##### Registered User Features
+
+#### Customer Service
+
+#### 404 Error Page
+
+### Future Features 
+List of Future Features 
+
+### Issues and Bugs 
+#### Resolved Bugs 
+* All bug-related documentation can be found within [TESTING.md](TESTING.md)
+* All recorded resolved bugs can also be found within [Github Issues]()
+#### Unresolved Bugs
+* All bug-related documentation can be found within [TESTING.md](TESTING.md)
+* All recorded resolved bugs can also be found within [Github Issues]()
+
+## Testing
+* All testing documentation can be found within [TESTING.md](TESTING.md)
+
+## Technologies Used
+### Frameworks
+### Languages
+### Dependencies
+### Programmes
+
+## Deployment 
+### Heroku
+
+## Credits 
+### Media
+### Code 
+### Content
+
+## Acknowledgments 
+
+
+
+
 
