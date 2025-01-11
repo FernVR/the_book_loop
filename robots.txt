@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /checkout_success/
+Disallow: /basket/
+Disallow: /add/
+Disallow: /update/
+Disallow: /delete/
+Disallow: /accounts/
+Disallow: /addaddress/
+Disallow: /changepassword/
+Allow: /signup/
+Sitemap: https://thebookloop-38d0e34a2881.herokuapp.com/sitemap.xml
