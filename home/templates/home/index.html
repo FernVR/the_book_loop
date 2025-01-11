@@ -32,7 +32,7 @@
         <div class="col-md-6 about-img">
         </div>
         <div class="col-md-6 about-content text-center">
-            <h3>What we do here</h3>
+            <p class="h3">What we do here</p>
             <hr>
             <p>
                 Welcome to The Book Loop, your online destination for second-hand books that bring stories back to life!
@@ -92,7 +92,7 @@
 
         {% if user.is_authenticated %}
         <form method="POST">
-            <h4>Sell Your Book</h4>
+            <h3>Sell Your Book</h3>
             {% csrf_token %}
             <div class="form-group">
                 {{ form.title.label_tag }}

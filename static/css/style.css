@@ -14,6 +14,7 @@ body {
     border: #000;
 }
 
+
 .black-btn:hover {
     background-color: transparent;
     border: none;
@@ -408,7 +409,7 @@ textarea:focus {
 
 #add-book, 
 #edit-book {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(/static/images/site-media/home-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url(/static/images/site-media/home-banner.webp);
 }
 
 .form-wrapper {
