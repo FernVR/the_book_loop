@@ -155,7 +155,7 @@ footer {
 /* Home Banner */
 
 .home-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/media/site-media/home-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/static/images/site-media/home-banner.png);
     padding: 120px 20px;
     background-position: center;
     justify-content: space-between;
@@ -468,7 +468,7 @@ textarea:focus {
 #login,
 #logout,
 #signup {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/media/site-media/customer-service-bg.png) ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/customer-service-bg.png) ;
 }
 
 .log-form-card {
