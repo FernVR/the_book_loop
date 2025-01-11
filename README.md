@@ -174,7 +174,8 @@ Key benefits included:
 Overall, Agile empowered the team to maintain a high level of productivity and adapt effectively, ensuring the delivery of a robust and user-friendly platform.
 
 ### GitHub Projects
-[GitHub Projects Board]()
+I used GitHub Projects board for this project, so I could easily locate all the issues and mark the completed ones.
+[GitHub Projects Board](https://github.com/users/FernVR/projects/7)
 
 ### Epics
 
@@ -195,24 +196,24 @@ Overall, Agile empowered the team to maintain a high level of productivity and a
 
 
 #### Iteration 1 :
-Create core functionality, superuser, and administrator tasks.
-[Link to Iteration page on github]()
+Planning and basic set-up and structure.
+[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/1?closed=1)
 
 #### Iteration 2 :
-Create register, login, logout functionality with basic structure added to HTML Templates.
-[Link to Iteration page on github]()
+Creating main functionality across all app files.
+[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/2?closed=1)
 
 #### Iteration 3 :
-Creating basic functionality on home page, blog posts page and about page. (Comments, add posts, likes, forms).
-[Link to Iteration page on github]()
+Polishing features and ensuring good functionality across all apps and features.
+[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/3?closed=1)
 
 #### Iteration 4 :
-Style/polish all views.
-[Link to Iteration page on github]()
+Ensure all design features are polished and front-end checklist is up to date and complete. All code should be tidied and ready for testing and submission.
+[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/4)
 
 #### Iteration 5 :
-All Manual and Automated Testing tasks/issues for Good News Blog and all documentation tasks.
-[Link to Iteration page on github]()
+All Manual and Automated Testing tasks/issues for The Book Loop and all documentation tasks.
+[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/5)
 
 ### User Stories
 The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
@@ -295,53 +296,156 @@ Inika Font is a serif typeface designed with elegance and readability in mind. I
 
 ### Images
 I tried to carefully select the images to match the overall theme and aesthetic of the site. I tried to use complimenting colours where possible.
+- I selected all book cover images so their were suited to the colour scheme of the site.
 <details><summary>Home Page Banner</summary><img src=""></details>
-<details><summary>About Page Banner</summary><img src=""></details>
-<details><summary>Profile Page</summary><img src=""></details>
+<details><summary>About Image</summary><img src=""></details>
+<details><summary>Home Page form - bg image</summary><img src=""></details>
+<details><summary>Customer Service form - bg image</summary><img src=""></details>
+<details><summary>Profile Page - bg image</summary><img src=""></details>
+<details><summary>Checkout - bg image</summary><img src=""></details>
+<details><summary>Basket - bg image</summary><img src=""></details>
 
 ### Responsiveness
 Website is response across all device screen sizes :
+#### Home Page
 <details><summary>Home Page Mobile</summary><img src=""></details>
 <details><summary>Home Page Tablet</summary><img src=""></details>
 <details><summary>Home Page Desktop</summary><img src=""></details>
 
+#### Profile Page
 <details><summary>Profile Page Mobile</summary><img src=""></details>
 <details><summary>Profile Page Tablet</summary><img src=""></details>
 <details><summary>Profile Page Laptop</summary><img src=""></details>
+
+#### Bookstore Page
+<details><summary>Bookstore Mobile</summary><img src=""></details>
+<details><summary>Bookstore Tablet</summary><img src=""></details>
+<details><summary>Bookstore Laptop</summary><img src=""></details>
 
 - More responsive testing grids included within [TESTING.md](TESTING.md)
 
 ## Features
 ### Existing Features
-
 #### Header 
+- Home link in the logo, accessible on all pages so users can easily get back to the home page
+- Nav links accessible on all pages to ensure smooth access to all pages.
+- Log status, ensures users can easily check if they are logged in/out.
+- Register/Sign In/Sign Out buttons so users can easily log in and out, unregistered users can easily create an account.
+- Basket icon and basket total, users can easily see the balance on their basket, and easily click on the basket link to access the basket page and ensures a smooth checkout process.
+
+![Screenshot of navigation bar]()
 
 #### Footer
+- Home link in the logo, accessible on all pages so users can easily get back to the home page.
+- Social media links, so users are easily redirected to social media pages on a new page.
+- Mailchimp Newsletter form, users can easily join the newsletter loop within the footer form, users are notified when their form is submitted successfully.
+- Email address contact, ensures a positive user experience in users are encouraged to reach out easily.
+- Copright message, users can easily access copright info.
+
+![Screenshot of footer]()
 
 #### Home Page 
-##### Best Seller List
-##### Sell User Book Form
+- Users can access a button to the store on the landing banner.
+- About section, users can read about the site.
+- Best seller list, users can access a list of best selling books, encouraging them to explore the bookstore.
+- Users can enquire about selling on their second hand books at home through the form.
+
+![Screenshot of Home/About]()
+![Screenshot of Best sellers/Form]()
 
 #### Bookstore
+- Users can easily access the book store from the landing banner button, or from the link in the header.
+- Users can search for books using the search bar.
+- Users can access pagination controls and scroll through multiple pages of books for sale.
+- Site admin users can access "add book" button, which brings them to a form where they can submit new book entires
+- More details on each book, and a link to add to the basket can be found on the Book Detail page.
+
+![Screenshot of bookstore/search bar]()
+![Screenshot of add book button]()
 
 #### Book Detail
-##### Reviews 
+- Details of each book can be found in their book detail page, details include, title, author, date of publishing, condition, rating and price.
+- All users can add books to their basket freely.
+- Out of stock books have a disabled button, so users can't accidentally add a book that isn't in stock.
+- Registered users can access "Add to Wish list" button, which dynamically adds books to their profile's wish list.
+- Site admin users can access product admin functionality here, where they can edit books, and delete books if needed.
+- A list of any reviews present on each product detail page, users can read through review messages, and ratings.
+- Registered users can add reviews here, using the review form.
+- Unregistered users are encouraged to create an account if they are not logged in.
+
+![Screenshot of Book detail page]()
+![Screenshot of Out of Stock]()
+![Screenshot of Wish-List button]()
+![Screenshot of Product Admin buttons]()
+![Screenshot of Reviews]()
 
 #### Basket 
+- Users can access their basket bu clicking on the basket icon in the nav bar.
+- On the basket page, users can view their basket items, and remove any items using the remove button.
+- Users can click on either 'keep shopping' to return to the bookstore, or click 'checkout' to move to the checkout page.
+- Users will be informed if their basket is empty.
+
+![Screenshot of Basket - full]()
+![Screenshot of Basket - empty]()
 
 #### Checkout
+- Users can access the checkout page from the basket page.
+- Users can view their order summary, with a price breakdown and the total.
+- Users can fill in their delivery and card details and checkout
+- Registered/Logged in users can use their default info here to ensure a fast and smooth checkout process.
+
+![Screenshot of Checkout page]()
+
+#### Checkout Sucess
+- Users are redirected to the checkout success page upon making a successful payment.
+- They are shown a nice message as well as their order summary, and a button to return to the bookstore.
+
+![Screenshot of checkout success]()
 
 #### User Authentication
+- Users can easily login/out/register on The Book Loop, ensuring a good user experience.
+- Registered users can access different features only available to them, encouraging user sign up.
+- Anonymous users can easily create a new account.
+- Registered users can easily delete their account and info on their profile page, ensuring good security accross the site.
+
+![Screenshot of Login]()
+![Screenshot of Logout]()
+![Screenshot of Sign up]()
 
 #### User Profile
-##### Registered User Features
+- Users can access their profile through the link in the nav, only visible to registered users.
+- Users can edit their user information, delivery details and wish-list.
+- Users can delete their account on the button on this page.
+- Users can add to their wish list, and easily remove items, or add them to their basket.
+
+![Screenshot of Profile Page]()
 
 #### Customer Service
+- All users can access the customer service page from the navigation bar.
+- Users can submit enquiries, complaints or anything else regarding their purchases, this ensures good communication between the business and customers.
+
+![Screenshot of Customer Service]()
 
 #### 404 Error Page
+- Should a user access any non-existing pages or another 404 error, they are displayed a message and a link to head back to the home page.
+
+![Screenshot of 404 page]()
 
 ### Future Features 
-List of Future Features 
+* **Book Recommendations Engine**:
+A personalized book recommendation system that uses machine learning algorithms to suggest books based on user preferences, browsing history, and wish-list items. This will enhance the user experience and encourage more purchases.
+
+* **Book Trading/Swapping Feature**:
+An option for users to trade or swap their books with other registered users. This feature will promote sustainability and community interaction, allowing users to exchange books they no longer need for new ones.
+
+* **Advanced Search Filters**:
+Enhanced search functionality that includes filters based on book genre, condition (new, like-new, or used), price range, author, and rating. This will make it easier for users to find books that match their exact preferences.
+
+* **Subscription Box Service**:
+A monthly subscription service that delivers a curated selection of books to users based on their reading preferences. This would cater to niche audiences, including book lovers, collectors, and people who enjoy surprises.
+
+* **Book Clubs and Community Forums**:
+A section of the site dedicated to virtual book clubs and community discussions. Users will be able to join or create book clubs, engage in discussions, and organize virtual events to meet like-minded readers.
 
 ### Issues and Bugs 
 #### Resolved Bugs 
@@ -355,20 +459,111 @@ List of Future Features
 * All testing documentation can be found within [TESTING.md](TESTING.md)
 
 ## Technologies Used
-### Frameworks
-### Languages
-### Dependencies
-### Programmes
+### Languages Used
+
+* [Python](https://www.python.org/doc/)
+* [Django](https://www.djangoproject.com/)
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+
+### Frameworks, Libraries & Programs Used
+
+1. [Visual Studio Code](https://code.visualstudio.com/)
+    - I used Visual Studio Code as editor for this project.
+
+1. [GitPod:](https://www.gitpod.io/)
+    - I used GitPod as my editor for this project.
+
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+
+1. [Django:](https://www.djangoproject.com/)
+    - I used Django as the python framework.
+
+1. [Bootstrap:](https://getbootstrap.com/)
+    - I used Boostrap as the HTML/CSS framwork.
+
+1. [Python Tutor Visual Debugger:](https://pythontutor.com/)
+    - I used Python Tutor for debugging.
+
+1. [Heroku:](https://heroku.com)
+    - For final deoployment.
+
+1. [Notes:](https://apple.com/notes/)
+    - I used the apple notes app on both my iPad and my iPhone for sketches, or any other planning/checklists used for this project.
+
+1. [Lucid Charts:](https://apple.com/notes/)
+    - I used Lucid Charts to create a database schema for GoodNewsBlog.
+
+1. [Figma:](https://www.figma.com/)
+    - I used Figma to create wireframes for this project.
+
+1. [Favicon Generator](https://favicon.io/favicon-generator/)
+    - I used Favicon generator to generate the favicon icon in the browser for free.
+
+1. [Apple Numbers:](https://apple.com/numbers/)
+    - I used the Numbers app on my iPad pro to create testing spreadsheets.
 
 ## Deployment 
+### Github
+1. Login (or sign up) to Github.
+2. Find the repository for this project, FernVR/the_book_loop.
+3. Click on the Settings link.
+4. Click on the Pages link in the left-hand side navigation bar.
+5. In the Source section, choose main from the drop-down select branch menu. Select Root from the drop-down select folder menu.
+6. Click Save. Your live Github Pages site is now deployed at the URL shown.cal machine.
+
 ### Heroku
+The deployment is made using [Heroku](https://www.heroku.com/) following the listed steps:
+
+1. Log in or register a new account on Heroku
+2. Click on 'New' in the dashboard and select 'Create New App'
+3. Select a name for the app and choose your region.
+4. Click on "Create app"
+5. When the app is created click on Setting
+6. To improve compatibility with various Python libraries add Config Var with Key = PORT and the Value = 8000
+7. Add 2 buildpacks: Python and then Nodejs in this specific order 
+8. Go back at the top and click on "Deploy" and select "GitHub"
+9. Scroll down and click on 'Connect to GitHub'
+10. Search for your GitHub repository name by typing it
+11. Click on "Connect"
+12. Scroll down and click on "Deploy Branch"
+13. You will see a message "The app was successfully deployed" when the app is built with python and all the depencencies
+14. Click on view and you will see the deployed site
+
+#### How to Clone
+
+1. Login (or sign up) to GitHub.
+2. Go to the repository for this project, it can be found here (link)
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
 
 ## Credits 
 ### Media
+#### Site Media
+* Logo:
+* Background images:
+
+#### Product Media
+
 ### Code 
+Include all documentation
+
 ### Content
+* Descriptions on books
 
 ## Acknowledgments 
+* Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
+
+* My mentor Sandeep, for providing a lot of knowledge, guidance and very helpful reading materials.
+
+[Back To Top](#the-book-loop)
 
 
 
