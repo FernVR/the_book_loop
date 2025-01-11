@@ -222,66 +222,69 @@ The issues/ user stories were broken down into different categories, developer, 
 ### Developer Stories
 Some examples of developer stories used in The Book Loop:
 
-- As a **developer** I can **something** so that **something**
+- As a **developer** I can **create a database instance on my site** so that **I can store data on my deployed site as well as the development version.**
 
-- As a **developer** I can **something** so that **something**
+- As a **developer** I can **create views using django templates** so that **I can create a dynamic page that extends functionality across all pages.**
 
-- As a **developer** I can **something** so that **something**
+- As a **developer** I can **create custom error handling** so that **I can create a better user experience and a user is easily redirected to the home page.**
 
 *You can access **all** developer stories for this project by redirecting to the issues tab of this repo*
 
-[The Book Loop - Issues]()
+[The Book Loop - Issues - Developer stories](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3A%22Dev+Role%22)
 
 ### Visitor Stories
 Some examples of visitor stories used in The Book Loop:
 
-- As a **visitor** I can **something** so that **something**
+- As a **visitor** I can **access the bookstore** so that **I can view items available to purchase.**
 
-- As a **visitor** I can **something** so that **something**
+- As a **visitor** I can **add items to my basket** so that **I can purchase many items at a time.**
 
-- As a **visitor** I can **something** so that **something**
+- As a **visitor** I can **easily find out more about the site** so that **I can discover different services available and interact with a new community.**
 
 *You can access **all** visitor stories for this project by redirecting to the issues tab of this repo*
-[The Book Loop - Issues]()
+[The Book Loop - Issues - Visitor User Stories](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+label%3A%22Visitor+User+Story%22+is%3Aclosed)
 
 ### Registered User Stories
 Some examples of registered-user stories used in The Book Loop:
 
-- As a **registered user,** I can **something** so that **something**
+- As a **registered user,** I can **register/login/logout of the site** so that **I can access all the features of the site and save my information.**
 
-- As a **registered user** I can **something** so that **something**
+- As a **registered user** I can **add items to my wish-list** so that **I can save items somewhere before I am ready to make a purchase.**
 
-- As a **registered user** I can **something** so that **something**
+- As a **registered user** I can **access my user profile** so that **I can edit any of my personal details, and view my basket or my wish list/ favourites.**
 
 *You can access **all** registered-user stories for this project by redirecting to the issues tab of this repo*
 
-[The Book Loop- Issues]()
+[The Book Loop- Issues - Registered User Stories](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3A%22Registered+User%22)
 
 ### Admin User Stories
 Some examples of admin user stories used in The Book Loop:
 
-- As a **site admin** I can **something** so that **something**
+- As a **site admin** I can **easily access the customer support database on the admin panel** so that **I can receive feedback and easily communicate with customers regarding their issues.**
 
-- As a **site administrator** I can **something** so that **something**
+- As a **site administrator** I can **access the admin panel using my admin login credentials** so that **I can access site databases and perform site admin tasks.**
 
-- As a **site administrator** I can **something** so that **something**
+- As a **site administrator** I can **access the product admin features of the site** so that **I can edit, add or delete items for sale.**
 
 *You can access **all** admin-user stories for this project by redirecting to the issues tab of this repo*
 
-[GoodNewsBlog- Issues]()
+[GoodNewsBlog- Issues - Site Admin](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3A%22Site+Admin%22)
 
 ## Wireframes
 I used Figma to create basic wireframes for standard screensizes:
-<details><summary>Home Page</summary><img src="#"></details>
-<details><summary>Bookstore</summary><img src=""></details>
-<details><summary>Customer Service</summary><img src=""></details>
+<details><summary>Home Page 1</summary><img src="docs/readme-media/wireframes/home1.png"></details>
+<details><summary>Home Page 2</summary><img src="docs/readme-media/wireframes/home2.png"></details>
+<details><summary>Bookstore 1</summary><img src="docs/readme-media/wireframes/books1.png"></details>
+<details><summary>Bookstore 2</summary><img src="docs/readme-media/wireframes/books2.png"></details>
+<details><summary>Customer Service</summary><img src="docs/readme-media/wireframes/customer-service.png"></details>
+<details><summary>Profile</summary><img src="docs/readme-media/wireframes/profile.png"></details>
 
 
 ## Database Schema
 I used Lucid Chart to create basic Entity Relationship Diagrams for database schema:
-- Note : one missing - explain
+- Note : sell books form from the home page is missing here, this is because I couldn't add it using the free version of Lucid Chart.
 
-![Screenshot of ERDS]()
+![Screenshot of ERDS](docs/readme-media/screenshots/erd.png)
 
 ## Design and Layout
 ### Typography
@@ -292,18 +295,18 @@ Inika Font is a serif typeface designed with elegance and readability in mind. I
 - Versatility: It works well on various screen sizes, providing a consistent reading experience on mobile and desktop.
 - Distinctive Style: Its unique design helps a news blog stand out while maintaining a polished appearance.
 ### Colour Scheme
-![Screenshot of Colour schemes]()
+![Screenshot of Colour schemes](docs/readme-media/screenshots/colour-pal.png)
 
 ### Images
-I tried to carefully select the images to match the overall theme and aesthetic of the site. I tried to use complimenting colours where possible.
+- I tried to carefully select the images to match the overall theme and aesthetic of the site. I tried to use complimenting colours where possible.
 - I selected all book cover images so their were suited to the colour scheme of the site.
-<details><summary>Home Page Banner</summary><img src=""></details>
-<details><summary>About Image</summary><img src=""></details>
-<details><summary>Home Page form - bg image</summary><img src=""></details>
-<details><summary>Customer Service form - bg image</summary><img src=""></details>
-<details><summary>Profile Page - bg image</summary><img src=""></details>
-<details><summary>Checkout - bg image</summary><img src=""></details>
-<details><summary>Basket - bg image</summary><img src=""></details>
+<details><summary>Home Page Banner</summary><img src="static/images/site-media/home-banner.webp"></details>
+<details><summary>About Image</summary><img src="static/images/site-media/about-img.png"></details>
+<details><summary>Home Page form - bg image</summary><img src="static/images/site-media/user-form.png"></details>
+<details><summary>Customer Service form - bg image</summary><img src="static/images/site-media/customer-service-bg.png"></details>
+<details><summary>Profile Page - bg image</summary><img src="static/images/site-media/profile-bg.png"></details>
+<details><summary>Checkout - bg image</summary><img src="static/images/site-media/store-banner.png"></details>
+<details><summary>Basket - bg image</summary><img src="static/images/site-media/basket-bg.png"></details>
 
 ### Responsiveness
 Website is response across all device screen sizes :
@@ -321,6 +324,16 @@ Website is response across all device screen sizes :
 <details><summary>Bookstore Mobile</summary><img src=""></details>
 <details><summary>Bookstore Tablet</summary><img src=""></details>
 <details><summary>Bookstore Laptop</summary><img src=""></details>
+
+#### Basket Page
+<details><summary>Basket Mobile</summary><img src=""></details>
+<details><summary>Basket Tablet</summary><img src=""></details>
+<details><summary>Basket Laptop</summary><img src=""></details>
+
+#### Checkout Page
+<details><summary>Checkout Mobile</summary><img src=""></details>
+<details><summary>Checkout Tablet</summary><img src=""></details>
+<details><summary>Checkout Laptop</summary><img src=""></details>
 
 - More responsive testing grids included within [TESTING.md](TESTING.md)
 
