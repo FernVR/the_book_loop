@@ -1,6 +1,6 @@
 # The Book Loop
 
-![Main Image - I am Responsive screenshot]()
+![Main Image - I am Responsive screenshot](docs/readme-media/am-i-responsive-home.png)
 
 [The Book Loop - Deployed Link](https://thebookloop-38d0e34a2881.herokuapp.com/)
 
@@ -180,40 +180,51 @@ I used GitHub Projects board for this project, so I could easily locate all the 
 ### Epics
 
 ##### Iteration 1 
-![Screenshot of iteration 1]()
+![Screenshot of iteration 1](docs/readme-media/screenshots/iteration-1.png)
 
 ##### Iteration 2
-![Screenshot of iteration 2]()
+![Screenshot of iteration 2](docs/readme-media/screenshots/iteration-2.png)
 
 ##### Iteration 3
-![Screenshot of iteration 3]()
+![Screenshot of iteration 3](docs/readme-media/screenshots/iteration-3.png)
 
 ##### Iteration 4
-![Screenshot of iteration 4]()
+![Screenshot of iteration 4](docs/readme-media/screenshots/iteration-4.png)
 
 ##### Iteration 5 
-![Screenshot of iteration 5]()
+![Screenshot of iteration 5](docs/readme-media/screenshots/iteration-5.png)
 
 
 #### Iteration 1 :
 Planning and basic set-up and structure.
-[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/1?closed=1)
+- Planning all front end elements, wireframes etc.
+- Planning features
+- Basic set up and structure.
+- [Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/1?closed=1)
 
 #### Iteration 2 :
 Creating main functionality across all app files.
-[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/2?closed=1)
+- adding main functionality
+- creating apps in order or priority.
+- [Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/2?closed=1)
 
 #### Iteration 3 :
 Polishing features and ensuring good functionality across all apps and features.
-[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/3?closed=1)
+- fixing any bugs or issues.
+- polishing all functionality
+- adding extra functionality
+- [Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/3?closed=1)
 
 #### Iteration 4 :
 Ensure all design features are polished and front-end checklist is up to date and complete. All code should be tidied and ready for testing and submission.
-[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/4)
+- polishing design, structure and layout to ensure good UI and UX.
+- [Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/4)
 
 #### Iteration 5 :
 All Manual and Automated Testing tasks/issues for The Book Loop and all documentation tasks.
-[Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/5)
+- creating and documenting all manual and automated tests.
+- creating readme and testing thorough documentation.
+- [Link to Iteration page on github](https://github.com/FernVR/the_book_loop/milestone/5)
 
 ### User Stories
 The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
@@ -242,6 +253,7 @@ Some examples of visitor stories used in The Book Loop:
 - As a **visitor** I can **easily find out more about the site** so that **I can discover different services available and interact with a new community.**
 
 *You can access **all** visitor stories for this project by redirecting to the issues tab of this repo*
+
 [The Book Loop - Issues - Visitor User Stories](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+label%3A%22Visitor+User+Story%22+is%3Aclosed)
 
 ### Registered User Stories
