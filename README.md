@@ -344,7 +344,7 @@ Website is response across all device screen sizes :
 - Register/Sign In/Sign Out buttons so users can easily log in and out, unregistered users can easily create an account.
 - Basket icon and basket total, users can easily see the balance on their basket, and easily click on the basket link to access the basket page and ensures a smooth checkout process.
 
-![Screenshot of navigation bar]()
+![Screenshot of navigation bar](docs/readme-media/screenshots/features/header-nav.png)
 
 #### Footer
 - Home link in the logo, accessible on all pages so users can easily get back to the home page.
@@ -353,7 +353,7 @@ Website is response across all device screen sizes :
 - Email address contact, ensures a positive user experience in users are encouraged to reach out easily.
 - Copright message, users can easily access copright info.
 
-![Screenshot of footer]()
+![Screenshot of footer](docs/readme-media/screenshots/features/footer.png)
 
 #### Home Page 
 - Users can access a button to the store on the landing banner.
@@ -361,8 +361,9 @@ Website is response across all device screen sizes :
 - Best seller list, users can access a list of best selling books, encouraging them to explore the bookstore.
 - Users can enquire about selling on their second hand books at home through the form.
 
-![Screenshot of Home/About]()
-![Screenshot of Best sellers/Form]()
+![Screenshot of Home/About](docs/readme-media/screenshots/features/home-about.png)
+![Screenshot of Best sellers](docs/readme-media/screenshots/features/best-sellers.png)
+![Screenshot of form](docs/readme-media/screenshots/features/sell-book-user.png)
 
 #### Bookstore
 - Users can easily access the book store from the landing banner button, or from the link in the header.
@@ -371,8 +372,8 @@ Website is response across all device screen sizes :
 - Site admin users can access "add book" button, which brings them to a form where they can submit new book entires
 - More details on each book, and a link to add to the basket can be found on the Book Detail page.
 
-![Screenshot of bookstore/search bar]()
-![Screenshot of add book button]()
+![Screenshot of bookstore/search bar](docs/readme-media/screenshots/features/bookstore.png)
+![Screenshot of add book button](docs/readme-media/screenshots/features/product-admin-add.png)
 
 #### Book Detail
 - Details of each book can be found in their book detail page, details include, title, author, date of publishing, condition, rating and price.
@@ -384,11 +385,11 @@ Website is response across all device screen sizes :
 - Registered users can add reviews here, using the review form.
 - Unregistered users are encouraged to create an account if they are not logged in.
 
-![Screenshot of Book detail page]()
-![Screenshot of Out of Stock]()
-![Screenshot of Wish-List button]()
-![Screenshot of Product Admin buttons]()
-![Screenshot of Reviews]()
+![Screenshot of Book detail page](docs/readme-media/screenshots/features/book-detail.png)
+![Screenshot of Out of Stock](docs/readme-media/screenshots/features/no-stock-btn.png)
+![Screenshot of Wish-List button](docs/readme-media/screenshots/features/wish-list-btn.png)
+![Screenshot of Product Admin buttons](docs/readme-media/screenshots/features/product-admin-edit-delete.png)
+![Screenshot of Reviews](docs/readme-media/screenshots/features/reviews.png)
 
 #### Basket 
 - Users can access their basket bu clicking on the basket icon in the nav bar.
@@ -396,8 +397,8 @@ Website is response across all device screen sizes :
 - Users can click on either 'keep shopping' to return to the bookstore, or click 'checkout' to move to the checkout page.
 - Users will be informed if their basket is empty.
 
-![Screenshot of Basket - full]()
-![Screenshot of Basket - empty]()
+![Screenshot of Basket - full](docs/readme-media/screenshots/features/basket-full.png)
+![Screenshot of Basket - empty](docs/readme-media/screenshots/features/basket-empty.png)
 
 #### Checkout
 - Users can access the checkout page from the basket page.
@@ -405,7 +406,7 @@ Website is response across all device screen sizes :
 - Users can fill in their delivery and card details and checkout
 - Registered/Logged in users can use their default info here to ensure a fast and smooth checkout process.
 
-![Screenshot of Checkout page]()
+![Screenshot of Checkout page](docs/readme-media/screenshots/features/checkout.png)
 
 #### Checkout Sucess
 - Users are redirected to the checkout success page upon making a successful payment.
@@ -419,9 +420,9 @@ Website is response across all device screen sizes :
 - Anonymous users can easily create a new account.
 - Registered users can easily delete their account and info on their profile page, ensuring good security accross the site.
 
-![Screenshot of Login]()
-![Screenshot of Logout]()
-![Screenshot of Sign up]()
+![Screenshot of Login](docs/readme-media/screenshots/features/sign-in.png)
+![Screenshot of Logout](docs/readme-media/screenshots/features/sign-out.png)
+![Screenshot of Sign up](docs/readme-media/screenshots/features/register.png)
 
 #### User Profile
 - Users can access their profile through the link in the nav, only visible to registered users.
@@ -429,18 +430,18 @@ Website is response across all device screen sizes :
 - Users can delete their account on the button on this page.
 - Users can add to their wish list, and easily remove items, or add them to their basket.
 
-![Screenshot of Profile Page]()
+![Screenshot of Profile Page](docs/readme-media/screenshots/features/profile.png)
 
 #### Customer Service
 - All users can access the customer service page from the navigation bar.
 - Users can submit enquiries, complaints or anything else regarding their purchases, this ensures good communication between the business and customers.
 
-![Screenshot of Customer Service]()
+![Screenshot of Customer Service](docs/readme-media/screenshots/features/customer-service.png)
 
 #### 404 Error Page
 - Should a user access any non-existing pages or another 404 error, they are displayed a message and a link to head back to the home page.
 
-![Screenshot of 404 page]()
+![Screenshot of 404 page](docs/readme-media/screenshots/features/error-page.png)
 
 ### Future Features 
 * **Book Recommendations Engine**:
