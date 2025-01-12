@@ -573,6 +573,7 @@ textarea:focus {
 .error-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/profile-bg.png);
     padding: 100px;
+    background-size: cover;
 }
 
 /* -------------------------------------------------------- Media Queries */
