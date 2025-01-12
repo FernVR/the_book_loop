@@ -290,10 +290,8 @@ I used Lucid Chart to create basic Entity Relationship Diagrams for database sch
 ### Typography
 
 Inika Font is a serif typeface designed with elegance and readability in mind. Its soft, well-balanced letterforms make it ideal for both print and digital platforms. I decided to use this font for:
-- Readability: The serif design enhances legibility, especially in longer articles, making it perfect for news content.
-- Professional Aesthetic: Inika has a formal yet approachable look, adding credibility to journalistic content.
-- Versatility: It works well on various screen sizes, providing a consistent reading experience on mobile and desktop.
-- Distinctive Style: Its unique design helps a news blog stand out while maintaining a polished appearance.
+- include reasons here 
+
 ### Colour Scheme
 ![Screenshot of Colour schemes](docs/readme-media/screenshots/colour-pal.png)
 
