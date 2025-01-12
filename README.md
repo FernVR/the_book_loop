@@ -156,6 +156,9 @@ However, for external links, especially those leading to paid or untrusted conte
 - **rel="sponsored":** This attribute is recommended for links that are part of paid advertising or sponsorships, signaling to search engines that the link is sponsored.
 These practices help ensure that your site adheres to SEO standards and guidelines when linking externally.
 
+5. **Lighthouse SEO Score**
+- ![Screenshot of Lighthouse SEO Score Breakdown]()
+
 ## Agile Methodology
 ### Overview
 The use of Agile methodology, demonstrated through GitHub Projects and Kanban boards, was instrumental in ensuring the successful delivery of The Book Loop. Agile’s iterative approach allowed for continuous development and improvement throughout the project lifecycle. By breaking down tasks into manageable sprints and tracking progress on Kanban boards, the development process became more organized and transparent.
