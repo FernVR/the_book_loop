@@ -107,6 +107,7 @@ class StripeWH_Handler:
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
         else:
+            print("couldn't find order")
             order = None
             try:
                 order = Order.objects.create(
@@ -119,7 +120,7 @@ class StripeWH_Handler:
                     street_address1=shipping_details.address.line1,
                     street_address2=shipping_details.address.line2,
                     county=shipping_details.address.state,
-                    original_bag=bag,
+                    # original_bag=bag,
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items():

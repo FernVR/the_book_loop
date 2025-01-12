@@ -38,10 +38,3 @@ def basket_contents(request):
         }
 
     return context
-
-
-
-
-
-
-

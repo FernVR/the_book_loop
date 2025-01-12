@@ -52,6 +52,17 @@ def checkout(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             order = form.save(commit=False)
+
+            # Calculate delivery cost and grand total
+
+            current_basket = basket_contents(request)
+
+            order.order_total = current_basket['total']
+
+            order.delivery_cost = current_basket['delivery']
+
+            order.grand_total = current_basket['grand_total']
+
             order.save()
 
             # Process basket items and create OrderLineItems
@@ -66,7 +77,7 @@ def checkout(request):
 
             # Stripe payment processing
             stripe.api_key = stripe_secret_key
-            amount = int(order.grand_total * 100)  # Convert to cents
+            amount = int(order.grand_total * 100)
             try:
                 stripe.PaymentIntent.create(
                     amount=amount,
@@ -87,7 +98,7 @@ def checkout(request):
         basket = request.session.get('basket', {})
         if not basket:
             messages.info(request, "Your basket is empty.")
-            return redirect(reverse('bookstore'))
+            return redirect(reverse('bookstore:bookstore'))
         
 
         # Retrieve user profile delivery info
