@@ -49,6 +49,7 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
+        print('IN handle_payment_intent_succeeded')
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
@@ -69,6 +70,7 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
+                print('IN save_info clicked')
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
@@ -81,7 +83,9 @@ class StripeWH_Handler:
         order_exists = False
         attempt = 1
         while attempt <= 5:
+            print('IN WHILE LOOP ATTEMPT: ', attempt)
             try:
+                print('IN try')
                 order = Order.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
@@ -96,12 +100,14 @@ class StripeWH_Handler:
                     original_bag=bag,
                     stripe_pid=pid,
                 )
+                print('Order: ', order)
                 order_exists = True
                 break
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
+            print('IN ORDER EXISTS')
             self._send_confirmation_email(order)
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
