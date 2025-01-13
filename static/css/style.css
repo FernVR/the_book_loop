@@ -351,7 +351,7 @@ form .form-group {
     border: none;
     color: #000;
     border-radius: 2rem;
-    max-width: 800px;
+    width: 800px;
     margin: 50px;
 }
 
@@ -581,6 +581,17 @@ textarea:focus {
 /* Mobile/Tablet sizes */
 @media screen and (min-width: 350px) {
 
+    /* Book Detail */
+
+    .review-list {
+        margin-left: 15px;
+        max-width: 360px;
+    }
+
+    .add-review {
+        margin-left: 10px;
+    }
+
     /* Newsletter form - Footer */
     #mc_embed_signup {
         width: 300px;
@@ -617,6 +628,16 @@ textarea:focus {
     #wish-list {
         margin: 30px; 
     }
+
+    .review-list {
+        margin: 50px;
+        min-width: 600px;
+    }
+
+    .add-review {
+        min-width: 400px;
+        margin-left: 30px;
+    }
 }
 
 
@@ -650,6 +671,11 @@ textarea:focus {
     #wish-list {
         margin-left: 150px; 
     }
+
+    .review-list {
+        min-width: 800px;
+    }
+
 }
 
 @media screen and (min-width: 1700px) {
