@@ -156,7 +156,7 @@ footer {
 /* Home Banner */
 
 .home-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/static/images/site-media/home-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/static/images/site-media/home-banner.webp);
     padding: 120px 20px;
     background-position: center;
     background-size: cover;
@@ -173,7 +173,7 @@ footer {
 }
 
 .about-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url(/static/images/site-media/about-img.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)), url(/static/images/site-media/about-img.webp);
     border-radius: 2rem;
     height: auto;
     width: 350px;
@@ -222,7 +222,7 @@ footer {
 /* Sell Your Old Books */
 
 .sell-books-sec {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/static/images/site-media/user-form.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/static/images/site-media/user-form.webp);
     background-size: cover;
     padding: 50px 20px;
 }
@@ -445,7 +445,7 @@ textarea:focus {
 /* -------------------------------------------------------- Basket */
 
 #basket {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/static/images/site-media/basket-bg.png) ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/static/images/site-media/basket-bg.webp) ;
     padding: 100px 0;
 }
 
@@ -458,7 +458,7 @@ textarea:focus {
 /* -------------------------------------------------------- Checkout */
 
 #checkout {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/static/images/site-media/store-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(/static/images/site-media/store-banner.webp);
     padding: 50px 0;
 }
 
@@ -471,7 +471,7 @@ textarea:focus {
 #login,
 #logout,
 #signup {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/customer-service-bg.png) ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/customer-service-bg.webp) ;
 }
 
 .log-form-card {
@@ -483,7 +483,7 @@ textarea:focus {
 /* -------------------------------------------------------- Customer Service */
 
 .customer-service-page {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/customer-service-bg.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/customer-service-bg.webp);
     padding: 100px 0;
 }
 
@@ -520,7 +520,7 @@ textarea:focus {
 }
 
 #user-info {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/profile-bg.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/profile-bg.webp);
 }
 
 .user-profile-info {
@@ -573,7 +573,7 @@ textarea:focus {
 /* -------------------------------------------------------- 404 error Page */
 
 .error-page {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/profile-bg.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(/static/images/site-media/profile-bg.webp);
     padding: 100px;
     background-size: cover;
 }

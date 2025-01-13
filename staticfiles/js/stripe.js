@@ -1,51 +1,61 @@
-
 const stripePublicKey = document.getElementById("id_stripe_public_key").textContent.trim();
 const clientSecret = document.getElementById("id_client_secret").textContent.trim();
 const stripe = Stripe(stripePublicKey);
 const elements = stripe.elements();
 const card = elements.create('card');
-const submitButton = document.getElementById("submit-button").textContent.trim();
+const submitButton = document.getElementById("submit-button");
+
 card.mount('#card-element');
 
 // Display card errors
-card.on('change', function (event) {
+card.on('change', (event) => {
     const displayError = document.getElementById('card-errors');
-    if (event.error) {
-        displayError.textContent = event.error.message;
-    } else {
-        displayError.textContent = '';
-    }
+    displayError.textContent = event.error ? event.error.message : '';
 });
 
+// Cache checkout data securely
+const cacheCheckoutData = async () => {
+    try {
+        const response = await fetch('/checkout/cache_checkout_data/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-CSRFToken': csrfToken },
+            body: JSON.stringify({
+                client_secret: clientSecret,
+                save_info: document.getElementById('id-save-info').checked,
+            }),
+        });
+        if (!response.ok) throw new Error('Failed to cache checkout data.');
+    } catch (error) {
+        console.error('Cache error:', error);
+        document.getElementById('card-errors').textContent = 'Error caching checkout data. Please try again.';
+    }
+};
+
 // Handle form submission
-const form = document.getElementById('payment-form');
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', async (event) => {
     event.preventDefault();
     submitButton.disabled = true;
-    const fullName = form.full_name.value.trim();
-    const email = form.email.value.trim();
+
+    await cacheCheckoutData();
 
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
             billing_details: {
-                name: fullName,
-                email: email,
+                name: form.full_name.value.trim(),
+                email: form.email.value.trim(),
             },
-        }
-    }).then(function (result) {
+        },
+    }).then((result) => {
         if (result.error) {
-            submitButton.disabled = false;
             document.getElementById('card-errors').textContent = result.error.message;
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
-            }
+            submitButton.disabled = false;
+        } else if (result.paymentIntent.status === 'succeeded') {
+            form.submit();
         }
-    }).catch(function (error) {
-        // Handle any unexpected errors and re-enable the button
+    }).catch((error) => {
+        console.error('Payment error:', error);
+        document.getElementById('card-errors').textContent = 'An unexpected error occurred. Please try again.';
         submitButton.disabled = false;
-        console.error("Payment error:", error);
-        document.getElementById('card-errors').textContent = "An unexpected error occurred. Please try again.";
     });
 });
