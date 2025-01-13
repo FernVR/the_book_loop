@@ -24,7 +24,7 @@ def home_view(request):
             form = SellBookForm()
     
     all_books = list(Book.objects.all())
-    best_seller_books = random.sample(all_books, min(4, len(all_books)))
+    best_seller_books = random.sample(all_books, min(3, len(all_books)))
 
     context = {
         'form': form,
