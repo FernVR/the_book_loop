@@ -61,7 +61,7 @@
     <div class="row d-flex justify-content-center best-sellers">
         {% if best_seller_books %}
         {% for book in best_seller_books %}
-        <div class="col-12 col-md-6 col-lg-3 text-center my-3">
+        <div class="col-12 col-md-6 col-lg-3 text-center">
             <a href="{% url 'bookstore:book_detail' book.id %}">
                 <img src="{{ book.cover_image.url }}" alt="{{ book.title }}" class="best-seller-img rounded-circle">
             </a>

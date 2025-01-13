@@ -141,8 +141,8 @@
                 </ul>
                 {% endif %}
 
-                <div id="basket-link" class="d-flex flex-column justify-content-center align-items-center position-relative">
-                    <a class="navbar-text h3 basket-icon position-relative" href="{% url 'view_basket' %}">
+                <div id="basket-link" class="d-flex justify-content-center align-items-center">
+                    <a class="navbar-text h3 basket-icon" href="{% url 'view_basket' %}">
                         <i class="fa-solid fa-basket-shopping"></i>
                         {% if total %}
                         <div class="basket-total">
