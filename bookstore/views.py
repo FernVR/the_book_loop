@@ -23,13 +23,13 @@ def bookstore(request):
     query = None
 
     if 'q' in request.GET:
-            query = request.GET['q']
-            if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('bookstore:bookstore'))
-            
-            queries = Q(title__icontains=query) | Q(description__icontains=query)
-            books = books.filter(queries)
+        query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
+            return redirect(reverse('bookstore:bookstore'))
+
+        queries = Q(title__icontains=query) | Q(description__icontains=query)
+        books = books.filter(queries)
 
     paginator = Paginator(books, 12)
     page_number = request.GET.get('page')
@@ -50,7 +50,7 @@ def book_detail(request, book_id):
     Renders book reviews.
     Add review functionality.
     """
-    
+
     book = get_object_or_404(Book, pk=book_id)
     reviews = Review.objects.filter(book=book)
     form = ReviewForm()
@@ -64,20 +64,20 @@ def book_detail(request, book_id):
             review.save()
             messages.success(request, "Your review has been submitted.")
             return redirect('bookstore:book_detail', book_id=book_id)
-    
+
     context = {
         'book': book,
         'reviews': reviews,
         'form': form,
     }
-    
+
     return render(request, 'bookstore/book_detail.html', context)
 
 
 @login_required
 def delete_book(request, book_id):
-    """ 
-    Delete a book from the store 
+    """
+    Delete a book from the store
     """
 
     if not request.user.is_superuser:
@@ -93,7 +93,7 @@ def delete_book(request, book_id):
 @login_required
 def edit_book(request, book_id):
     """
-    Edit a book details in the store 
+    Edit a book details in the store
     """
 
     if not request.user.is_superuser:
@@ -108,7 +108,10 @@ def edit_book(request, book_id):
             messages.success(request, 'Successfully updated book!')
             return redirect(reverse('bookstore:book_detail', args=[book.id]))
         else:
-            messages.error(request, 'Failed to update book. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update book. Please ensure the form is valid.')
+
     else:
         form = BookForm(instance=book)
         messages.info(request, f'You are editing {book.title}')
@@ -124,8 +127,8 @@ def edit_book(request, book_id):
 
 @login_required
 def add_book(request):
-    """ 
-    Add a book to the store 
+    """
+    Add a book to the store
     """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
@@ -138,7 +141,9 @@ def add_book(request):
             messages.success(request, 'Successfully added book!')
             return redirect(reverse('bookstore:book_detail', args=[book.id]))
         else:
-            messages.error(request, 'Failed to add book. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add book. Please ensure the form is valid.')
     else:
         form = BookForm()
 
@@ -156,10 +161,11 @@ def delete_review(request, review_id):
     View to delete a review.
     """
     review = get_object_or_404(Review, pk=review_id)
-    
+
     if review.author != request.user:
-        return HttpResponseForbidden("You are not allowed to delete this review.")
-    
+        return HttpResponseForbidden(
+            "You are not allowed to delete this review.")
+
     review.delete()
     messages.success(request, "Your review has been deleted successfully.")
     return redirect('bookstore:book_detail', book_id=review.book.id)

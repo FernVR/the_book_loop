@@ -13,6 +13,7 @@ from user_profile.models import UserProfile
 
 # Create your views here.
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -28,8 +29,6 @@ def cache_checkout_data(request):
         return HttpResponse(content=str(e), status=400)
 
 
-
-
 def checkout(request):
     """
     Render the checkout page and process orders.
@@ -39,7 +38,8 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if not stripe_public_key or not stripe_secret_key:
-        messages.error(request, "Stripe payment keys are missing. Please contact support.")
+        messages.error(request,
+        "Stripe payment keys are missing. Please contact support.")
         return redirect(reverse('view_basket'))
 
     if request.method == 'POST':

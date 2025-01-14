@@ -4,6 +4,7 @@ from .forms import CustomerForm
 
 # Create your views here.
 
+
 def customer_service(request):
     """ 
     Handle the customer support form submission.
@@ -14,9 +15,13 @@ def customer_service(request):
         form = CustomerForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message has been successfully submitted. We will get back to you soon!')
+            messages.success(
+                request, 
+                'Your message has been successfully submitted.'
+                'We will get back to you soon!')
             return redirect('bookstore:bookstore')
     else:
         form = CustomerForm()
 
-    return render(request, 'customer_service/customer_service.html', {'form': form})
+    return render(request, 'customer_service/customer_service.html',
+                 {'form': form})

@@ -8,16 +8,16 @@ from bookstore.models import Book
 
 # Create your views here.
 
+
 @login_required
 def user_profile(request):
-    """ 
+    """
     Returns rendered user profile page
 
     """
     profile = get_object_or_404(UserProfile, user=request.user)
     wishlist = WishList.objects.filter(user=request.user).first()
     form = UserProfileForm(instance=profile)
-    
 
     template = 'user_profile/user_profile.html'
     context = {
@@ -42,7 +42,8 @@ def edit_profile(request):
             messages.success(request, 'Your profile has been updated.')
             return redirect('user_profile')
         else:
-            messages.error(request, 'Update failed. Please check the form for errors.')
+            messages.error(request, 
+                           'Update failed. Please check the form for errors.')
     else:
         form = UserProfileForm(instance=profile)
 
@@ -69,7 +70,8 @@ def edit_user_info(request):
             user.username = username
             user.email = email
             user.save()
-            messages.success(request, 'Your user information has been updated.')
+            messages.success(request,
+                             'Your user information has been updated.')
             return redirect('user_profile')
         else:
             messages.error(request, 'Please fill out all fields.')
@@ -89,7 +91,8 @@ def delete_account(request):
     user = request.user
     if request.method == 'POST':
         user.delete()
-        messages.success(request, 'Your account has been successfully deleted.')
+        messages.success(request, 
+                         'Your account has been successfully deleted.')
         return redirect('home')
     else:
         messages.error(request, 'Invalid request method.')
@@ -98,7 +101,7 @@ def delete_account(request):
 
 @login_required
 def wishlist_view(request):
-    """ 
+    """
     Renders wish-list
     """
     wishlist, _ = WishList.objects.get_or_create(user=request.user)
@@ -111,7 +114,7 @@ def wishlist_view(request):
 
 @login_required
 def add_to_wishlist(request):
-    """ 
+    """
     Add items to wish-list
     """
     if request.method == "POST":
@@ -121,15 +124,20 @@ def add_to_wishlist(request):
             return redirect("wishlist_view")
         try:
             book = get_object_or_404(Book, id=request.POST.get("book_id"))
-            wishlist, created = WishList.objects.get_or_create(user=request.user)
+            wishlist, created = WishList.objects.get_or_create(
+                user=request.user)
 
             if book in wishlist.books.all():
-                messages.warning(request, f"{book.title} is already in your wish-list.")
+                messages.warning(
+                    request, f"{book.title} is already in your wish-list.")
             else:
                 wishlist.books.add(book)
-                messages.success(request, f"{book.title} has been added to your wish-list.")
+                messages.success(
+                    request, f"{book.title} has been added to your wish-list.")
         except Exception as e:
-            messages.error(request, "Something went wrong while adding the book to your wish-list.")
+            messages.error(
+                request, 
+                "Something went wrong while adding the book to your wish-list.")
             print(f"Error adding to wishlist: {e}")
     else:
         messages.error(request, "Invalid request method.")
@@ -144,5 +152,6 @@ def remove_from_wishlist(request, book_id):
     book = get_object_or_404(Book, id=book_id)
     wishlist = get_object_or_404(WishList, user=request.user)
     wishlist.books.remove(book)
-    messages.success(request, f'"{book.title}" has been removed from your wish-list.')
+    messages.success(
+        request, f'"{book.title}" has been removed from your wish-list.')
     return redirect("user_profile")
