@@ -42,8 +42,16 @@ Back to [README.md](README.md) file.
 ### HTML 
 I used [The W3C Markup Validation Service](https://validator.w3.org/) to validate all HTML pages by inputting the source code into the direct input field, these were my results:
 
+<details><summary>Home Page Result</summary><img src="docs/testing-media/validation-results/home-html-val.png"></details>
+<details><summary>Bookstore Page Result</summary><img src="docs/testing-media/validation-results/bookstore-html-val.png"></details>
+<details><summary>Book Detail Page Result</summary><img src="docs/testing-media/validation-results/book-detail-html-val.png"></details>
+<details><summary>Customer Service Page Result</summary><img src="docs/testing-media/validation-results/customer-service-html-val.png"></details>
+<details><summary>Profile Page Result</summary><img src="docs/testing-media/validation-results/profile-html-val.png"></details>
+
 ### CSS
 I used [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my style.css file, I got these results:
+
+![CSS Validator Results](docs/testing-media/validation-results/css-result.png)
 
 ### Javascript
 I used [JSHint](https://jshint.com/) to validate my style.css file, I got these results:
