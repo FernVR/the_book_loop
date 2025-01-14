@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib import messages
+from django.http import HttpResponse
 from .forms import SellBookForm
 from bookstore.models import Book
 import random
@@ -39,3 +40,20 @@ def custom_404(request, exception):
     Renders 404 page.
     """
     return render(request, '404.html', status=404)
+
+
+
+def robots_txt(request):
+    """
+    Generate robots.txt
+    """
+    content = """User-agent: *
+    Disallow: /admin/
+    Disallow: /checkout/
+    Disallow: /checkout_success/
+    Disallow: /basket/
+    Allow: /signup/
+    Allow: /home/
+
+    Sitemap: https://thebookloop-38d0e34a2881.herokuapp.com/sitemap.xml"""
+    return HttpResponse(content, content_type="text/plain")

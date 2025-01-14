@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import handler404
-from home.views import custom_404
+from home.views import custom_404, robots_txt
 
 urlpatterns = [
     path('', include('home.urls')),
@@ -30,6 +30,7 @@ urlpatterns = [
     path('customer_service/', include('customer_service.urls')),
     path('checkout/', include('checkout.urls')),
     path('user_profile/', include('user_profile.urls')),
+    path("robots.txt", robots_txt),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
