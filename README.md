@@ -29,7 +29,6 @@ The Book Loop is an innovative e-commerce platform dedicated to promoting sustai
   - [Visitor Stories](#visitor-stories)
   - [Registered User Stories](#registered-user-stories)
   - [Admin User Stories](#admin-user-stories)
-  - [E-Commerce Features]()
 
 * [Wireframes](#wireframes)
 
@@ -51,13 +50,16 @@ The Book Loop is an innovative e-commerce platform dedicated to promoting sustai
 * [Testing](#testing)
 
 * [Technologies Used](#technologies-used)
-  - [Frameworks]()
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libraries and Programs Used](#frameworks-libraries--programs-used)
 
 * [Deployment](#deployment)
-  * [Heroku]()
+  - [Github](#github)
+  - [Heroku](#heroku)
 
 * [Credits](#credits)
-  - [Media]()
+  - [Media](#media)
+  - [Code](#code)
 
 * [Acknowledgements](#acknowledgements)
 
@@ -229,6 +231,7 @@ All Manual and Automated Testing tasks/issues for The Book Loop and all document
 
 ### User Stories
 The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
+
 ![Screenshot example of different issues with different labels.](docs/readme-media/screenshots/github-labels.png)
 
 ### Developer Stories
@@ -319,33 +322,30 @@ Inika Font is a serif typeface designed with elegance and readability in mind. I
 <details><summary>Basket - bg image</summary><img src="static/images/site-media/basket-bg.png"></details>
 
 ### Responsiveness
-Website is response across all device screen sizes :
+I used my iPhone 12 Pro and iPad Pro 12.9 to test responsive design on these pages:
 #### Home Page
-<details><summary>Home Page Mobile</summary><img src=""></details>
-<details><summary>Home Page Tablet</summary><img src=""></details>
-<details><summary>Home Page Desktop</summary><img src=""></details>
+<details><summary>Home Page Mobile</summary><img src="docs/readme-media/screenshots/responsive-design/home-mobile.jpeg"></details>
+<details><summary>Home Page Tablet</summary><img src="docs/readme-media/screenshots/responsive-design/home-tablet.jpeg"></details>
+<details><summary>Home Page Tablet 2</summary><img src="docs/readme-media/screenshots/responsive-design/home-tablet-2.jpeg"></details>
 
 #### Profile Page
-<details><summary>Profile Page Mobile</summary><img src=""></details>
-<details><summary>Profile Page Tablet</summary><img src=""></details>
-<details><summary>Profile Page Laptop</summary><img src=""></details>
+<details><summary>Profile Page Mobile</summary><img src="docs/readme-media/screenshots/responsive-design/profile-mobile.jpeg"></details>
+<details><summary>Profile Page Tablet</summary><img src="docs/readme-media/screenshots/responsive-design/profile-tablet.jpeg"></details>
 
 #### Bookstore Page
-<details><summary>Bookstore Mobile</summary><img src=""></details>
-<details><summary>Bookstore Tablet</summary><img src=""></details>
-<details><summary>Bookstore Laptop</summary><img src=""></details>
+<details><summary>Bookstore Mobile</summary><img src="docs/readme-media/screenshots/responsive-design/bookstore-mobile.jpeg"></details>
+<details><summary>Bookstore Tablet</summary><img src="docs/readme-media/screenshots/responsive-design/bookstore-tablet.jpeg"></details>
+<details><summary>Bookstore Tablet 2</summary><img src="docs/readme-media/screenshots/responsive-design/bookstore-tablet-2.jpeg"></details>
 
 #### Basket Page
-<details><summary>Basket Mobile</summary><img src=""></details>
-<details><summary>Basket Tablet</summary><img src=""></details>
-<details><summary>Basket Laptop</summary><img src=""></details>
+<details><summary>Basket Mobile</summary><img src="docs/readme-media/screenshots/responsive-design/basket-mobile.jpeg"></details>
+<details><summary>Basket Tablet</summary><img src="docs/readme-media/screenshots/responsive-design/basket-tablet.jpeg"></details>
 
 #### Checkout Page
-<details><summary>Checkout Mobile</summary><img src=""></details>
-<details><summary>Checkout Tablet</summary><img src=""></details>
-<details><summary>Checkout Laptop</summary><img src=""></details>
+<details><summary>Checkout Mobile</summary><img src="docs/readme-media/screenshots/responsive-design/checkout-mobile.jpeg"></details>
+<details><summary>Checkout Tablet</summary><img src="docs/readme-media/screenshots/responsive-design/checkout-tablet.jpeg"></details>
 
-- More responsive testing grids included within [TESTING.md](TESTING.md)
+More responsive testing grids included within [TESTING.md](TESTING.md)
 
 ## Features
 ### Existing Features
@@ -424,7 +424,7 @@ Website is response across all device screen sizes :
 - Users are redirected to the checkout success page upon making a successful payment.
 - They are shown a nice message as well as their order summary, and a button to return to the bookstore.
 
-![Screenshot of checkout success]()
+![Screenshot of checkout success](docs/readme-media/screenshots/features/checkout-success.png)
 
 #### User Authentication
 - Users can easily login/out/register on The Book Loop, ensuring a good user experience.
