@@ -65,6 +65,16 @@ I used [JSHint](https://jshint.com/) to validate my style.css file, I got these 
 ### Python
 I used [The CI Python Linter](https://pep8ci.herokuapp.com/) to validate my python files, I got these results:
 
+<details><summary>basket/contexts.py</summary><img src="docs/testing-media/validation-results/basket-contexts-py.png"></details>
+<details><summary>basket/urls.py</summary><img src="docs/testing-media/validation-results/basket-urls-py.png"></details>
+<details><summary>basket/views.py</summary><img src="docs/testing-media/validation-results/basket-views-py.png"></details>
+<details><summary>bookstore/models.py</summary><img src="docs/testing-media/validation-results/bookstore-models-py.png"></details>
+<details><summary>bookstore/views.py</summary><img src="docs/testing-media/validation-results/bookstore-views-py.png"></details>
+<details><summary>checkout/views.py</summary><img src="docs/testing-media/validation-results/checkout-views-py.png"></details>
+<details><summary>customer-service/views.py</summary><img src="docs/testing-media/validation-results/customer-service-views-py.png"></details>
+<details><summary>home/views.py</summary><img src="docs/testing-media/validation-results/home-views-py.png"></details>
+<details><summary>profile/views.py</summary><img src="docs/testing-media/validation-results/profile-views-py.png"></details>
+
 ## Python Unit Testing
 Results for testing report can be found in [test_report.txt](test_report.txt) which I generated using the 'python manage.py test -v 2 > test_report.txt' command in the terminal.
 
