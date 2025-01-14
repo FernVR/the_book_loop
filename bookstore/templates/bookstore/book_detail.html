@@ -17,7 +17,7 @@
 					class="img-fluid book-detail-img">
 			</div>
 			<div class="col-md-6">
-				<h1>{{ book.title }}</h1>
+				<h2>{{ book.title }}</h2>
 				<p><strong>Author:</strong> {{ book.author }}</p>
 				<p><strong>Description:</strong> {{ book.description }}</p>
 				<p><strong>Rating:</strong> {{ book.rating }} <i class="fa-solid fa-star"></i> </p>
@@ -52,7 +52,6 @@
 				<div class="mt-5">
 					<h4>
 						<strong>Product Admin:</strong>
-						<hr>
 					</h4>
 					<a class=" btn btn-primary edit-item" href="{% url 'bookstore:edit_book' book.id %}">Edit Item</a>
 					<button class="btn btn-danger red-btn" id="deleteButton" data-book-title="{{ book.title }}"
@@ -90,7 +89,7 @@
 <section id="reviews">
 	<div class="row">
 		<div class="col-md-8 review-list p-5 border-end">
-			<h4 class="text-center">Community Reviews</h4>
+			<h3 class="text-center">Community Reviews</h3>
 			{% if reviews %}
 			<ul class="list-unstyled">
 				{% for review in reviews %}
@@ -107,8 +106,8 @@
 						<button type="submit" class="btn btn-danger btn-sm mt-2 red-btn">Delete</button>
 					</form>
 					{% endif %}
+					<hr>
 				</li>
-				<hr>
 				{% endfor %}
 			</ul>
 			{% else %}

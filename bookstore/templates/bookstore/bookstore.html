@@ -8,7 +8,7 @@
 <section class="bookstore">
 
     <div class="bookstore-content container">
-        <h1 class="text-center  d-none">Welcome to the Bookstore</h1>
+        <h2 class="text-center  d-none">Welcome to the Bookstore</h2>
 
         <!-- Add Product for Super Users -->
         {% if request.user.is_superuser %}
@@ -24,6 +24,9 @@
 
         <!-- Search bar -->
         <section class="d-flex justify-content-center align-items-center p-5 search">
+            <h2 class="d-none">
+                Section Header
+            </h2>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'bookstore:bookstore' %}">
                     <div class="input-group w-100">
