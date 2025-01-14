@@ -314,12 +314,12 @@ Inika Font is a serif typeface designed with elegance and readability in mind. I
 - I tried to carefully select the images to match the overall theme and aesthetic of the site. I tried to use complimenting colours where possible.
 - I selected all book cover images so their were suited to the colour scheme of the site.
 <details><summary>Home Page Banner</summary><img src="static/images/site-media/home-banner.webp"></details>
-<details><summary>About Image</summary><img src="static/images/site-media/about-img.png"></details>
-<details><summary>Home Page form - bg image</summary><img src="static/images/site-media/user-form.png"></details>
-<details><summary>Customer Service form - bg image</summary><img src="static/images/site-media/customer-service-bg.png"></details>
-<details><summary>Profile Page - bg image</summary><img src="static/images/site-media/profile-bg.png"></details>
-<details><summary>Checkout - bg image</summary><img src="static/images/site-media/store-banner.png"></details>
-<details><summary>Basket - bg image</summary><img src="static/images/site-media/basket-bg.png"></details>
+<details><summary>About Image</summary><img src="static/images/site-media/about-img.webp"></details>
+<details><summary>Home Page form - bg image</summary><img src="static/images/site-media/user-form.webp"></details>
+<details><summary>Customer Service form - bg image</summary><img src="static/images/site-media/customer-service-bg.webp"></details>
+<details><summary>Profile Page - bg image</summary><img src="static/images/site-media/profile-bg.webp"></details>
+<details><summary>Checkout - bg image</summary><img src="static/images/site-media/store-banner.webp"></details>
+<details><summary>Basket - bg image</summary><img src="static/images/site-media/basket-bg.webp"></details>
 
 ### Responsiveness
 I used my iPhone 12 Pro and iPad Pro 12.9 to test responsive design on these pages:
