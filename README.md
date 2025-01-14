@@ -157,7 +157,8 @@ However, for external links, especially those leading to paid or untrusted conte
 These practices help ensure that your site adheres to SEO standards and guidelines when linking externally.
 
 5. **Lighthouse SEO Score**
-- ![Screenshot of Lighthouse SEO Score Breakdown]()
+
+  ![Screenshot of Lighthouse SEO Score Breakdown](docs/readme-media/screenshots/lighthouse-seo.png)
 
 ## Agile Methodology
 ### Overview

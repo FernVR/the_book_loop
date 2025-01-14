@@ -4,4 +4,6 @@ Disallow: /checkout/
 Disallow: /checkout_success/
 Disallow: /basket/
 Allow: /signup/
+Allow: /home/
+
 Sitemap: https://thebookloop-38d0e34a2881.herokuapp.com/sitemap.xml
