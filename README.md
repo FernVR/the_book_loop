@@ -149,16 +149,13 @@ Search Engine Optimization (SEO) is a critical aspect of any online platform, as
 4. **Custom 404 Page:**
   A custom 404 error page was included to provide a user-friendly experience and redirect users to other parts of the site, minimizing frustration and retaining visitors.
 
-In the current project, all links are internal and do not require rel attributes. Internal links contribute to the site's SEO, helping to establish a better structure for search engines to follow.
-However, for external links, especially those leading to paid or untrusted content, the following best practices should be considered in the future:
+5. **At least one link to an external resource, which makes use of a rel attribute.**
+  Added a link to this projects domain in the head of the [base.html](templates/base.html) file.
 
-- **rel="nofollow":** This attribute should be applied to external links to prevent search engines from following those links, typically used for links to untrusted or user-generated content.
-- **rel="sponsored":** This attribute is recommended for links that are part of paid advertising or sponsorships, signaling to search engines that the link is sponsored.
-These practices help ensure that your site adheres to SEO standards and guidelines when linking externally.
+6. **Lighthouse SEO Score**
 
-5. **Lighthouse SEO Score**
-
-  ![Screenshot of Lighthouse SEO Score Breakdown](docs/readme-media/screenshots/lighthouse-seo.png)
+  ![Screenshot of Lighthouse SEO Score](docs/readme-media/screenshots/lighthouse-seo.png)
+  ![Screenshot of Lighthouse SEO Score Breakdown](docs/readme-media/screenshots/lighthouse-seo-passed.png)
 
 ## Agile Methodology
 ### Overview
@@ -232,7 +229,7 @@ All Manual and Automated Testing tasks/issues for The Book Loop and all document
 
 ### User Stories
 The issues/ user stories were broken down into different categories, developer, visitor, registered-user and admin user stories. This was to separate concerns and ensure that all user functionality was being added. I added personalised labels to the issues so I could see which categories each issue was separated into, and how many from each section I was still working on to complete. 
-![Screenshot example of different issues with different labels.]()
+![Screenshot example of different issues with different labels.](docs/readme-media/screenshots/github-labels.png)
 
 ### Developer Stories
 Some examples of developer stories used in The Book Loop:
@@ -305,8 +302,7 @@ I used Lucid Chart to create basic Entity Relationship Diagrams for database sch
 ## Design and Layout
 ### Typography
 
-Inika Font is a serif typeface designed with elegance and readability in mind. Its soft, well-balanced letterforms make it ideal for both print and digital platforms. I decided to use this font for:
-- include reasons here 
+Inika Font is a serif typeface designed with elegance and readability in mind. Its soft, well-balanced letterforms make it ideal for both print and digital platforms. On a website dedicated to books, I thought this was the clear choice for an elegant and tasteful design.
 
 ### Colour Scheme
 ![Screenshot of Colour schemes](docs/readme-media/screenshots/colour-pal.png)
@@ -536,6 +532,21 @@ A section of the site dedicated to virtual book clubs and community discussions.
 1. [Apple Numbers:](https://apple.com/numbers/)
     - I used the Numbers app on my iPad pro to create testing spreadsheets.
 
+1. [Free Online Sitemap Generator:](www.xml-sitemaps.com)
+    - For generating the sitemap file.
+
+1. [Whitenoise:](https://whitenoise.readthedocs.io/en/latest/)
+    - For serving static files.
+
+1. [Cloudinary:](https://cloudinary.com/)
+    - For serving bookstore images.
+
+1. [PostgreSQL:](https://www.postgresql.org/)
+    - For creating a database instance.
+
+1. [Design.com:](https://www.design.com/)
+    - To generate a free logo.
+
 ## Deployment 
 ### Github
 1. Login (or sign up) to Github.
@@ -575,16 +586,20 @@ The deployment is made using [Heroku](https://www.heroku.com/) following the lis
 ## Credits 
 ### Media
 #### Site Media
-* Logo:
-* Background images:
+* **Logo** - Generated from [Design.com](https://www.design.com/), using a free logo generator.
+
+* **Background images** - all from [Unsplash](https://unsplash.com/)
 
 #### Product Media
 
-### Code 
-Include all documentation
+* I used images of book covers from [Amazon Books]() and [Easons](https://www.easons.com/).
 
-### Content
-* Descriptions on books
+### Code 
+
+* For the basket and checkout app, I copied some code from the Boutique Ado Walkthrough project with [Code Institute](https://codeinstitute.net/), but made a lot of changes based on my models and what features I want to include.
+
+* Youtube tutorials and creators: [Desphixs](https://www.youtube.com/@desphixs), [Very Academy - Python E commerce Tutorial](https://www.youtube.com/watch?v=UqSJCVePEWU&list=PLOLrQ9Pn6caxY4Q1U9RjO1bulQp5NDYS_) and [Codemy Django Wednesdays E Commerce](https://www.youtube.com/watch?v=u6R4vBa7ZK4&list=PLCC34OHNcOtpRfBYk-8y0GMO4i1p1zn50).
+
 
 ## Acknowledgments 
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
