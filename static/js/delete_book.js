@@ -1,3 +1,5 @@
+/* global bootstrap */
+
 document.addEventListener('DOMContentLoaded', function () {
     var deleteButton = document.getElementById("deleteButton");
     if (deleteButton) {

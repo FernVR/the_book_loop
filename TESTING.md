@@ -56,6 +56,12 @@ I used [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to
 ### Javascript
 I used [JSHint](https://jshint.com/) to validate my style.css file, I got these results:
 
+<details><summary>stripe.js</summary><img src="docs/testing-media/validation-results/stripe-js.png"></details>
+<details><summary>wishlist.js</summary><img src="docs/testing-media/validation-results/wishlist-js.png"></details>
+<details><summary>rating-slider.js</summary><img src="docs/testing-media/validation-results/rating-slider-js.png"></details>
+<details><summary>image-preview.js</summary><img src="docs/testing-media/validation-results/image-preview-js.png"></details>
+<details><summary>delete-book.js</summary><img src="docs/testing-media/validation-results/delete-book-js.png"></details>
+
 ### Python
 I used [The CI Python Linter](https://pep8ci.herokuapp.com/) to validate my python files, I got these results:
 

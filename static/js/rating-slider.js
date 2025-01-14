@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 document.addEventListener('DOMContentLoaded', function () {
     const slider = document.getElementById('rating-slider');
     const ratingValue = document.getElementById('rating-value');

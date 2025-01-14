@@ -1,9 +1,13 @@
+/* jshint esversion: 8 */
+/* global Stripe, csrfToken */
+
 const stripePublicKey = document.getElementById("id_stripe_public_key").textContent.trim();
 const clientSecret = document.getElementById("id_client_secret").textContent.trim();
 const stripe = Stripe(stripePublicKey);
 const elements = stripe.elements();
 const card = elements.create('card');
 const submitButton = document.getElementById("submit-button");
+const form = document.getElementById("payment-form");
 
 card.mount('#card-element');
 

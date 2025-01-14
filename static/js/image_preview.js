@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 document.addEventListener("DOMContentLoaded", () => {
     const newImageInput = document.getElementById("id_cover_image");
     if (newImageInput) {
