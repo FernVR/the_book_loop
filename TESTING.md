@@ -78,17 +78,18 @@ I used [The CI Python Linter](https://pep8ci.herokuapp.com/) to validate my pyth
 ## Python Unit Testing
 Results for testing report can be found in [test_report.txt](test_report.txt) which I generated using the 'python manage.py test -v 2 > test_report.txt' command in the terminal.
 
-<details><summary>Python Unittest Result</summary> <img src=""></details>
-
 ### Automated Testing
+I ended up stretched for time and couldn't carry out as much automated testing as I would've wanted, but I managed to test the bookstore and basket views files.
 Testing functions can be found in these files:
-[appname/Test Forms](appname/tests.py)
-[appname/Test Forms](appname/tests.py)
-[appname/Test Forms](appname/tests.py)
-[appname/Test Forms](appname/tests.py)
-[appname/Test Forms](appname/tests.py)
 
-<details><summary>Automated testing</summary> <img src=""></details>
+[basket/Tests](basket/test_views.py)
+
+[bookstore/Tests](bookstore/test_views.py)
+
+![Test Results](docs/testing-media/automated-testing.png)
+
+
+<details><summary>Automated testing</summary> <img src="docs/testing-media/automated-testing.png"></details>
 
 
 ## Manual Testing
