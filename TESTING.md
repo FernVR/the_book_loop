@@ -23,14 +23,6 @@ Back to [README.md](README.md) file.
     - [Sign up/ Sign In/ Sign Out Pages](#sign-up-sign-in-sign-out-pages)
     - [Customer Service Form]()
     - [Profile Page]()
-    
-- [User Story Testing](#user-story-testing)
-    - [Developer User Stories](#developer-user-stories)
-    - [Visitor User Stories](#visitor-user-stories)
-    - [Registered User Stories](#resgistered-user-stories)
-    - [Admin User Stories](#admin-user-stories)
-
-- [UI](#ui)
 
 - [Bugs](#bugs)
 
@@ -87,9 +79,6 @@ Testing functions can be found in these files:
 [bookstore/Tests](bookstore/test_views.py)
 
 ![Test Results](docs/testing-media/automated-testing.png)
-
-
-<details><summary>Automated testing</summary> <img src="docs/testing-media/automated-testing.png"></details>
 
 
 ## Manual Testing
