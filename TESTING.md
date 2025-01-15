@@ -80,7 +80,6 @@ Results for testing report can be found in [test_report.txt](test_report.txt) wh
 
 <details><summary>Python Unittest Result</summary> <img src=""></details>
 
-
 ### Automated Testing
 Testing functions can be found in these files:
 [appname/Test Forms](appname/tests.py)
@@ -90,6 +89,7 @@ Testing functions can be found in these files:
 [appname/Test Forms](appname/tests.py)
 
 <details><summary>Automated testing</summary> <img src=""></details>
+
 
 ## Manual Testing
 Extensive Manual Testing was carried out during the duration of this project. I tried to test each feature/link upon creating them, I have also included screenshots of the testing grids I created.
@@ -189,18 +189,18 @@ Extensive Manual Testing was carried out during the duration of this project. I 
 <details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/profile-forms.jpeg"></details>
 
 
-## UI
-
 ## Bugs
+
 ### Resolved Bugs
 Complete list of all resolved bugs can be found in detail within the issues within the 'bug' label, they can all be found here: [Github Issues - Bugs](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
 
 ### Unresolved Bugs
-I didn't have time to fix a few bugs within this project so close to the due date, thankfully nothing serious, just minor UI issues.
+I didn't have time to fix a few bugs within this project so close to the due date, just minor UI issues.
 These issues are marked with a 'wontfix' label and their detailed issues can be found here: [Github Issues - Bugs - wontfix](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3Awontfix)
 
+
 ## Browser Compatibility
-<details><summary>Browser Compatibility Grid </summary> <img src=""></details>
+<details><summary>Browser Compatibility Grid </summary> <img src="docs/testing-media/browser-compatibility.jpg"></details>
 
 ## Lighthouse Test Result
  I generated a Google Lighthouse report and got these results:
