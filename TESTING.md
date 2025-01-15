@@ -101,39 +101,104 @@ copy this structure for each page:
 
 <details><summary>Responsive Design Grid </summary> <img src=""></details>
 
+<details><summary>Forms </summary> <img src=""></details>
+
 ### Bookstore 
-"" ""
+<details><summary>Links and Buttons </summary> <img src=""></details>
+
+<details><summary>Display and Images</summary> <img src=""></details>
+
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
 
 ### Book Detail 
 
+<details><summary>Links and Buttons </summary> <img src=""></details>
+
+<details><summary>Display and Images</summary> <img src=""></details>
+
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
+
+<details><summary>Forms </summary> <img src=""></details>
+
 ### Basket
+
+<details><summary>Links and Buttons </summary> <img src=""></details>
+
+<details><summary>Display and Images</summary> <img src=""></details>
+
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
 
 ### Checkout
 
+<details><summary>Links and Buttons </summary> <img src=""></details>
+
+<details><summary>Display and Images</summary> <img src=""></details>
+
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
+
+<details><summary>Forms </summary> <img src=""></details>
+
 ### Sign up/ Sign In/ Sign Out Pages
+
+<details><summary>Links and Buttons </summary> <img src=""></details>
+
+<details><summary>Display and Images</summary> <img src=""></details>
+
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
+
+<details><summary>Forms </summary> <img src=""></details>
 
 ### Customer Service
 
+<details><summary>Links and Buttons </summary> <img src=""></details>
+
+<details><summary>Display and Images</summary> <img src=""></details>
+
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
+
+<details><summary>Forms </summary> <img src=""></details>
+
 ### Profile Page
 
+<details><summary>Links and Buttons </summary> <img src=""></details>
 
-## User Story Testing
+<details><summary>Display and Images</summary> <img src=""></details>
 
-### Developer User Stories
-### Visitor User Stories
-### Resgistered User Stories
-### Admin User Stories
+<details><summary>Responsive Design Grid </summary> <img src=""></details>
+
+<details><summary>Forms </summary> <img src=""></details>
+
 
 ## UI
 
 ## Bugs
 ### Resolved Bugs
+Complete list of all resolved bugs can be found in detail within the issues within the 'bug' label, they can all be found here: [Github Issues - Bugs](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
+
 ### Unresolved Bugs
+I didn't have time to fix a few bugs within this project so close to the due date, thankfully nothing serious, just minor UI issues.
+These issues are marked with a 'wontfix' label and their detailed issues can be found here: [Github Issues - Bugs - wontfix](https://github.com/FernVR/the_book_loop/issues?q=is%3Aissue+is%3Aclosed+label%3Awontfix)
 
 ## Browser Compatibility
 <details><summary>Browser Compatibility Grid </summary> <img src=""></details>
 
 ## Lighthouse Test Result
- I generated a Google Lighthouse report and got this result:
+ I generated a Google Lighthouse report and got these results:
 
- ![Lighthouse Result]()
+ <details><summary>Home Result</summary></summary><img src="docs/testing-media/lightouse/lightouse-result.png"></details>
+ <details><summary>Home Performance</summary></summary><img src="docs/testing-media/lightouse/lightouse-home-performance.png"></details>
+ <details><summary>Home SEO</summary></summary><img src="docs/readme-media/screenshots/lighthouse-seo-passed.png"></details>
+ <details><summary>Home Best Practises</summary></summary><img src="docs/testing-media/lightouse/home-best-practises.png"></details>
+ <details><summary>Bookstore Result</summary></summary><img src="docs/testing-media/lightouse/bookstore-lightouse.png"></details>
+ <details><summary>Bookstore Accessibility</summary></summary><img src="docs/testing-media/lightouse/bookstore-accessibility.png"></details>
+ <details><summary>Bookstore Performance</summary></summary><img src="docs/testing-media/lightouse/bookstore-performance.png"></details>
+ <details><summary>Bookstore Best Practises</summary></summary><img src="docs/testing-media/lightouse/bookstore-best-practices.png"></details>
+ <details><summary>Bookstore SEO</summary></summary><img src="docs/testing-media/lightouse/bookstore-seo.png"></details>
+
+ * I received some lower performance scores and tried to make changes to the image sizing to hopefully fix these issues - unfortunately the book covers I added were in PNG and I didn't have time to convert them, like I did for the background images.
+
+ * I tried to ensure SEO and Accessibility scores were 100 across all pages.
+
+ * Not sure what to do about the 'Best Practices' scores, I didn't have much time to make changes here so close to the deadline.
+
+ 
