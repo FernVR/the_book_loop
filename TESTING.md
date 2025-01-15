@@ -93,80 +93,100 @@ Testing functions can be found in these files:
 
 ## Manual Testing
 Extensive Manual Testing was carried out during the duration of this project. I tried to test each feature/link upon creating them, I have also included screenshots of the testing grids I created.
+
+
+### Header Navigation / Footer
+
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/nav-links-buttons.jpeg"></details>
+
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/nav-display-images.jpeg"></details>
+
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/nav-responsive-design.jpeg"></details>
+
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/nav-forms.jpeg"></details>
+
+
 ### Home Page
-copy this structure for each page:
-<details><summary>Links and Buttons </summary> <img src=""></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/home-links-buttons.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/home-display-images.jpeg"></details>
 
-<details><summary>Forms </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/home-responsive-design.jpeg"></details>
+
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/home-forms.jpeg"></details>
+
 
 ### Bookstore 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/bookstore-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/bookstore-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/bookstore-responsive-design.jpeg"></details>
+
 
 ### Book Detail 
 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/book-detail-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/book-detail-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/book-detail-responsive-design.jpeg"></details>
 
-<details><summary>Forms </summary> <img src=""></details>
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/book-detail-forms.jpeg"></details>
+
 
 ### Basket
 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/basket-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/basket-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/basket-responsive-design.jpeg"></details>
+
 
 ### Checkout
 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/checkout-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/checkout-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/checkout-responsive-design.jpeg"></details>
 
-<details><summary>Forms </summary> <img src=""></details>
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/checkout-forms.jpeg"></details>
+
 
 ### Sign up/ Sign In/ Sign Out Pages
 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/sign-up-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/sign-up-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/sign-up-responsive-design.jpeg"></details>
 
-<details><summary>Forms </summary> <img src=""></details>
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/sign-up-forms.jpeg"></details>
+
 
 ### Customer Service
 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/customer-service-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/customer-service-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/customer-service-responsive-design.jpeg"></details>
 
-<details><summary>Forms </summary> <img src=""></details>
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/customer-service-forms.jpeg"></details>
+
 
 ### Profile Page
 
-<details><summary>Links and Buttons </summary> <img src=""></details>
+<details><summary>Links and Buttons </summary> <img src="docs/testing-media/manual-testing/profile-links-buttons.jpeg"></details>
 
-<details><summary>Display and Images</summary> <img src=""></details>
+<details><summary>Display and Images</summary> <img src="docs/testing-media/manual-testing/profile-display-images.jpeg"></details>
 
-<details><summary>Responsive Design Grid </summary> <img src=""></details>
+<details><summary>Responsive Design Grid </summary> <img src="docs/testing-media/manual-testing/profile-responsive-design.jpeg"></details>
 
-<details><summary>Forms </summary> <img src=""></details>
+<details><summary>Forms </summary> <img src="docs/testing-media/manual-testing/profile-forms.jpeg"></details>
 
 
 ## UI
